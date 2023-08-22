@@ -1,0 +1,11 @@
+name: geo4436
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.10
+  - pip
+  - scipy
+  - pandas
+  - matplotlib-base
+  - spyder

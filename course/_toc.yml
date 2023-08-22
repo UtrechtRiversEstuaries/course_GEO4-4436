@@ -1,0 +1,16 @@
+format: jb-book
+root: index
+options:
+  numbered: false
+parts:
+  - caption: General information
+    # numbered: false
+    chapters:
+    - file: general/about
+    - file: general/software
+  - caption: Practicals
+    numbered: false
+    chapters:
+    - file: practicals/chapter_1
+    - file: practicals/chapter_2
+    - file: practicals/chapter_3

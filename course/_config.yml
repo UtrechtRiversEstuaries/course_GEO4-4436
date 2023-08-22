@@ -1,0 +1,20 @@
+title: River and Delta Systems
+author: '<a href="https://www.uu.nl/staff/MGKleinhans">Maarten Kleinhans</a> and contributors'
+copyright: "2023"
+
+execute:
+  execute_notebooks: off
+
+latex:
+  latex_documents:
+    targetname: geo4_4436.tex
+
+sphinx:
+  config:
+    html_theme_options:
+      use_download_button: false
+      use_issues_button: false
+      use_repository_button: false
+      extra_footer: 'River and Delta Systems (GEO4-4436) is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>'
+
+
