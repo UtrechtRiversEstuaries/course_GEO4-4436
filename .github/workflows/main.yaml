@@ -1,0 +1,38 @@
+name: Deploy website
+
+on: [push]
+
+jobs:
+
+    build_and_deploy:
+
+        runs-on: ubuntu-22.04
+
+        name: "Deploy website"
+
+        steps:
+
+        - name: checkout course_GEO4-4436
+          uses: actions/checkout@v3
+
+        - uses: conda-incubator/setup-miniconda@v2
+          with:
+              activate-environment: action
+              environment-file: environment/workflow/action.yaml
+              python-version: 3.11
+              auto-activate-base: false
+              auto-update-conda: false
+              channels: conda-forge
+
+        - name: Configure
+          shell: bash -l {0}
+          run: |
+              mkdir build
+              cmake \
+                  -S . \
+                  -B build
+
+        - name: Build html
+          shell: bash
+          run: |
+              cmake --build build
