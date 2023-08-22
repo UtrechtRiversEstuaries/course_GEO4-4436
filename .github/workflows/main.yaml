@@ -41,12 +41,10 @@ jobs:
         - name: Archive artifact
           shell: bash -l {0}
           run: |
-            pwd
-            ls -al build/course/_build/html/
             tar \
               --dereference --hard-dereference \
               --directory "build/course/_build/html/" \
-              -cvf "$RUNNER_TEMP/artifact.tar"
+              -cvf "$RUNNER_TEMP/artifact.tar" \
               .
 
         - name: Upload artifact
