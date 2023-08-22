@@ -42,6 +42,7 @@ jobs:
           shell: bash -l {0}
           run: |
             pwd
+            ls -al build/course/_build/html/
             tar \
               --dereference --hard-dereference \
               --directory "build/course/_build/html/" \
