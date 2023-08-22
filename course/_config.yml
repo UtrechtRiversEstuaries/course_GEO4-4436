@@ -13,13 +13,9 @@ sphinx:
   config:
     html_theme_options:
       use_download_button: false
-      use_issues_button: false
       use_repository_button: false
+      use_issues_button: true
+      repository_url:  https://github.com/UtrechtRiversEstuaries/course_GEO4-4436
       extra_footer: 'River and Delta Systems (GEO4-4436) is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>'
 
 
-
-repository:
-  url: https://github.com/UtrechtRiversEstuaries/course_GEO4-4436
-html:
-  use_issues_button: true
