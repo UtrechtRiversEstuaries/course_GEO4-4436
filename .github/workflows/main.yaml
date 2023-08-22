@@ -39,8 +39,9 @@ jobs:
 
         # see: https://github.com/actions/upload-pages-artifact
         - name: Archive artifact
-          shell: sh
+          shell: bash -l {0}
           run: |
+            pwd
             tar \
               --dereference --hard-dereference \
               --directory "build/course/_build/html/" \
