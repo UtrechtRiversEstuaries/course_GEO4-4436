@@ -21,10 +21,10 @@
 In this section we consider a one-dimensional river with an initial constant slope $S_0 = 0.1$ m/m. To gain insight, we want to compute the evolution of the river bed in space and time using very basic physical laws. Similar approaches are used in cellular automats of rivers and in so-called reduced-complexity models in earth surface, processes and landforms (try a search in Google Scholar to see debates and controversies). In this model, we do _not_ consider the influence of the water motion and critical Shields number etc. on sediment transport. The total sediment transport rate $q_t$ [in $m^3/s$ per m width, or $m^2/s$] is therefore assumed to depend simply linearly on the local bed slope $S$. More precisely, we assume that:
 
 $$
-q_t = \alpha_s_t S
+q_t = \alpha_{s_t} S
 $$
 
-where $\alpha_s_t$ is a proportionality coefficient (with the same unit as sediment transport) of the total sediment transport.
+where $\alpha_{s_t}$ is a proportionality coefficient (with the same unit as sediment transport) of the total sediment transport.
 
 To solve this problem numerically, it needs to be discretized in space and in time. The reach of the river under consideration, of length $L$, is divided into $Nx$ sub-reaches, or grid cells, of length $dx = L/Nx$. These sub-reaches are separated by $Nx + 1$ nodes, of coordinates $x_i = (i − 1)dx$, with integer $i$ varying between $1$ and $Nx + 1$. Each of these nodes corresponds to a bed elevation $\eta_i$ and a sediment transport rate $q_{ti}$ ($i$ is the node number). The bed elevation $\eta^n_i$ at time $t_n$ is then used to compute the bed elevation $\eta^{n+1}_i$ at time $t_{n+1} = t_n + dt$ (concept of time discretization).
 
