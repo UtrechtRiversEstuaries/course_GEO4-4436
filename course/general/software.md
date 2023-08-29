@@ -13,7 +13,7 @@ Miniconda is already installed in the VMA computer rooms.
 
 ## Installing the course environment
 
-To setup the course environment first create a textfile (e.g. geo4436.yaml in your course directory) with the following content:
+To setup the course environment first create a YAML file (e.g. geo4436.yaml in your course directory) with the following content:
 
 ```{literalinclude} ../../environment/environment.yaml
 :language: yaml
