@@ -216,7 +216,7 @@ This model is simple and fast, and assumes a constant and morphologically releva
 ```
 
 (EXERCISE-3.3)=
-## **Exercise 3 - Implementing Parker's morphodynamic model**
+## **EXERCISE 3 - Implementing Parker's morphodynamic model**
 
 ```{important}
 **You are expected to hand in this code and answers to the questions in your separate document.**
