@@ -763,17 +763,17 @@ Additional data: channel slope $S = 1.5 × 10^{-4}$ m/m; median diameter of the 
 
 The following exercises have to be handed in for the practical of Chapter 2:
 
-- EXERCISE 1 - Relational and logical operations <EXERCISE 2.1> {ref}`EXERCISE-2.1`
+- {ref}`EXERCISE-2.1`
 
-- EXERCISE 2 - Radioactive decay of C14 <EXERCISE 2.2> {ref}`EXERCISE-2.2`
+- {ref}`EXERCISE-2.2`
 
-- EXERCISE 3 - Grain-related sediment transport <EXERCISE 2.3> {ref}`EXERCISE-2.3`
+- {ref}`EXERCISE-2.3`
 
-- EXERCISE 4 - Characterize flow in experimental conditions <EXERCISE 2.4> {ref}`EXERCISE-2.4`
+- {ref}`EXERCISE-2.4`
 
-- EXERCISE 5 - Comparison of sediment transport predictors <EXERCISE 2.5> {ref}`EXERCISE-2.5`
+- {ref}`EXERCISE-2.5`
 
-- EXERCISE 6 - Sediment transport of the of the Rhine at Lobith <EXERCISE 2.6> {ref}`EXERCISE-2.6`
+- {ref}`EXERCISE-2.6`
 
 ```{important}
 We expect the scripts in one zip file named **YourSurname_GEO4-4436_Chapter2**. Also include to your zip file all the separate files that you have imported in your scripts. Moreover, each script should be well labelled and contain the answers to questions as comments. Please note that only the relevant information should be displayed when running the scripts, so do not print every variable.
