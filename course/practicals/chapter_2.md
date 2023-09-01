@@ -327,7 +327,7 @@ Some additional remarks about for-loops:
 ---
 
 (EXERCISE-2.2)=
-## **EXERCISE 2 -- Radioactive decay of C14**
+## **EXERCISE 2 - Radioactive decay of C14**
 
 ```{important}
 **You are expected to hand in this code.**
@@ -385,7 +385,7 @@ _Please add this script to the folder that you will zip and send to us._
 ---
 
 (EXERCISE-2.3)=
-## **EXERCISE 3 -- Grain-related sediment transport**
+## **EXERCISE 3 - Grain-related sediment transport**
 
 ```{important}
 **You are expected to hand in this code.**
@@ -493,7 +493,7 @@ Some additional remarks about while-loops:
 ---
 
 (EXERCISE-2.4)=
-## **EXERCISE 4 -- Characterize flow in experimental conditions**
+## **EXERCISE 4 - Characterize flow in experimental conditions**
 
 ```{important}
 **You are expected to hand in this code.**
@@ -644,7 +644,7 @@ For illustrative purposes, let's start with an example of a function that is so 
 ---
 
 (EXERCISE-2.5)=
-## **EXERCISE 5 -- Comparison of sediment transport predictors**
+## **EXERCISE 5 - Comparison of sediment transport predictors**
 
 ```{important}
 **You are expected to hand in this code.**
