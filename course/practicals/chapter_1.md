@@ -18,8 +18,8 @@ While there are some good Python books, the best material for learning most thin
 
 For this course, we write our Python files using an IDE (Integrated Development Environment), which is a software application that provides for user-friendly programming. There are many free IDEs to write code in Python. Here we use ***Spyder***.
 
-```{important}
-Make sure you have downloaded all the {ref}`software` in order to be able to run Spyder in the course environment.
+```{note}
+Make sure you have completed the {ref}`software` in order to be able to run Spyder in the course environment.
 ```
 
 ### 1.1.1 Overview on Spyder
