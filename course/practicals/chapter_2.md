@@ -5,7 +5,7 @@
 
 -   The exercises in this chapter will be graded on the following criteria: (1) does the program run? (2) Can we understand it (=enough comments)? (3) Does it do the right thing as specified in assignment?
 
--	You will receive an individual grade based on the competency of your coding and understanding of how this code relates to reality.
+-   You will receive an individual grade based on the competency of your coding and understanding of how this code relates to reality.
 
 -   There are 6 exercises that you must hand that increase in difficulty and required time for completion.
 
