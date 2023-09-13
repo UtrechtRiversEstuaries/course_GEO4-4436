@@ -87,6 +87,8 @@ A very simple morphodynamic model system without flow
 -   Create a vector which contains the time-evolution of the bed elevation at the first node. This vector should be filled element-by-element during the time loop. Plot this vector as a function of time. What kind of evolution do you obtain? Despite the simplicity of this model, this behaviour is a fair representation of many morphological developments in nature.
 
 ```{Important}
+End of Exercise 1.
+
 _Please add this script and the document with answers to the open questions to the folder that you will zip and send to us._
 ```
 
@@ -198,6 +200,8 @@ This is one of the simplest numerical solutions that provides reasonably stable 
 -   For insight into the numerics, now calculate a second vector $H2$ which contains the water depth values obtained without using the {ref}`corrector step<predictor_corrector_scheme>`. Plot the results with and without the use of a corrector in one figure and compare them. This comparison should be performed for a fine spatial grid (the one initially given for instance) and a very large one. Do you understand better why schemes such as the predictor-corrector are used?
 
 ```{Important}
+End of Exercise 2.
+
 _Please add this script and the document with answers to the open questions to the folder that you will zip and send to us._
 ```
 
@@ -251,6 +255,8 @@ where $C$ is the characteristic celerity of a disturbance in bed level. In pract
 ```
 
 ```{Important}
+End of Exercise 3.
+
 _Please add this script and the document with answers to the open questions to the folder that you will zip and send to us._
 ```
 
