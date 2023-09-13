@@ -157,6 +157,8 @@ $$
 	_Answer open questions as remarks in separate lines starting with: '#'_.
 
 ```{Important}
+End of Exercise 1.
+
 _Please add this script to the folder that you will zip and send to us._
 ```
 
@@ -379,6 +381,8 @@ Try to Google some examples.
 ```
 
 ```{Important}
+End of Exercise 2.
+
 _Please add this script to the folder that you will zip and send to us._
 ```
 
@@ -440,6 +444,8 @@ $$ (Eq_2_11)
 	```
 
 ```{Important}
+End of Exercise 3.
+
 _Please add this script to the folder that you will zip and send to us._
 ```
 
@@ -553,6 +559,8 @@ When something goes wrong, print $h_{temp}$ and possibly other parameters during
 	_Answer open questions as remarks in separate lines starting with: '#'_.
 
 ```{Important}
+End of Exercise 4.
+
 _Please add this script to the folder that you will zip and send to us._
 ```
 
@@ -689,6 +697,8 @@ We continue from {ref}`EXERCISE-2.3`. Here, the objective is to compare the sedi
 	_Answer open questions as remarks in separate lines starting with: '#'_.
 
 ```{Important}
+End of Exercise 5.
+
 _Please add this script to the folder that you will zip and send to us._
 ```
 
@@ -758,6 +768,12 @@ Additional data: channel slope $S = 1.5 × 10^{-4}$ m/m; median diameter of the 
 12.	Plot $Q_s$ as a function of $Q_c$ for the whole dataset. Choose the best representation (log axis or not). (Conclude for yourself: how many times smaller than the flow discharge is the sediment discharge in this river?)
 
 13.	Calculate the average volume of sediment transported through Lobith per year. To do that, you should first compute the total volume of sediment transported through Lobith for each year of the dataset and then average those values.
+
+```{Important}
+End of Exercise 6.
+
+_Please add this script to the folder that you will zip and send to us._
+```
 
 ## **PRODUCTS TO HAND IN**
 
