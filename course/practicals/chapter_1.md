@@ -368,6 +368,7 @@ $S = 1.6 × 10^{−4}$ can be written in Python as: ```1.6e-4```.
 ````
 
 ```{Important}
+End of Exercise 1.
 _Please add this script to the folder that you will zip and send to us._
 ```
 
@@ -808,6 +809,7 @@ $$
 	_Answer open questions as remarks in separate lines starting with: '#'_.
 
 ```{Important}
+End of Exercise 2.
 _Please add this script to the folder that you will zip and send to us._
 ```
 ---
@@ -1161,6 +1163,7 @@ This exercise is based on the dataset contained in the file _MPMtransportdata.xl
 	_Answer open questions as remarks in separate lines starting with: '#'_.
 
 ```{important}
+End of Exercise 3.
 _Please add this script **and all files you have imported in your script** to the folder that you will zip and send to us._
 ```
 
@@ -1296,6 +1299,7 @@ In this exercise, we will perform some analysis on a dataset containing the flow
 	`````
 
 ```{important}
+End of Exercise 4.
 _Please add this script **and all files you have imported in your script** to the folder that you will zip and send to us._
 ```
 
