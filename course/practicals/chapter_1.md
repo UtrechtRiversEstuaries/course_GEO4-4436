@@ -1117,7 +1117,7 @@ This exercise is based on the dataset contained in the file _MPMtransportdata.xl
 	import seaborn as sns
 
 	plt.figure(3)
-	plt.scatter(tau,qs,s=s.astype(float)\*50, c=s, cmap = \"inferno\", alpha =0.4)
+	plt.scatter(tau,qs,s=s.astype(float)*50,c=s,cmap="inferno",alpha=0.4)
 	plt.xscale('log')
 	plt.yscale('log')
 	```
