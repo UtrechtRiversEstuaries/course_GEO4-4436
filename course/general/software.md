@@ -20,6 +20,12 @@ To setup the course environment first create a YAML file (e.g. geo4436.yaml in y
 :language: yaml
 ```
 
+Then launch [Anaconda prompt](https://anaconda.org/conda-forge/prompt) and change the prompt directory into course directory (where you stored the yaml file) using ```cd ```, e.g.:
+
+```python
+cd C:\Users\YourName\course_GEO-4436
+```
+
 Then create the environment with:
 
 ```python
