@@ -3,7 +3,7 @@
 ```{important}
 ***NOTES ABOUT CHAPTER 2***
 
--   Please note that this exercise is pass/fail and you must pass this practical to complete the course.
+-   The exercises in this chapter will be graded on the following criteria: (1) does the program run? (2) Can we understand it (=enough comments)? (3) Does it do the right thing as specified in assignment?
 
 -	You will receive an individual grade based on the competency of your coding and understanding of how this code relates to reality.
 
