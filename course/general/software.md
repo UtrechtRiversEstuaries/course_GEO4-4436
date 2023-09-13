@@ -37,10 +37,18 @@ This will install all required software for the course, and may take a while.
 
 ## Activating the course environment
 
-When starting the computer practicals you first need to activate your environment:
+When starting the computer practicals you first need to activate your environment in the [Anaconda prompt](https://anaconda.org/conda-forge/prompt):
 
 ```python
 conda activate geo4436
 ```
 
+```{note}
+The Anaconda prompt should be installed together with Anaconda. You can look for it in your search bar.
+```
+
 You then can start e.g. Spyder or Python from the command prompt.
+
+```python
+spyder
+```
