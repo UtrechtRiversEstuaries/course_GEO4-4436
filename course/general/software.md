@@ -34,6 +34,9 @@ conda env create -f geo4436.yaml
 
 This will install all required software for the course, and may take a while.
 
+```{important}
+If you are working on a MacBook, the Anaconda prompt is not installed. However, the above commands should work as well if you run them in the [Terminal](https://en.wikipedia.org/wiki/Terminal_(macOS)). Note that the syntax for directories is different on Mac than on Windows.
+```
 
 ## Activating the course environment
 
