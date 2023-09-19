@@ -22,12 +22,12 @@ To setup the course environment first create a YAML file (e.g. geo4436.yaml in y
 
 Then launch [Anaconda prompt](https://anaconda.org/conda-forge/prompt) and change the prompt directory into course directory (where you stored the yaml file) using ```cd ```, e.g.:
 
-```{note}
-The Anaconda prompt should be installed together with Anaconda. You can look for it in your search bar.
-```
-
 ```python
 cd C:\Users\YourName\course_GEO-4436
+```
+
+```{note}
+The Anaconda prompt should be installed together with Anaconda. You can look for it in your search bar.
 ```
 
 Then create the environment with:
@@ -39,7 +39,7 @@ conda env create -f geo4436.yaml
 This will install all required software for the course, and may take a while.
 
 ```{important}
-If you are working on a MacBook, the Anaconda prompt is not installed. However, the above commands should work as well if you run them in the [Terminal](https://en.wikipedia.org/wiki/Terminal_(macOS)), which you can find through the search bar. Note that the syntax for directories is different on Mac than on Windows.
+If you are working on a MacBook, the Anaconda prompt is not installed. However, the above commands should work as well if you run them in the [Terminal](https://en.wikipedia.org/wiki/Terminal_(macOS)), which you can find through the search bar. Note that the syntax for directories/paths is different on Mac than on Windows.
 ```
 
 ## Activating the course environment
