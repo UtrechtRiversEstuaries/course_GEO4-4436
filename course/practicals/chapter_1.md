@@ -1296,7 +1296,7 @@ In this exercise, we will perform some analysis on a dataset containing the flow
 	```
 	import matplotblib as mpl
 	import importlib
-	Importlib.reload(mpl); importlib.reload(plt); importlib.reload(sns)
+	importlib.reload(mpl); importlib.reload(plt); importlib.reload(sns)
 	```
 	````
 	`````
