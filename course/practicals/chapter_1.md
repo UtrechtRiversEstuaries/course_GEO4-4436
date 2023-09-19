@@ -1290,11 +1290,11 @@ In this exercise, we will perform some analysis on a dataset containing the flow
 	import matplotlib
     	%matplotlib qt5
 	````
-	Now if you move the cursor along the plot line, the x-, and y values will be given in the upper right of hte window.
+	Now if you move the cursor along the plot line, the x-, and y values will be given in the upper right of the window.
 	````{note}
 	This setting is not temporary. If you want to reset matplotlib so that your plots will occur in the file/variable navigator again, you can run the lines of code in your console:
 	```
-	import matplotblib as mpl
+	import matplotlib as mpl
 	import importlib
 	importlib.reload(mpl); importlib.reload(plt); importlib.reload(sns)
 	```
