@@ -1288,14 +1288,14 @@ In this exercise, we will perform some analysis on a dataset containing the flow
 	To be able to read the data in a plot, you are required to plot your figures in a window outside of the plot window ({numref}`Fig. 1`). You can do this by running the following lines in your console:
 	````
 	import matplotlib
-    	%matplotlib qt5
+	%matplotlib qt5
 	````
 	Now if you move the cursor along the plot line, the x-, and y values will be given in the upper right of the window.
 	````{note}
 	This setting is not temporary. If you want to reset matplotlib so that your plots will occur in the file/variable navigator again, you can run the lines of code in your console:
 	```
 	import matplotlib as mpl
-	import importlib
+ 	import importlib
 	importlib.reload(mpl); importlib.reload(plt); importlib.reload(sns)
 	```
 	````
