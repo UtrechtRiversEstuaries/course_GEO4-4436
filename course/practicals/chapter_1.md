@@ -1035,10 +1035,11 @@ This exercise is based on the dataset contained in the file _MPMtransportdata.xl
 	where $u\ast$ is the shear velocity (m/s) defined by the above relation. (Accept this for now... there is a complicated story behind it involving boundary layer theory.)
 
 	````{note}
-	$S$ consists of float elements, which the _sin_-function initially doesn't recognize. Therefore you will need to type the following in your code:
+	The $S$ variable is has the type "Array of object". Although $S$ consists of float elements, the _sin_-function isn't able to recognize these elements as such within an "Array of object". Therefore you will need to type the following in your code to specify that it needs to read the elements as floats:
 	```
-	sin(S.astype(float))
+	np.sin(S.astype(float))
 	```
+ 	This is not only the case for the _sin_-function, but also many other numpy functions!
 	````
 
 5.  To compare datasets derived from different scales (e.g. field versus lab measurements), parameters are often made dimensionless. Shear stress $\tau$ can be nondimensionalized into the "Shields parameter" $\theta$, which is the ratio of the flow force driving sediment transport and gravitational force that demobilizes sediment. Calculate $\theta$ following:
