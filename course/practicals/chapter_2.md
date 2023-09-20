@@ -427,7 +427,7 @@ $$ (Eq_2_11)
 
 3.  Calculate the associated Shields parameter $\theta$ for $tau2$ (Eq. {eq}`Eq_1_4`).
 
-4.  Use the function [scatter](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html) to plot the Einstein parameter $\phi$ (using the measured transport rates) as a function of the newly computed Shields Parameter (Eq. {eq}`Eq_1_5`). Make the colours again dependent on the log of the grain size $D\ast$ (Bonnefille number; Eq. {eq}`Eq_1_7`).
+4.  Use the function [scatter](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html) to plot the Einstein parameter $\phi$ (using the measured transport rates; Eq. {eq}`Eq_1_5`) against the newly computed Shields Parameter. Make the colours again dependent on the log of the grain size $D\ast$ (Bonnefille number; Eq. {eq}`Eq_1_7`).
 
 5.	Now answer the following questions as brief comments in your scripts:
 
