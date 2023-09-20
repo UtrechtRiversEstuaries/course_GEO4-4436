@@ -1096,7 +1096,7 @@ This exercise is based on the dataset contained in the file _MPMtransportdata.xl
 	Plot the MPM prediction as an additional red line in the second figure and add a [legend](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.legend.html) to the figure.
 
 	````{hint}
-	To plot this line, first define two vectors $x$ and $y$ such that $x$ contains an appropriate range of values for the Shields parameter $\theta$ and $y$ contains the $\phi_b$ values calculated using the MPM predictor. $x$ is thus a series of values and not the same as the values of $theta$ that you calculated at Eq. {eq}`Eq_1_4`.
+	To plot this line, first define two vectors $x$ and $y$ such that $x$ contains an appropriate range of values for the Shields parameter ($\theta$) and $y$ contains the $\phi_b$ values calculated using the MPM predictor (so insert $x$ in Eq. {eq}`Eq_1_6`). $x$ is thus a series of values and not the same as the values of $\theta$ that you calculated at Eq. {eq}`Eq_1_4`. 
 	```{note}
 	If you base your range of $x$ values here to include values below $\theta_{cr}$, then you raise negative numbers to a non-integer power, resulting in imaginary numbers, which will lead to an error when you try to plot them.
 	```
