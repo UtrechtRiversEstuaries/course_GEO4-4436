@@ -433,7 +433,7 @@ $$ (Eq_2_11)
 
 	1.	Compare the plot you just created with the one you made in {ref}`EXERCISE-1.3`. What do you notice?
 
-	2.	You are using the Meyer-Peter and Mueller transport predictor. When is this typically used? In what cases can the MPM predictor NOT be used?
+	2.	In the previous chapter, you were using the Meyer-Peter and Mueller transport predictor. When is this typically used? In what cases can the MPM predictor NOT be used?
 
 	3.	Is your Shields parameter value reasonable? How does it compare with the total shear stress in the experimental data?
 
