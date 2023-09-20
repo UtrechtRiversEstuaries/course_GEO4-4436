@@ -1135,7 +1135,7 @@ This exercise is based on the dataset contained in the file _MPMtransportdata.xl
 
 13. Answer the following questions with respect to the plot you just created:
 
-	- Why do we multiple $s$ by 50?
+	- Why do we multiply $s$ by 50?
 
 	- What determines the colours of the data points?
 
