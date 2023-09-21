@@ -10,6 +10,8 @@
 -   Try to schedule your workload accordingly.
 
 -   Please note for this exercise you must submit the scripts (with appropriate comments) as ***.zip*** file which will be used to determine your grade.
+
+-   The deadline for this Chapter is at 9:00 before the start of next practical.
 ```
 
 ## 1.1 Getting started
