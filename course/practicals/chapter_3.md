@@ -3,7 +3,7 @@
 ```{important}
 ***NOTES ABOUT CHAPTER 3***
 
--	You will receive an individual grade based on the competency of your coding and understanding of how this code relates to reality.
+-   You will receive an individual grade based on the competency of your coding and understanding of how this code relates to reality.
 
 -   Please note that you must pass this practical to complete the course.
 
@@ -13,7 +13,9 @@
 
 -   Please note for this exercise you must submit the scripts (with appropriate comments) as ***.zip*** file which will be used to determine your grade.
 
--	More important however is the **Word document or PDF** with your answers and explanations. This document should be accompanied by a number of screenshots of the modelling results.
+-   More important however is the **Word document or PDF** with your answers and explanations. This document should be accompanied by a number of screenshots of the modelling results.
+
+-   The deadline for this Chapter is at 9:00 before the start of next practical.
 ```
 
 ## 3.1 A very simplified morphodynamic model
