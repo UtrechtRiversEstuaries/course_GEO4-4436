@@ -1079,7 +1079,7 @@ This exercise is based on the dataset contained in the file _MPMtransportdata.xl
 
 8.  Plot in a new figure the data in a nondimensional form, i.e. the Einstein parameter $\phi$ (y-axis) as a function of the Shields parameter $\theta$ (x-axis). Give an appropriate title to the plot, as well as labels to the axes.
 
-9.	Compare the figures plotted at **7** and **8**. Does the use of dimensionless parameters seem efficient?
+9.	Compare the figures plotted at **7** and **8**. Is the use of dimensionless parameters useful?
 
 	_Answer open questions as remarks in separate lines starting with: '#'_.
 
