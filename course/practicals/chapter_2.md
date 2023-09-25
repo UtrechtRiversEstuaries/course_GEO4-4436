@@ -513,7 +513,7 @@ This problem will be solved using an iteration process. We start with a first gu
 
 -   Importing relevant packages and initialisation of parameters
 
--   Make a first guess by defining $h$ (such that $0.00001 < h < h_{max}$, with $h_{max} = 3$ cm). Use if-statements to make sure the computation is only executed for these conditions.
+-   Make a first guess by defining $h$ (such that $h_{min} < h < h_{max}$, with $h_{min} = 0.01$ mm and $h_{max} = 3$ cm). Use if-statements to make sure the computation is only executed for these conditions.
 
 -   Define $h_{temp}$ to allow for the first loop to start, e.g. $h_{temp} = 0.9h$. Continue looping as long as the absolute value of $h - h_{temp}$ is larger than $1 × 10^{−6}$ m.
 
