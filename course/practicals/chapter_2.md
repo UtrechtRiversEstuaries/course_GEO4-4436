@@ -469,7 +469,7 @@ _Please add this script to the folder that you will zip and send to us._
 
 ---
 
-## 2.3 WHILE-loops
+### 2.2.3 WHILE-loops
 
 #### Purpose:
 
@@ -584,7 +584,7 @@ _Please add this script to the folder that you will zip and send to us._
 
 ---
 
-## 2.4 User-defined functions
+## 2.3 User-defined functions
 
 We have already discussed {ref}`functions<functions_intro>` that are built into Python or its {ref}`packages<packages_intro>` (e.g. np.mean). As you start to write your own programmes, you will need to create your own functions that take one or more input arguments, operate on this input and then return a result (output). Function files are simply text files with a _.py_ extension and can be written as script files using the Python editor.
 
