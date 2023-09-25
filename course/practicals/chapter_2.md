@@ -302,11 +302,27 @@ for index in range:
 	For nested loops, it is important that each loop has it's own indented block. This can be only another loop.
 	```
 
+	````{note}
+	In the example above, we defined the ranges with integers (in this case the length of rows for ```i``` (=2) and length of columns for ```j``` (=3). However, this will require updating of your code every time you want to run your calculations with an input array of different size. It is therefore recommended to **ALWAYS** define your ranges using the [len()](https://docs.python.org/3/library/functions.html#len) function. ```len(B)``` will return the number or rows of your array. If you want to return the number of columns, you can obtain that number by running the function by specifying it over one specific row (e.g. ```len(B[0])```. So it is recommended to run the above example as:
+
+	```
+	B = np.zeros((2,3))
+	for i in range(len(B)):
+	    for j in range(len(B[0])):
+	        ij = (i+1)*(j+1)
+	        B[i,j] = ij
+	        print(B)
+	    print(B)
+	print(B)
+	```
+ 
+	````
+
 -	For-loops can be combined with if-statements as in the following example:
 
 	```
 	s = np.array([2,1,-4,23,0])
-	for i in range(0,5):
+	for i in range(len(s)):
 	    if s[i] >= 2:
 	        s[i] = 3*s[i]
 	        print(s)
@@ -322,7 +338,7 @@ for index in range:
 
 Some additional remarks about for-loops:
 
--   In the first iteration of the for-loop, the index variable is assigned the first value in the range (start, end, increment). From the second time onwards, Python automatically assigns to the variable the second value in the range etc. The increment is by default 1, unless specified otherwise.
+-   In the first iteration of the for-loop, the index variable is assigned the first value in the ```range(start, end, increment)```. From the second time onwards, Python automatically assigns to the variable the second value in the range etc. Unless specified otherwise, the start is by default ```0``` and the increment is by default ```1```. So ```range(end)``` will make your loop start at ```0```, with an increment of ```1``` until ```end``` is reached. If you give two input arguments, Python will interpret it as ```range(start, end)```, with the default increment of ```1```.
 
 -   The number of times a loop is executed, equals the number of values in the range.
 
@@ -453,7 +469,7 @@ _Please add this script to the folder that you will zip and send to us._
 
 ---
 
-### 2.2.3 WHILE-loops
+## 2.3 WHILE-loops
 
 #### Purpose:
 
@@ -568,7 +584,7 @@ _Please add this script to the folder that you will zip and send to us._
 
 ---
 
-## 2.3 User-defined functions
+## 2.4 User-defined functions
 
 We have already discussed {ref}`functions<functions_intro>` that are built into Python or its {ref}`packages<packages_intro>` (e.g. np.mean). As you start to write your own programmes, you will need to create your own functions that take one or more input arguments, operate on this input and then return a result (output). Function files are simply text files with a _.py_ extension and can be written as script files using the Python editor.
 
