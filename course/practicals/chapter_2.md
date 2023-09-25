@@ -172,11 +172,11 @@ In a simple program, the commands are executed one after the other, independentl
 
 ### 2.2.1 If-statements
 
-#### Purpose:
+**Purpose:**
 
 If-statements are used when a decision must be taken depending on the outcome of a comparison statement (also called conditional expression). If the comparison is _True_, then the group of commands is executed. If the comparison is _False_, the group of commands is skipped.
 
-#### Format:
+**Format:**
 
 The simplest if-statement is the following example:
 
@@ -228,11 +228,11 @@ The general structure of the if-statement is as follows. Only the commands assoc
 
 ### 2.2.2 FOR-loops
 
-#### Purpose:
+**Purpose:**
 
 For-loops are used to repeat a command or group of commands for a fixed, predetermined number of times.
 
-#### Format:
+**Format:**
 
 The general structure of a for-loop is as follows:
 
@@ -469,13 +469,13 @@ _Please add this script to the folder that you will zip and send to us._
 
 ---
 
-### 2.2.3 WHILE-loops
+## 2.3 WHILE-loops
 
-#### Purpose:
+**Purpose:**
 
 While-loops are used to repeat a command or group of commands, an indefinite number of times until the condition specified by the while-statement is no longer satisfied.
 
-#### Format:
+**Format:**
 
 The general structure for a while-loop is as follows:
 
@@ -584,7 +584,7 @@ _Please add this script to the folder that you will zip and send to us._
 
 ---
 
-## 2.3 User-defined functions
+## 2.4 User-defined functions
 
 We have already discussed {ref}`functions<functions_intro>` that are built into Python or its {ref}`packages<packages_intro>` (e.g. np.mean). As you start to write your own programmes, you will need to create your own functions that take one or more input arguments, operate on this input and then return a result (output). Function files are simply text files with a _.py_ extension and can be written as script files using the Python editor.
 
