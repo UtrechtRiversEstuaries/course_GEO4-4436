@@ -1012,7 +1012,7 @@ This exercise is based on the dataset contained in the file _MPMtransportdata.xl
 	```
 
 	```{note}
-	The _r_ here refers to _raw_ and makes sure that everything between the quotation marks is read as a 'raw' string, without making other interpretations. This prevents the syntax of the the path to do anything unwanted to your script.
+	The _r_ here refers to _raw_ and makes sure that everything between the quotation marks is read as a 'raw' string, without making other interpretations. This prevents the syntax of the path to cause the script to error when it wants to read a file from the directory.
 	```
 
 	You can now load the data using the following line:
