@@ -18,6 +18,7 @@
 -   The deadline for this Chapter is at 9:00 before the start of next practical.
 ```
 
+(CHAPTER-3.1)=
 ## 3.1 A very simplified morphodynamic model
 
 In this section we consider a one-dimensional river with an initial constant slope $S_0 = 0.1$ m/m. To gain insight, we want to compute the evolution of the river bed in space and time using very basic physical laws. Similar approaches are used in cellular automats of rivers and in so-called reduced-complexity models in earth surface, processes and landforms (try a search in Google Scholar to see debates and controversies). In this model, we do _not_ consider the influence of the water motion and critical Shields number etc. on sediment transport. The total sediment transport rate $q_t$ [in $m^3/s$ per m width, or $m^2/s$] is therefore assumed to depend simply linearly on the local bed slope $S$. More precisely, we assume that:
@@ -42,22 +43,26 @@ This should be done in two main steps (see also {ref}`Figure 4<Fig. 4>`).
 
 
 $$
-\frac{\partial \eta}{\partial t} = - \frac{\partial q_t}{\partial x}
+\frac{\partial \eta}{\partial t} = \frac{\partial q_t}{\partial x}
 $$
 
 that is to say, in a discretized form:
 
 $$
-\frac{\eta^{n+1}_i - \eta^n_i}{dt} = - \left( \frac{\partial q_t}{\partial x} \right)^n_i
+\frac{\eta^{n+1}_i - \eta^n_i}{dt} = \left( \frac{\partial q_t}{\partial x} \right)^n_i
 $$
 
 and therefore
 
 $$
-\eta^{n+1}_i - \eta^n_i = - \left( \frac{\partial q_t}{\partial x} \right)^n_i dt
+\eta^{n+1}_i - \eta^n_i = \left( \frac{\partial q_t}{\partial x} \right)^n_i dt
 $$
 
 In short, the gradient of sediment transport should be calculated and then used to update the bed elevation.
+
+```{note}
+A negative gradient of sediment transport implies that there is more sediment going out than going in, resulting in a lowering of the bed surface.
+```
 
 ```{note}
 This formulation of the Exner relation assumes that the volume of deposited or eroded sediment includes pore space between the particles. In a later exercise, where we calculate sediment mass flux without pores using the Engelund-Hansen or Meyer-Peter and Mueller functions, the Exner relation will be written including the pore space correction.
@@ -80,7 +85,7 @@ This formulation of the Exner relation assumes that the volume of deposited or e
 A very simple morphodynamic model system without flow
 ```
 
--   Complete the time-loop using the explanations given above.
+-   Complete the time-loop using the explanations and equations given above in {ref}`CHAPTER-3.1`. 
 
 -   Run the model and analyse the results. Report about your findings and explain what happens.
 
