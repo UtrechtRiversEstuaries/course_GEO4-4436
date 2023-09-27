@@ -149,7 +149,7 @@ $$ (Eq_3_19)
 Adding a discretized form for $S$ and inserting Eqs. {eq}`Eq_3_16` and {eq}`Eq_3_17` into Eq. {eq}`Eq_3_19` yields:
 
 $$
-F_{back}(H) = \frac { \frac {\eta_{i+1} - \eta_i}{dx} - \frac {1}{\alpha_r^2} \left( \frac {H}{k_c} \right)^{- \frac {1}{3}} \frac {q_w^2}{gH^3} } {1 - \frac {q_w^2}{gH^3}}
+F_{back}(H) = \frac { \frac {\eta_{i} - \eta_{i+1}}{dx} - \frac {1}{\alpha_r^2} \left( \frac {H}{k_c} \right)^{- \frac {1}{3}} \frac {q_w^2}{gH^3} } {1 - \frac {q_w^2}{gH^3}}
 $$ (Eq_3_20)
 
 Rearranging equation Eq. {eq}`Eq_3_18`, we get:
