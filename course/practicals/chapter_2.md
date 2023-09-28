@@ -724,7 +724,7 @@ _Please add this script to the folder that you will zip and send to us._
 ---
 
 (EXERCISE-2.6)=
-## **EXERCISE 6 - Sediment transport of the of the Rhine at Lobith**
+## **EXERCISE 6 - Sediment transport of the Rhine at Lobith**
 
 Let's continue with the dataset of daily-averaged discharge the Rhine you used at {ref}`EXERCISE-1.4`. Create again a new _.py_ file called _Exercise6_ in your work-directory, where you load _LobithDischargeData.asc_ and the commands needed to solve the following assignments.
 
