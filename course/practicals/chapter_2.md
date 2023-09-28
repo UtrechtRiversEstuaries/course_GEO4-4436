@@ -674,7 +674,7 @@ For illustrative purposes, let's start with an example of a function that is so 
 ## **EXERCISE 5 - Comparison of sediment transport predictors**
 
 ```{important}
-**You are expected to hand in this code.**
+**You are expected to hand in this code and all the functions you created.**
 ```
 
 We continue from {ref}`EXERCISE-2.3`. Here, the objective is to compare the sediment transport measured by Meyer-Peter and Mueller in their flume experiments to the predictions given by the _MPM_ and the _EH_ predictors (semi-empirical model formulations), using several user-defined functions.
@@ -718,13 +718,17 @@ We continue from {ref}`EXERCISE-2.3`. Here, the objective is to compare the sedi
 ```{Important}
 End of Exercise 5.
 
-_Please add this script to the folder that you will zip and send to us._
+_Please add this script and all the functions to the folder that you will zip and send to us._
 ```
 
 ---
 
 (EXERCISE-2.6)=
 ## **EXERCISE 6 - Sediment transport of the Rhine at Lobith**
+
+```{important}
+**You are expected to hand in this code.**
+```
 
 Let's continue with the dataset of daily-averaged discharge the Rhine you used at {ref}`EXERCISE-1.4`. Create again a new _.py_ file called _Exercise6_ in your work-directory, where you load _LobithDischargeData.asc_ and the commands needed to solve the following assignments.
 
