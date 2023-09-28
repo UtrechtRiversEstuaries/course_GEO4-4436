@@ -170,7 +170,7 @@ _Please add this script to the folder that you will zip and send to us._
 
 In a simple program, the commands are executed one after the other, independently from the output of the previous one. However, it is sometimes necessary to include some sort of decision-making in the programme. For example, we can decide to compute sediment transport using different predictors depending on the sediment characteristics and flow conditions. The programme should therefore be able to choose the appropriate calculation and forgo the others. It is also sometimes required to repeat a sequence of commands several times, until a certain condition is reached. The order in which commands or groups of commands are executed, is also called the *flow of the program*, and can be controlled in several ways in Python. In the following sections, the three basic flow control methods will be presented: if-statements, for-loops and while-loops.
 
-## 2.3 If-statements
+## 2.3 IF-statements
 
 **Purpose:**
 
