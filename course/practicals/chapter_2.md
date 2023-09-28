@@ -438,7 +438,7 @@ $$ (Eq_2_11)
 
 1.  Copy the data file _MPMtransportdata.xls_ in your current work directory and open a new _.py_ file, which you'll save as _Exercise3_.
 
-2.  Create a new vector $tau2$ containing the total shear stress $\tau$ when $D_{50}$ > 1 mm and the grain related shear stress $\tau_c$ otherwise ($D_{50}$ < 1 mm). You can use part of the script you wrote at {ref}`EXERCISE-1.3`.
+2.  Create a new vector $tau2$ containing the total shear stress $\tau$ when $D_{50}$ >= 1 mm and the grain related shear stress $\tau_c$ otherwise ($D_{50}$ < 1 mm). You can use part of the script you wrote at {ref}`EXERCISE-1.3`.
 
 	```{note}
 	[np.log()](https://numpy.org/doc/1.18/reference/generated/numpy.log.html) is natural logarithmic whilst [np.log10()](https://numpy.org/doc/1.18/reference/generated/numpy.log10.html) is base-10 logarithmic.
