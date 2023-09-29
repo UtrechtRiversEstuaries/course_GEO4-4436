@@ -347,10 +347,10 @@ plt.plot(a,b)
 **You are expected to hand in this code.**
 ```
 
-The aim is to calculate flow velocity and water depth in a river from known variables and parameters (find out through a web search what the difference is between "variable" and "parameter"). The flow resistance parameter for this river is $C = 44$ m<sup>1/2</sup>/s, the bankful discharge $Q_{bf} = 2500$ m<sup>3</sup>/s, the channel width $W = 500$ m and the channel gradient $S = 1.6 × 10^{−4}$ m/m. $Q_{bf}$ is defined as:
+The aim is to calculate flow velocity and water depth in a river from known variables and parameters (find out through a web search what the difference is between "variable" and "parameter"). The flow resistance parameter for this river is $C = 44$ m<sup>1/2</sup>/s, the discharge $Q = 2500$ m<sup>3</sup>/s, the channel width $W = 500$ m and the channel gradient $S = 1.6 × 10^{−4}$ m/m. $Q$ is defined as:
 
 $$
-Q_{bf} = h u W \\
+Q = h u W \\
 $$ (Eq_1_1)
 
 where $h$ is water depth in m and $u$ is flow velocity in m/s averaged over the depth and width of the channel. $u$ is related to $h$ following the Chezy equation:
