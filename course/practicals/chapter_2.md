@@ -381,8 +381,8 @@ for i in range (1,26)
 plt.figure()
 plt.plot(t,C/C[0])
 plt.title('Relative radioactive decay of C14 sample')
-xlabel('t($10^3$ years)')
-ylabel('$C_{t}/C_{0}$')
+plt.xlabel('t($10^3$ years)')
+plt.ylabel('$C_{t}/C_{0}$')
 ```
 
 Answer the following questions:
