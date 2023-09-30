@@ -1160,7 +1160,7 @@ This exercise is based on the dataset contained in the file _MPMtransportdata.xl
 	Create a new figure, which will be divided into two subplots. In the top subplot of the figure, plot sediment transport $q_s$ (y-axis) as a function of shear stress $\tau$ (x-axis), with a colormap depending on the base 10 logarithm of the Bonnefille number $D\ast$. On the bottom part, plot the same figure but then in its nondimensional form. Add colorbars with proper labels to both plots.
 
 	````{note}
-	For a better distribution of the colors, it is recommended to use the [base 10 logarithm](https://numpy.org/doc/stable/reference/generated/numpy.log10.html) of the Bonnefille number as the "color vector" argument of the function [scatter()](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html), instead of just the Bonnefille number.
+	For a better distribution of the colors, we use the [base 10 logarithm](https://numpy.org/doc/stable/reference/generated/numpy.log10.html) of the Bonnefille number as the "color vector" argument of the function [scatter()](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html), instead of just the Bonnefille number.
 	````
 
 15. Look at the data plotted in non-dimensional form. One set of points seems to follow a different trend than the others. What range of $D\ast$ does this correspond to?
