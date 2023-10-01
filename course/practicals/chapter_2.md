@@ -414,6 +414,10 @@ _Please add this script to the folder that you will zip and send to us._
 **You are expected to hand in this code.**
 ```
 
+```{important}
+You cannot do this assignment if you didn't complete {ref}`EXERCISE-1.3` of practical 1.
+```
+
 Let's come back to {ref}`EXERCISE-1.3` concerning the analysis of the dataset from [Meyer-Peter and Mueller (1948)](https://repository.tudelft.nl/islandora/object/uuid:4fda9b61-be28-4703-ab06-43cdc2a21bd7?). We observed that part of the data was following a different trend than the others after non-dimensionalisation. A closer look shows that these data points correspond to experiments performed using a very fine sediment ($D_{50}$ = 0.3402 mm). In this case, bedforms probably developed. Therefore, the use of a grain related shear stress $\tau_c$ instead of total shear stress $\tau$ (Eq. {eq}`Eq_1_3`) is more appropriate and might improve the prediction. We again assume that the density of the water $\rho$ is 1000 kg/m<sup>3</sup> and Earth's gravity acceleration $g$ is 9.81 m/s<sup>2</sup>.
 
 $\tau_c$ is calculated as follows:
@@ -680,6 +684,10 @@ For illustrative purposes, let's start with an example of a function that is so 
 
 We continue from {ref}`EXERCISE-2.3`. Here, the objective is to compare the sediment transport measured by Meyer-Peter and Mueller in their flume experiments to the predictions given by the _MPM_ and the _EH_ predictors (semi-empirical model formulations), using several user-defined functions.
 
+```{important}
+You cannot do this assignment if you didn't complete {ref}`EXERCISE-1.3` of practical 1 and {ref}`EXERCISE-2.3` of practical 2.
+```
+
 1.	In {ref}`EXERCISE-1.3`, we introduced the total shear stress $\tau$ (Eq. {eq}`Eq_1_3`) and in {ref}`EXERCISE-2.3` the grain related shear stress $\tau_c$ (Eq. {eq}`Eq_2_9`). The total shear of the flow is related to the total friction of the channel. For the computation of near-bed sediment transport, however, only the shear force on the grains is needed. [Einstein (1950)](https://books.google.nl/books?hl=nl&lr=&id=xIhtv2wpR9oC&oi=fnd&pg=PA1&dq=Einstein,+H.+(1950)), [Soulsby (1997)](https://www.icevirtuallibrary.com/doi/abs/10.1680/doms.25844.fm), and others conceptually divided the total shear stress $\tau$ into bed form-related shear stress $\tau_b$ and grain-related shear stress $\tau_c$, of which the latter is relevant for sediment transport.
 
 	Create two functions, one that calculates the total Shields parameter $\theta$ and one that calculates the grain-related Shields parameter $\theta^/$ with Eq. {eq}`Eq_1_4`, using $\tau$ and $\tau_c$, respectively. Think about all the input parameters that are needed.
@@ -732,6 +740,10 @@ _Please add this script and all the functions to the folder that you will zip an
 ```
 
 Let's continue with the dataset of daily-averaged discharge the Rhine you used at {ref}`EXERCISE-1.4`. Create again a new _.py_ file called _Exercise6_ in your work-directory, where you load _LobithDischargeData.asc_ and the commands needed to solve the following assignments.
+
+```{important}
+You cannot do this assignment if you didn't complete {ref}`EXERCISE-1.4` of practical 1.
+```
 
 ### Morphologically relevant statistics of the discharge dataset
 
