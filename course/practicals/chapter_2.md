@@ -446,7 +446,7 @@ $$ (Eq_2_11)
 
 3.  Calculate the associated Shields parameter $\theta$ for $tau2$ (Eq. {eq}`Eq_1_4`).
 
-4.  Use the function [scatter](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html) to plot the Einstein parameter $\phi$ (using the measured transport rates; Eq. {eq}`Eq_1_5`) against the newly computed Shields Parameter. Make the colours again dependent on the log of the nondimensionalized grain size $D\ast$ (Bonnefille number; Eq. {eq}`Eq_1_7`).
+4.  Use the function [scatter](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html) to plot the Einstein parameter $\phi$ (using the measured transport rates; Eq. {eq}`Eq_1_5`) against the newly computed Shields Parameter. Make the colours again dependent on the [base 10 logarithm](https://numpy.org/doc/stable/reference/generated/numpy.log10.html) of the nondimensionalized grain size $D\ast$ (Bonnefille number; Eq. {eq}`Eq_1_7`) and use the specific gravity of the sediment $s*10$ to set the size of the scatter points.
 
 5.	Now answer the following questions as brief comments in your scripts:
 
