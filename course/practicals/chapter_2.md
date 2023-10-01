@@ -628,11 +628,12 @@ For illustrative purposes, let's start with an example of a function that is so 
 	# input R radius(m)
 	# h cylinder height(m)
 	    import numpy as np
-	    def a_circ(R):
-	        return 2*np.pi*(R**2)
-	    def a_lat(R,h):
-	        return 2*np.pi*R*h
-	    return a_lat(R,h)+a_circ(R)
+ 	    # first calculate the area of the circles at the top and base
+	    a_circ = 2*np.pi*(R**2)
+	    # then calculate the area of the side of the cylinder (= lateral area)
+	    a_lat = 2*np.pi*R*h
+  	    # return the entire cylinder area as a sum of both
+	    return a_lat+a_circ
 	```
 
 -	Now try call upon these functions specifying a radius of ```2``` and a height of ```3```. Do you understand the results?
