@@ -716,7 +716,7 @@ You cannot do this assignment if you haven't done {ref}`EXERCISE-1.3` of practic
 
 4.  Make a new _.py_ file called _Exercise5_ in your work-directory. This script should call all the functions you created above and ultimately plots the predictions of both the MPM and EH predictors against the measured sediment transport rates from the MPM dataset in one figure with log scales. Add a line corresponding to x = y on the figure. Give the figure proper labels, titles and a legend.
 
--	Now answer the following questions as brief comments in your script:
+5.	Now answer the following questions as brief comments in your script:
 
 	1.	Why is creating a function outside of your script preferable to creating the function within your script?
 
