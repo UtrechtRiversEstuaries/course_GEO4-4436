@@ -200,7 +200,7 @@ This is one of the simplest numerical solutions that provides reasonably stable 
 
 -   Run the script and analyse the output.
 
--   The normal water depth $H_n$ and critical water depth $H_c$ are computed at the beginning of the script. Explain what these depths represent. Add to the figure two lines corresponding to $H = H_c$ and $H = H_n$. Modify the legend.
+-   The normal water depth $H_n$ and critical water depth $H_c$ are computed at the beginning of the script. Explain what these depths represent. Add to the figure two lines corresponding to $H = H_c$ and $H = H_n$. Make sure that these depths are plotted above the bed elevation. Modify the legend.
 
 -   Run the code for different values of $\xi_d$. Different behaviours can be observed depending on this value. Make a representative figure for each type of observed behaviour (to add to your separate document) and comment on your findings. Discuss in particular what is happening for values less than critical depth.
 
