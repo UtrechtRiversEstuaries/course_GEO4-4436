@@ -1299,7 +1299,7 @@ In this exercise, we will perform some analysis on a dataset containing the flow
 	```
 	import matplotlib as mpl
  	import importlib
-	importlib.reload(mpl); importlib.reload(plt); importlib.reload(sns)
+	importlib.reload(mpl); importlib.reload(plt);
 	```
 	````
 	`````
