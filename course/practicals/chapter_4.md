@@ -2,7 +2,7 @@
 
 ## The assignment
 
--  Ask a research question that interests you and answer it by analysis of data or numerical modelling in Python. Keep the questions as simple as possible! Consider what is possible in the given time:
+-  Ask a research question that interests you and answer it by analysis of data or numerical modelling in Python. Keep the questions as simple as possible! Consider what is possible in the given time.
 
 	```{note}
 	-  If you have come up with a question, it's likely too complicated. Ask some smaller questions to the larger main question and one of these smaller questions is probably your feasible research question.
