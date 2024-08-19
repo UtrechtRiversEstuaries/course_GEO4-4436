@@ -1,4 +1,4 @@
-# **Chapter 1 - Starting programming with Python test**
+# **Chapter 1 - Starting programming with Python**
 
 ```{important}
 ***NOTES ABOUT CHAPTER 1***

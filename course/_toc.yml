@@ -14,3 +14,4 @@ parts:
     - file: practicals/chapter_1
     - file: practicals/chapter_2
     - file: practicals/chapter_3
+    - file: practicals/chapter_4
