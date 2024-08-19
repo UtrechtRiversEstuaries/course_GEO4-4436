@@ -59,11 +59,11 @@
 ```{important} 
 The final grade for the creative exercise is determined as follows:
 
-- Average of the coarse teachers grade for clear poster and recognizable empirical cycle (20%)
+- Average of the course teachers grade for clear poster and recognizable empirical cycle (20%)
 
-- Average of the coarse teachers grade for convincing and clear presentation (20%)
+- Average of the course teachers grade for convincing and clear presentation (20%)
 
-- Average of the coarse teachers grade for creativity (20%)
+- Average of the course teachers grade for creativity (20%)
 
 - Does the code run and are the comments clear (20%)
 
