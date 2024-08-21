@@ -292,3 +292,19 @@ The following exercises have to be handed in for the practical of Chapter 3:
 ```{important}
 We expect the scripts and the separate word or PDF document in one zip file named **YourSurname_GEO4-4436_Chapter3**. Also include to your zip file all the separate files that you have imported in your scripts. Moreover, each script should be well labelled and contain the answers to questions as comments. Please note that only the relevant information should be displayed when running the scripts, so do not print every variable.
 ```
+
+```{important} 
+The final grade for the exercises of Chapter 3 is determined as follows:
+
+- Does the program run? (20%)
+
+- Does the program do what the assignment asked it and are the comments clear? (20%)
+
+- Are the answers to the questions correct? (20%)
+
+- Do the answers to the questions show insight of models and implications on reality? (20%)
+
+- Does the program produce clean figures? (20%)
+
+Each of the sub-grades is graded between 0 (poor) and 5 (well done). The final grade for the exercises of Chapter 3 will make up 5% of the final grade of the course.
+```

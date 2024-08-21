@@ -56,6 +56,16 @@
 
 -  Finally, your code will also be graded (0,1,2) based on whether it runs properly and if the comments are clear.
 
+## **PRODUCTS TO HAND IN**
+
+The following needs to be submitted for the creative exercise of Chapter 4:
+
+- **1 PDF of the poster** made on one page in powerpoint at the dimensions of your laptop screen. If you used sources (published papers), include references in small print.
+
+- **Your code**, including in the comments the online source of the data that you used, if applicable.
+
+- **Peer review forms**, which will be handed out during the presentation day.
+
 ```{important} 
 The final grade for the creative exercise is determined as follows:
 
@@ -68,14 +78,6 @@ The final grade for the creative exercise is determined as follows:
 - Does the code run and are the comments clear (20%)
 
 - Average of the grades from the peer review (20%)
+
+The final grade for the creative exercise will make up 20% of the final grade of the course.
 ```
-
-## **PRODUCTS TO HAND IN**
-
-The following needs to be submitted for the creative exercise of Chapter 4:
-
-- **1 PDF of the poster** made on one page in powerpoint at the dimensions of your laptop screen. If you used sources (published papers), include references in small print.
-
-- **Your code**, including in the comments the online source of the data that you used, if applicable.
-
-- **Peer review forms**, which will be handed out during the presentation day.

@@ -1327,3 +1327,19 @@ The following exercises have to be handed in for the practical of Chapter 1:
 ```{important}
 We expect the scripts in one zip file named **YourSurname_GEO4-4436_Chapter1**. Also include to your zip file all the separate files that you have imported in your scripts. Moreover, each script should be well labelled and contain the answers to questions as comments. Please note that only the relevant information should be displayed when running the scripts, so do not print every variable.
 ```
+
+```{important} 
+The final grade for the exercises of Chapter 1 is determined as follows:
+
+- Does the program run? (20%)
+
+- Are the comments such that we can understand what the code means and should do? (20%)
+
+- Does the program do what the assignment asked it to do? (20%)
+
+- Are the interpretations and answers to the questions correct? (20%)
+
+- Does the program produce clean figures? (20%)
+
+Each of the sub-grades is graded between 0 (poor) and 5 (well done). The final grade for the exercises of Chapter 1 will make up 5% of the final grade of the course.
+```
