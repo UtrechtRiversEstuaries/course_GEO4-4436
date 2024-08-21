@@ -7,12 +7,12 @@
 	```{note}
 	-  If you have come up with a question, it's likely too complicated. Ask some smaller questions to the larger main question and one of these smaller questions is probably your feasible research question.
 
-	-  Make hypotheses that answer your questions: can you test the hypothesis by plotting data of / changing values of one or two variables in one of the 1D models of Chapter 3?
+	-  Make hypotheses that answer your questions: can you test the hypothesis by plotting data of / changing values of one or two variables in one of the 1D models of [Chapter 3](https://utrechtriversestuaries.github.io/course_GEO4-4436/practicals/chapter_3.html)?
 
 	-  It does not have to be novel rocket science. You are welcome to be as creative as you want to be, but ask yourself what will be feasible with your programming skills.
 	```
 
--  Do the work! Properly code your data analysis and a plot (or a few), or change a chapter 3 model and run it.
+-  Do the work! Properly code your data analysis and a plot (or a few), or change a [Chapter 3 model](https://utrechtriversestuaries.github.io/course_GEO4-4436/practicals/chapter_3.html) and run it, clearly indicating what you changed.
 
 -  Present your work on a **simple** mini-poster which includes the following:
 
@@ -48,7 +48,7 @@
    - Written feedback on tips and tops
    ```
 
-   For the peer review, we count on your integrity and attentiveness and do not tolerate nepotism.
+   For the peer review, we count on your integrity and attentiveness. Realize that your fellow students benefit from a clear and critical review and not from a friendly review.
 
 -  Aside from the peer review, each poster and presentation will be graded by two course teachers. 
    The rubric of the course teachers contains the same items as the peer review, with additionally a grade (0,1,2) for creativity.
@@ -77,3 +77,5 @@ The following needs to be submitted for the creative exercise of Chapter 4:
 - **1 PDF of the poster** made on one page in powerpoint at the dimensions of your laptop screen. If you used sources (published papers), include references in small print.
 
 - **Your code**, including in the comments the online source of the data that you used, if applicable.
+
+- **Peer review forms**, which will be handed out during the presentation day.
