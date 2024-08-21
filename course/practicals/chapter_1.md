@@ -3,7 +3,7 @@
 ```{important}
 ***NOTES ABOUT CHAPTER 1***
 
--   The exercises in this chapter will be graded on the following criteria: (1) does the program run? (2) Can we understand it (=enough comments)? (3) Does it do the right thing as specified in assignment?
+-   The exercises in this chapter will be graded on the following criteria: (1) does the program run? (2) Can we understand it (=enough comments)? (3) Does it do the right thing as specified in assignment? See the end of this chapter for the full rubric.
 
 -   There are 4 exercises that you must hand that increase in difficulty and required time for completion.
 

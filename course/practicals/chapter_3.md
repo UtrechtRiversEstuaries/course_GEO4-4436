@@ -3,7 +3,7 @@
 ```{important}
 ***NOTES ABOUT CHAPTER 3***
 
--   You will receive an individual grade based on the competency of your coding and understanding of how this code relates to reality.
+-   You will receive an individual grade based on the competency of your coding and understanding of how this code relates to reality. See the end of this chapter for the full rubric.
 
 -   Please note that you must pass this practical to complete the course.
 
