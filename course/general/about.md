@@ -8,17 +8,17 @@ contributors { font-size:20px }
 
 <subtitle> Python manual </subtitle>
 
-<contributors> *Jana Cox, Steven Weisscher, Harke Douma, Eise Nota, Maarten Kleinhans* </contributors>
+<contributors> *Jana Cox, Steven Weisscher, Harke Douma, Eise Nota, Abigail Hillen-Schiller, Maarten Kleinhans* </contributors>
 
-Version: August 2023
+Version: August 2024
 
 # Important course information
 
 -	This course consists of 4 practicals. The theory and assignments of the first 3 practicals are covered in this manual in separate chapters. Below you can find a short description of their content.
 
-	**First practical:** How to use the main features of Python (manipulation of arrays of data and use of script files) and starting with data analysis and visualisation.
+	**First practical:** How to use the main features of Python (manipulating arrays of data and using script files) and getting started with data analysis and visualisation.
 
-	**Second practical:** How to write more complex programs using tests and loops as well as how to create your own functions and use these in a script file to analyse data.
+	**Second practical:** How to write more complex programs using tests and loops, as well as how to create your own functions and use these in a script to analyse data.
 
 	**Third practical:** Introduction to the modelling of physical processes. During this practical you will build a simple morphodynamic model.
 
@@ -32,15 +32,15 @@ Version: August 2023
 
 -   The answers to questions should be written as comments starting with ```#``` in the script files or (if specified) in a separate Word document.
 
--   Please note that the Exercises required to hand in are all specified at the end of each chapter. Do not hand in other exercises in the manual.
+-   Please note that the exercises you are required to hand in are all specified at the end of each chapter. Do not hand in other exercises in the manual.
 
--   The evaluation of the codes will be based on three main criteria:
+-   The evaluation of the code you hand in will be based on three main criteria:
 
 	1. Does the program run?
 
 	2. Does the program do the right thing?
 
-	3. Can we read/understand the code easily? (i.e. is it commented enough?)
+	3. Can we read/understand the code easily? (i.e. is it commented properly?)
 
 -   If you have issues with debugging, please first consult the debugging manual on Blackboard.
 
