@@ -362,7 +362,7 @@ See [Kleinhans, 2005](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2
 
 The commands should be written in a _.py_ file called _Exercise1_, saved in your current directory. The script should display the results.
 
-Do not forget to comment the file, and give meaningful names to the variables.
+Do not forget to comment the file and give meaningful names to the variables.
 
 ````{hint}
 $S = 1.6 × 10^{−4}$ can be written in Python as: ```1.6e-4```.
@@ -380,31 +380,31 @@ _Please add this script to the folder that you will zip and send to us._
 
 A data structure is the fundamental form that Python uses to store and manipulate data. It allows for efficient calculations and analysis over entire datasets. There are multiple types of data structures. In this course we will discuss _lists_, _arrays_ and _DataFrames_.
 
--	A **list** is simply a 1D series of numbers and is formed using square brackets \[...\]. You can also create lists within lists.
+-	A **list** is simply a one-dimensional series of elements (e.g. numbers, strings, or other lists) and can be create using using square brackets `[]`.
 
--	An **array** can be defined as a list of lists. An array contains data of all the same type (e.g. all numbers or all characters).
+-	An **array** is similar to a list, but it can have any number of dimensions. An array contains data of all the same type (e.g. all integers or all strings).
 
 -	A **DataFrame** is a matrix of different elements organized in rows and columns which CAN be of different datatypes.
 
-Different data types that constitute lists, arrays and DataFrames are provided in {numref}`Table 2`.
+Different data types that can be stored in lists, arrays and DataFrames are provided in {numref}`Table 2`.
 
 In this section we will learn how to create lists, arrays and dataframes, extract the relevant information from one of them, and perform calculations with them.
 
 ### 1.3.1 Creating lists, arrays and DataFrames
 
--   Clear your variables and run in your console: ```L = [1, 2, 5, 10]```. Check the Variable Explorer to see the kind of data structure that is produced.
+-   Clear your variables and run in your console: ```L = [1, 2, 5, 10]```. Check the Variable Explorer to see the type of data structure that is produced.
 
--   Now run in your console: ```L2 = [[1, 2, 5, 10],[3, 4, -2, 7]]```. Now compare $L$ and $L2$ in the Variable Explorer. Do you understand the difference in size?
+-   Now run in your console: ```L2 = [[1, 2, 5, 10], [3, 4, -2, 7]]```. Now compare $L$ and $L2$ in the Variable Explorer. Do you understand the difference in size?
 
 	```{hint}
 	By double clicking on a variable in the variable explorer, you can see more information.
 	```
 
-$L$ and $L2$ are data structures of the type _list_. Lists are a basic [Python structure](https://docs.python.org/3/tutorial/datastructures.html#), built in the core Python documentation. It therefore does not require a {ref}`package<packages_intro>` to be imported.
+$L$ and $L2$ are data structures of the type _list_. A list is a basic [Python structure](https://docs.python.org/3/tutorial/datastructures.html#) included in the core Python modules. It therefore does not require a {ref}`package<packages_intro>` to be imported.
 
 -   Now import numpy again as np.
 
--	Run: ```A = np.array(L2)```. What kind of variable do you obtain and what is the difference with $L2$?
+-	Run: ```A = np.array(L2)```. What kind of variable do you obtain and how is different from $L2$?
 
 $A$ is of type [array](https://numpy.org/doc/stable/reference/generated/numpy.array.html), which is a data structure type of the _numpy_ package.
 
@@ -422,12 +422,12 @@ Because of the worlwide usage of both packages, _numpy arrays_ can be easily tra
 
 (note_on_data_structures)=
 ```{important}
-Some {ref}`functions<functions_intro>`, notations or attributes specifically require a specific type of data structure (e.g. array or DataFrame). Therefore, you should always consider whether your variable is stored in the proper data structure!
+Some {ref}`functions<functions_intro>`, classes or attributes require a specific type of data structure (e.g. array or DataFrame). Therefore, you should always consider whether your variable is stored in the proper data structure!
 ```
 
-The advantage of package-built data structures is that it has its own built-in attributes. Attributes are called using a ```.```.
+The advantage of package-built data structures is that they have their own built-in attributes. Attributes are called using a ```.```.
 
--   Run the following codes:
+-   Run the following code:
 
 	```D.size```
 
@@ -437,7 +437,7 @@ The advantage of package-built data structures is that it has its own built-in a
 
 	```A.shape```
 
-As you can see, there are overlapping attributes between _numpy arrays_ and _pandas DataFrames_. For any type of data structure, you can usually find the attributes on the online available official documentation of the specific data structure (e.g. [pandas DataFrame](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html)).
+As you can see, there are overlapping attributes between _numpy arrays_ and _pandas DataFrames_. For any type of data structure, you can usually find the attributes online in the official documentation of the specific data structure (e.g. [pandas DataFrame](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html)).
 
 -   Have a closer look at the attributes listed in [DataFrame documentation](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Run the following codes:
 
@@ -451,22 +451,22 @@ Instead of defining all the specific elements, as you did for $L$ and $L2$, you 
 
 -	Run the following codes:
 
-	```A3 = np.arange(1,6,1)```
+	```A3 = np.arange(1, 6, 1)```
 
-	```A4 = np.arange(1,6,2)```
+	```A4 = np.arange(1, 6, 2)```
 
-	```A5 = np.arange(12,0,-3)```
+	```A5 = np.arange(12, 0, -3)```
 
-	```A6 = np.arange(12,0,3)```
+	```A6 = np.arange(12, 0, 3)```
 
 	Compare the outcomes. Do yo understand how the np.arange function works?
 
-The np.arange function requires as input (begin, end, interval). If no interval is specified, the default interval is 1. So ```np.arange(1,6)``` will return the same as ```np.arange(1,6,1)```.
+The np.arange function requires as input "(begin, end, interval)". If no interval is specified, the default interval is 1. So ```np.arange(1, 6)``` will return the same as ```np.arange(1, 6, 1)```.
 
 ````{note}
 The end number is not included in the output array.
 
-Thus ```np.arange(1,6,1)``` returns ```[1 2 3 4 5]``` and NOT ```[1 2 3 4 5 6]```.
+Thus ```np.arange(1, 6, 1)``` returns ```[1 2 3 4 5]``` and NOT ```[1 2 3 4 5 6]```.
 ````
 
 ### 1.3.2 Concatenation, vstack and hstack
