@@ -464,7 +464,7 @@ Instead of defining all the specific elements, as you did for $L$ and $L2$, you 
 The np.arange function requires as input "(begin, end, interval)". If no interval is specified, the default interval is 1. So ```np.arange(1, 6)``` will return the same as ```np.arange(1, 6, 1)```.
 
 ````{note}
-The end number is not included in the output array.
+The _end_ number is not included in the output array.
 
 Thus ```np.arange(1, 6, 1)``` returns ```[1 2 3 4 5]``` and NOT ```[1 2 3 4 5 6]```.
 ````
@@ -475,16 +475,16 @@ Sometimes it can be useful to combine several related arrays or lists into one u
 
 -	Clear your variables and import numpy. Run the following codes:
 
-	```a = np.arange(1,3)```
+	```a = np.arange(1, 3)```
 
-	```b = np.arange(4,6)```
+	```b = np.arange(4, 6)```
 
-	```c = np.concatenate((a,b))```
+	```c = np.concatenate((a, b))```
 
 	Inspect how arrays $a$ and $b$ are joined together into array $c$.
 
 	```{note}
-	Several functions require double brackets, e.g. _np.concatenate(( ))_.
+	Several functions require double parens (parentheses, `(())`) or double brackets (`[[]]`), e.g. _np.concatenate(( ))_.
 	```
 
 The default is to concatenate arrays in the same dimension (also referred to as horizontally).
@@ -495,9 +495,9 @@ The above arrays are 1-dimensional (i.e. their size has only one direction, for 
 
 -	Now run:
 
-	```d = np.vstack((a,b))```
+	```d = np.vstack((a, b))```
 
-	```e = np.hstack((a,b))```
+	```e = np.hstack((a, b))```
 
 	Compare the outcomes.
 
@@ -543,7 +543,7 @@ For a _numpy array_ you can identify an element by position as follows:
 
 	```A = np.array(L)```
 
-	```NA = A[1,3]```
+	```NA = A[1, 3]```
 
 	Here $NA$ provides the element of array $A$ at position (1,3).
 
@@ -551,7 +551,7 @@ For a _numpy array_ you can identify an element by position as follows:
 
 	```D = pd.DataFrame(L)```
 
-	```ND = D[1,3]```
+	```ND = D[1, 3]```
 
 	Here we refer to an {ref}`earlier note<note_on_data_structures>` on data structures.
 
@@ -569,9 +569,9 @@ To replace an element with something else we use [numpy where](https://numpy.org
 
 -   Run the following codes:
 
-	```A = np.where(A==-2,2,A)```
+	```A = np.where(A == -2, 2, A)```
 
-	```D = D.replace(-2,2)```
+	```D = D.replace(-2, 2)```
 
 	Compare $A$ and $D$ with their previous outputs. Do you understand how the _np.where_ function works?
 
@@ -579,18 +579,18 @@ Instead of single elements, you can also call entire rows and columns.
 
 -   Run the following codes:
 
-	```RA = A[0,0:4]```
+	```RA = A[0, 0:4]```
 
-	```CA = A[0:2,2]```
+	```CA = A[0:2, 2]```
 
-	```RD = D.iloc[0,0:4]```
+	```RD = D.iloc[0, 0:4]```
 
-	```CD = D.iloc[0:2,2]```
+	```CD = D.iloc[0:2, 2]```
 
 	Examine the outputs.
 
 	````{note}
-	Instead of defining a row or column through its first and last index, you can also just use ```:```, e.g. for the variables definede here, ```RA = A[0,:]``` yields the same output as ```RA = A[0,0:4]```. The same goes for ```CD = D.iloc[:,2]``` and ```CD = D.iloc[0:2,2]```.
+	Instead of defining a row or column through its first and last index, you can also just use ```:```, e.g. for the variables definede here, ```RA = A[0, :]``` yields the same output as ```RA = A[0, 0:4]```. The same goes for ```CD = D.iloc[:, 2]``` and ```CD = D.iloc[0:2, 2]```.
 	````
 
 -	Create two new vectors containing the second rows of $A$ and $D$.
@@ -605,13 +605,13 @@ If you conduct simple operations on a numpy array with a scalar, all the element
 
 -	For instance, inspect the outputs of the following commands:
 
-	```2*A```
+	```2 * A```
 
-	```2/A```
+	```2 / A```
 
-	```2+A```
+	```2 + A```
 
-	```2-A```
+	```2 - A```
 
 -	Now try the same operations with pandas DataFrame $D$. Do these operations also work for Dataframes?
 
