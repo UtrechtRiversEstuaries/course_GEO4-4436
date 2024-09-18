@@ -387,11 +387,11 @@ plt.ylabel('$C_{t}/C_{0}$')
 
 Answer the following questions:
 
-1.  Is a for loop or an if loop more appropriate in this situation? Why?
+1.  Is a for loop or an if statement more appropriate in this situation? Why?
 
-2.  Can you think of an example where an if loop is appropriate but a for loop is not?
+2.  Can you think of an example where an if statement is appropriate but a for loop is not?
 
-3.  Can you think of an example where you need to combine an if and for loop?
+3.  Can you think of an example where you need to combine an if statement and for loop?
 
 	_Answer open questions as remarks in separate lines starting with: '#'_.
 
