@@ -36,7 +36,7 @@ This should be done in two main steps (see also {ref}`Figure 4<Fig. 4>`).
 -   The sediment transport rate $q_t$ is first computed as a function of the local slope at each node (proportionality coefficient given in the Python script).
 
 	```{hint}
-	The local slope, defined as minus the gradient of the bed elevation ($S = −\partial \eta$), can be computed using the _numpy_ function [gradient](https://numpy.org/doc/stable/reference/generated/numpy.gradient.html).
+	The local slope, defined as the gradient of the bed elevation ($S = \partial \eta$), can be computed using the _numpy_ function [gradient](https://numpy.org/doc/stable/reference/generated/numpy.gradient.html). When computing the slope, do these values make sense to you?
 	```
 
 -   To compute the bed evolution per grid point, we need to calculate the difference between the sediment coming into the grid point and leaving the grid point. This is the amount of sediment that gets stored or eroded from that point, which changes the  bed elevation. For bed evolution, the sediment balance equation (also called Exner equation) is then used. You can see this as a derivative of the law of mass conservation. It can be written as:
