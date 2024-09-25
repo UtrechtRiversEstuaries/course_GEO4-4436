@@ -21,7 +21,7 @@
 (CHAPTER-3.1)=
 ## 3.1 A very simplified morphodynamic model
 
-In this section we consider a one-dimensional river with an initial constant slope $S_0 = 0.1$ m/m. To gain insight, we want to compute the evolution of the river bed in space and time using very basic physical laws. Similar approaches are used in cellular automats of rivers and in so-called reduced-complexity models in earth surface, processes and landforms (try a search in Google Scholar to see debates and controversies). In this model, we do _not_ consider the influence of the water motion and critical Shields number etc. on sediment transport. The total sediment transport rate $q_t$ [in $m^3/s$ per m width, or $m^2/s$] is therefore assumed to depend simply linearly on the local bed slope $S$. More precisely, we assume that:
+In this section we consider a one-dimensional river with an initial constant slope $S_0 = -0.1$ m/m. To gain insight, we want to compute the evolution of the river bed in space and time using very basic physical laws. Similar approaches are used in cellular automats of rivers and in so-called reduced-complexity models in earth surface, processes and landforms (try a search in Google Scholar to see debates and controversies). In this model, we do _not_ consider the influence of the water motion and critical Shields number etc. on sediment transport. The total sediment transport rate $q_t$ [in $m^3/s$ per m width, or $m^2/s$] is therefore assumed to depend simply linearly on the local bed slope $S$. More precisely, we assume that:
 
 $$
 q_t = \alpha_{s_t} S
