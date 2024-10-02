@@ -3,9 +3,9 @@
 ```{important}
 ***NOTES ABOUT CHAPTER 3***
 
--   You will receive an individual grade based on the competency of your coding and understanding of how this code relates to reality. See the end of this chapter for the full rubric.
+-   The exercises in this chapter will be graded on the following criteria: (1) does the program run? (2) Does it do the right thing as specified in assignment and is it properly commented (3) Do your answers show insights into the models? See the end of this chapter for the full rubric.
 
--   Please note that you must pass this practical to complete the course.
+-   You will receive an individual grade based on the competency of your coding and understanding of how this code relates to reality.
 
 -   There are 3 exercises that you must hand that increase in difficulty and required time for completion.
 
@@ -17,6 +17,7 @@
 
 -   The deadline for this Chapter is at 9:00 before the start of next practical.
 ```
+
 
 (CHAPTER-3.1)=
 ## 3.1 A very simplified morphodynamic model
@@ -290,7 +291,7 @@ The following exercises have to be handed in for the practical of Chapter 3:
 - {ref}`EXERCISE-3.3`
 
 ```{important}
-We expect the scripts and the separate word or PDF document in one zip file named **YourSurname_GEO4-4436_Chapter3**. Also include to your zip file all the separate files that you have imported in your scripts. Moreover, each script should be well labelled and contain the answers to questions as comments. Please note that only the relevant information should be displayed when running the scripts, so do not print every variable.
+We expect the scripts and the separate word or PDF document in one zip file named **YourSurname_GEO4-4436_Chapter3**. Also include to your zip file all the separate files that you have imported in your scripts, as well as the **word** file. Moreover, each script should be well labelled and contain the answers to questions should be provided in the word file. Please note that only the relevant information should be displayed when running the scripts, so do not print every variable.
 ```
 
 ```{important} 
