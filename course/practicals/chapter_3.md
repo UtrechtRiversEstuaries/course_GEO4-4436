@@ -291,7 +291,7 @@ The following exercises have to be handed in for the practical of Chapter 3:
 - {ref}`EXERCISE-3.3`
 
 ```{important}
-We expect the scripts and the separate word or PDF document in one zip file named **YourSurname_GEO4-4436_Chapter3**. Also include to your zip file all the separate files that you have imported in your scripts, as well as the **word** file. Moreover, each script should be well labelled and contain the answers to questions should be provided in the word file. Please note that only the relevant information should be displayed when running the scripts, so do not print every variable.
+We expect the scripts and the separate word or PDF document in one zip file named **YourSurname_GEO4-4436_Chapter3**. Also include to your zip file all the separate files that you have imported in your scripts. Moreover, each script should be well labelled and contain the answers to questions should be provided in the word file. Please note that only the relevant information should be displayed when running the scripts, so do not print every variable.
 ```
 
 ```{important} 
