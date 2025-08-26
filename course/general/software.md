@@ -4,7 +4,7 @@
 
 ## Installing Conda
 
-You will need the Conda package manager to setup the work environment for the course.
+You will need the Conda package manager to set up the work environment for the course.
 You can install [Anaconda](https://www.anaconda.com/) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html).
 The user guide and short reference on Conda can be found [here](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html).
 
@@ -14,7 +14,7 @@ Miniconda is already installed in the VMA computer rooms.
 
 ## Installing the course environment
 
-To setup the course environment, first create a YAML file (e.g. geo4436.yaml in your course directory) with the following content:
+To set up the course environment, first create a YAML file (e.g. geo4436.yaml in your course directory) with the following content:
 
 ```{literalinclude} ../../environment/environment.yaml
 :language: yaml
@@ -33,7 +33,7 @@ Anaconda Prompt should be installed together with Anaconda. You can look for it 
 Then create the environment with:
 
 ```
-(base) C:\Users\YourName> conda env create -f geo4436.yaml
+(base) C:\Users\YourName\course_GEO-4436> conda env create -f geo4436.yaml
 ```
 
 This will install all required software for the course, and may take a while.

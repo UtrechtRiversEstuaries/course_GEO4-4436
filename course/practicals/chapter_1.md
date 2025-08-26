@@ -5,7 +5,7 @@
 
 -   The exercises in this chapter will be graded on the following criteria:
 	(1) Does the program run?
-	(2) Can we understand it (=properly commented)?
+	(2) Can we understand it (= properly commented)?
 	(3) Does it do the right thing as specified in assignment? See the end of this chapter for the full rubric.
 
 -   There are 4 exercises that you must hand in, that increase in difficulty and time required for completion. Try to schedule your workload accordingly.
@@ -44,9 +44,11 @@ Setup of Spyder text editor. Source: [Harish Maddukuri](https://medium.com/coder
 
 ### 1.1.2 Creating your own workspace (directory)
 
-Python scripts are generally created and saved into _Projects_. These projects are located in a workspace/directory. The current workspace or directory is is shown in the taskbar. We advise you start every new practical by creating a new Project. To do that:
+Python scripts are generally created and saved into _Projects_. These projects are located in a workspace/directory. The current workspace or directory is shown in the taskbar.
 
--   Projects -> New Project
+We advise you start every new practical by creating a new Project. To do that:
+
+-   Projects $\rarr$ New Project
 
 -   Give the project a name, e.g. _Practical1_
 
@@ -70,9 +72,9 @@ Any files that you create will now all be found in your project at the location 
 
 -   ![](img/media/image6.png) to save the currently displayed .py file
 
--   ![](img/media/image7.png) to save all opened .py files
+-   ![](img/media/image7.png) to save all open .py files
 
-Now create a new project in a .py file, called ***Practical1***. This is the file you will be working in today.
+Now create a new project and a new file called `Practical1.py`. This is the file you will be working in today.
 
 ```{note}
 For the coming exercises, you need to create different .py files. Don't code the exercises in the _Practical1_ file.
@@ -88,19 +90,48 @@ In this section we will perform some introductory exercises of Python. We will d
 
 You can see that the output prints the text (=_string_) you just wrote between the quotation marks.
 
+```{tip}
+**Definition**
+A _string_ ('str') is an object that Python displays as-is and does not interpret, such as text that is intended for the human user. You can create a string by putting the text in single (`' '`) or double (`" "`) quotation marks.
+
+For example, in the code `print("Hello, World!")`, the sequence `Hello, World!` is a string. The word `print` is a function (we will learn about these later), a type of instruction to the computer. If we were to write `"print"` instead, Python would no longer interpret this as an instruction, and would not pring the subsequent string to the console.
+```
+
 -	To verify whether this is indeed a string, run: ```type("Hello, World!")```.
 
-You just asked the Spyder console to directly display information. However, you will usually want to store such information in a **variable**.
+You just asked the Spyder console to directly display information. Python will immediately forget this information after displaying it. For Python to remember information for future use, we need to store it in a **variable**.
 
--	For instance, define variable _a_ by running: ```a = 2.5```.
+-	For instance, declare variable _a_ by running: ```a = 2.5```.
 
-With this command, we defined a new variable _a_ and assigned the value 2.5 to it.
+With this command, we declare a new variable _a_ and assigned the value 2.5 to it.
+
+```{tip}
+**Definition**
+A _variable_ is a container for storing information. It has a name, such as `a`, and a value, such as `2.5`. The value of a variable may be a number, a string, or an entire collection of such objects. Pretty much anything can be stored in a variable.
+
+Assigning a value to a new variable is known in programmer-speak as _declaring_ that variable.
+```
+
+```{important}
+Assigning a new value to an existing variable will delete the old value of that variable.
+For example, if we run:
+`[1]: x = 5`
+`[2]: x = "Hello, World!"`
+only the value "Hello, World!" will be stored in the variable `x`.
+```
 
 -	Now type in the console: ```b = 3 * a ** 2``` and press enter.
 
-We defined a new variable, *b*, equal to: $3a^2$.
+We declared a new variable, *b*, equal to $3a^2$.
 
 -	To see the value of *b*, run ```print(b)``` or just ```b``` in your console.
+
+```{important}
+**Printing to the console**
+As you can see above, when working in the console it is enough to type a command or variable name, and its result or value will be printed (shown) on screen.
+
+In the next section, we will start working in `.py` files (a.k.a. code files or scripts). With these, only objects or outputs that are explicitly printed using the `print` function will appear on screen. Everything else will remind behind the scenes, as it were.
+```
 
 You can also navigate to the {ref}`Variable Explorer <Fig. 1>`. This provides the name, type, size, and value of the variables that are currently stored in the Spyder application.
 
@@ -133,7 +164,7 @@ The basic Python operations and their symbols are presented in {numref}`Table 1`
   - Example
 * - ```str```
   - String; text
-  - ```Hello, World!```
+  - ```"Hello, World!"```
 * - ```int```
   - Integer; numeric
   - ```2```
@@ -147,7 +178,7 @@ The basic Python operations and their symbols are presented in {numref}`Table 1`
 
 #### Initial lines of a Python script
 
-Now we start working in the {ref}`Editor <Fig. 1>`. A new .py file in Spyder will automatically show some initial information, e.g.:
+Now we start working in the {ref}`Editor <Fig. 1>`. A new `.py` file in Spyder will automatically show some initial information, e.g.:
 
 ```
 # -*- coding: utf-8 -*-
@@ -177,7 +208,7 @@ The ```# -*- coding: utf-8 -*-``` is a remnant of an older Python version. You c
 
 #### Running a Python script or specific lines
 
--	Add two new lines to your script where you define the same variables _a_ and _b_ as you did earlier above.
+-	Add two new lines to your script where you declare the same variables _a_ and _b_ as you did earlier above.
 
 -	Add ```print(b)``` in a new line.
 
@@ -201,7 +232,7 @@ Note: there is a difference between RUNNING the file (using the green play butto
 
 -   Now type in the console: ```c = a * 30``` and press Enter
 
-We are defining a new variable $c$, as a function of variable $a$, but you just deleted $a$. Therefore, the command cannot be executed, since $a$ is not defined anymore. An error message appears in the console.
+We are declaring a new variable $c$, as a function of variable $a$, but you just deleted $a$. The command cannot be executed, because $a$ is not stored in Python's memory anymore. An error message appears in the console.
 
 (functions_intro)=
 #### Python functions
@@ -221,9 +252,9 @@ from numpy import pi
 from numpy import cos
 ```
 
-You just imported two object -- one is the variable _pi_ and the other is a function that calculates the _cosine_ of a value. Run: ```cos(pi)```. Now clear the console and run ```cos(pi)``` again. Clearing the console also deletes all imported objects!
+You just imported two object -- one is the constant _pi_ and the other is a function that calculates the _cosine_ of a value. Run: ```cos(pi)```. Now clear the console and run ```cos(pi)``` again. Clearing the console also deletes all imported objects!
 
-So what exactly is ```numpy```, above?
+Now, what exactly is ```numpy```?
 
 (packages_intro)=
 #### Python packages
@@ -243,10 +274,10 @@ The advantage of Python is that it is free and open-source, where any user can w
 	```{note}
 	For any package or function that you want to import, it is important to do this at the beginning of your Python script, **before** using them!
 
-	If you import a package but don't use it, an orange triangle ![](img/media/image10.png) will appear to the left of the import command.
+	If you import a package but don't use it, an orange triangle ![](img/media/image10.png) will appear to the left of the import command in the Spyder editor.
 	```
 
--	Now run your script and you can use all of the functions available in the _numpy_ library. Run in your console: ```np.cos(np.pi)``` and then ```cos(pi)```. Do you understand the difference here?
+-	Run your script and you can use all of the functions available in the _numpy_ library. Run in your console: ```np.cos(np.pi)``` and then ```cos(pi)```. Do you understand the difference here?
 
 -   Now test some of the other frequently-used mathematical functions of _numpy_, given in {numref}`Table 3`.
 
@@ -267,7 +298,7 @@ The advantage of Python is that it is free and open-source, where any user can w
 * - ```np.round()```
   - round towards the nearest {ref}`integer <Table 2>`
 * - ```np.ceil()```, ```np.floor()```
-  - round towards plus (or minus) infinity
+  - round towards plus (`ceil`) or minus (`floor`) infinity
 * - ```np.log()```, ```np.log10()```
   - natural logarithm, logarithm base 10
 * - ```np.exp()```
@@ -275,10 +306,10 @@ The advantage of Python is that it is free and open-source, where any user can w
 ```
 
 ```{important}
-All of these mathematical functions have their own documentation at the [official numpy web page](https://numpy.org/doc/stable/reference/routines.math.html), or on many of the other Python-related web pages. A very important step of debugging is **always** to ask a search engine! Also see the the debug manual on Blackboard. Note, however, that asking an Artificial Intelligence to write your code will not help your learning (and may count as plagiarism, and has an enormous CO<sub>2</sub> footprint).
+All of these mathematical functions have their own documentation at the [official numpy web page](https://numpy.org/doc/stable/reference/routines.math.html), or on many of the other Python-related web pages. A very important step of debugging is **always** to ask a search engine! Also see the the debug manual on Brightspace. Note, however, that asking an Artificial Intelligence to write your code will not help your learning (and may count as plagiarism, and has an enormous CO<sub>2</sub> footprint).
 ```
 
--	If you want to see all the attributes of a function or package, run for instance ```dir(np)``` or ```dir(np.cos)```.
+-	If you want to see all the attributes of a function or package, run for instance ```help(np)``` or ```help(np.cos)```.
 
 
 Aside from _numpy_, there are countless other free and open source packages that constitute the vibrant community of Python. As you will find out later, other important packages in this course are:
@@ -288,28 +319,30 @@ Aside from _numpy_, there are countless other free and open source packages that
 -	[matplotlib](https://matplotlib.org/stable/index.html), which is used for data visualisation.
 
 ```{note}
-A Python function is specific to a single task. Packages also include modules, which have a .py extension and define multiple functions, classes, attributes etc.
+A Python function is specific to a single task. Packages can also include modules, which define multiple functions, classes, attributes etc.
 ```
 
 ## 1.2  Working with .py files
 
-A .py file is a program file or script written in Python. It is a succession of Python commands which can be written and edited using a text editor and then is run using the Python interpreter - this is the behind-the-scenes part of Python, which translates our code into something the computer can understand directly. A Python IDE such as Spyder contains a text editor (and other useful elements, as we've seen), and is capable of communicating directly with the interpreter. Using .py files allows you to organise and save different series of commands. Scripts can be edited, extended or corrected whenever you want and can be executed several times. Writing the commands into a script is necessary when you perform advanced data analysis, since it allows you to check/improve your methodology, but also to be sure you perform the exact same data processing for several datasets, for instance.
+A `.py` file is a program file or script written in Python. It is a succession of Python commands which can be written and edited using a text editor and then is run using the Python interpreter - this is the behind-the-scenes part of Python, which translates our code into something the computer can understand directly. A Python IDE such as Spyder contains a text editor (and other useful elements, as we've seen), and is capable of communicating directly with the interpreter. Using `.py` files allows you to organise and save different series of commands. Scripts can be edited, extended or corrected whenever you want and can be executed several times. Writing the commands into a script is necessary when you perform advanced data analysis, since it allows you to check/improve your methodology, but also to be sure you perform the exact same data processing for several datasets, for instance.
 
 ````{important}
-It is important to add comment lines to your scripts to make them easier to understand. This is particularly useful when you open a script after a long time and try to figure out what you have been doing. In a Python script, anything written to the right of a hashtag ```#``` is considered comment and will be ignored during the execution. In the .py files, the comments appear in a different colour (grey by default).
+Good code includes comments to explain to anyone reading what different parts of it do - most importantly to Future You, who will be staring at the script a month from now, wondering "wth was I trying to do here?"
+Comments in Python start with a `#`, which tells the interpreter to skip the rest of the line and move on to the next one.
+In Spyder, comments will appear in a different colour (grey by default).
 ````
 
 When a script is executed, Python executes the commands in the order they are written. It is therefore important to consider in which order you want to execute your commands. Generally, scripts are structured as follows:
 
--	**Header**						Describe the script in a few words (e.g. objective, date of creation, author of the script)
+-	**Docstring (documentation string)**	Describe the script in a few words (e.g. objective, date of creation, author of the script)
 
--	**Package import**				Import all the necessary packages to perform operations (e.g. numpy)
+-	**Package import**						Import all the necessary packages to perform operations (e.g. numpy)
 
--	**Initialization**				Define the main variables and load your data
+-	**Initialization**						Declare the main variables and load your data
 
--	**Calculations**				Execute the calculations
+-	**Calculations**						Execute the calculations
 
--	**Output and visualisation**	Commands to display the results, plot graphics and save output
+-	**Output and visualisation**			Commands to display the results, plot graphics and save output
 
 Copy-paste and execute the simple example below:
 
@@ -335,6 +368,10 @@ b = a ** 2
 
 # Output and visualisation
 plt.plot(a, b)
+```
+
+```{tip}
+Best practices for using Python are described in a series of "Python Enhancement Proposals" or [PEPs](https://peps.python.org/pep-0000/). Most relevant to the beginning and even advanced Python user are [PEP 8 - the style guide](https://pep8.org/) and [PEP 20 - the Zen of Python](http://www.thezenofpython.com/) (or run `import this` in your Spyder console).
 ```
 
 ---

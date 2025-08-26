@@ -10,7 +10,7 @@ contributors { font-size:20px }
 
 <contributors> *Jana Cox, Steven Weisscher, Harke Douma, Eise Nota, Abigail Hillen-Schiller, Maarten Kleinhans* </contributors>
 
-Version: August 2024
+Version: August 2025
 
 # Important course information
 
@@ -22,13 +22,13 @@ Version: August 2024
 
 	**Third practical:** Introduction to the modelling of physical processes. During this practical you will build a simple morphodynamic model.
 
-	**Fourth practical:** Creative assignment, where you will be answering your own research question using Python (see blackboard for instructions).
+	**Fourth practical:** Creative assignment, where you will be answering your own research question using Python (see Brightspace for instructions).
 
--	Each practical will be graded on a scale of 1 to 10. Of the final grade, the creative exercise is worth 20% and the first three practicals are each 5%. So all practicals combined make up 35% of the final grade.
+-	Each practical will be graded on a scale of 1 to 10. Of the final grade, the first three practicals are worth 5% each and the creative exercise is worth 20%. So all practicals combined make up 35% of the final grade.
 
 -   During the practicals, you will have to work individually.
 
--   The Python assignments should be handed in following the deadlines provided by the lecturers. The different files (Python code, data files and answers to the questions) should be combined in a zip-file and sent to the lecturers of the course as instructed in class.
+-   The Python assignments should be handed in following the deadlines provided by the lecturers. All the files necessary for your code to run (Python scripts, data files), as well as answers to the questions, should be combined in a zip-file and sent to the lecturers of the course as instructed in class.
 
 -   The answers to questions should be written as comments starting with ```#``` in the script files or (if specified) in a separate Word document.
 
@@ -40,9 +40,9 @@ Version: August 2024
 
 	2. Does the program do the right thing?
 
-	3. Can we read/understand the code easily? (i.e. is it commented properly?)
+	3. Can we read/understand the code easily? (_i.e._, is it commented properly?)
 
--   If you have issues with debugging, please first consult the debugging manual on Blackboard.
+-   If you have issues with debugging, please first consult the debugging manual on Brightspace.
 
 -   If you run into problems during coding or debugging, consider:
 
