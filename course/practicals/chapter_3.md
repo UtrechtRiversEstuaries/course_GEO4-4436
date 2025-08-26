@@ -3,9 +3,9 @@
 ```{important}
 ***NOTES ABOUT CHAPTER 3***
 
--   You will receive an individual grade based on the competency of your coding and understanding of how this code relates to reality. See the end of this chapter for the full rubric.
+-   The exercises in this chapter will be graded on the following criteria: (1) does the program run? (2) Does it do the right thing as specified in assignment and is it properly commented (3) Do your answers show insights into the models? See the end of this chapter for the full rubric.
 
--   Please note that you must pass this practical to complete the course.
+-   You will receive an individual grade based on the competency of your coding and understanding of how this code relates to reality.
 
 -   There are 3 exercises that you must hand that increase in difficulty and required time for completion.
 
@@ -18,10 +18,11 @@
 -   The deadline for this Chapter is at 9:00 before the start of next practical.
 ```
 
+
 (CHAPTER-3.1)=
 ## 3.1 A very simplified morphodynamic model
 
-In this section we consider a one-dimensional river with an initial constant slope $S_0 = 0.1$ m/m. To gain insight, we want to compute the evolution of the river bed in space and time using very basic physical laws. Similar approaches are used in cellular automats of rivers and in so-called reduced-complexity models in earth surface, processes and landforms (try a search in Google Scholar to see debates and controversies). In this model, we do _not_ consider the influence of the water motion and critical Shields number etc. on sediment transport. The total sediment transport rate $q_t$ [in $m^3/s$ per m width, or $m^2/s$] is therefore assumed to depend simply linearly on the local bed slope $S$. More precisely, we assume that:
+In this section we consider a one-dimensional river with an initial constant slope $S_0 = -0.1$ m/m. To gain insight, we want to compute the evolution of the river bed in space and time using very basic physical laws. Similar approaches are used in cellular automats of rivers and in so-called reduced-complexity models in earth surface, processes and landforms (try a search in Google Scholar to see debates and controversies). In this model, we do _not_ consider the influence of the water motion and critical Shields number etc. on sediment transport. The total sediment transport rate $q_t$ [in $m^3/s$ per m width, or $m^2/s$] is therefore assumed to depend simply linearly on the local bed slope $S$. More precisely, we assume that:
 
 $$
 q_t = \alpha_{s_t} S
@@ -36,7 +37,7 @@ This should be done in two main steps (see also {ref}`Figure 4<Fig. 4>`).
 -   The sediment transport rate $q_t$ is first computed as a function of the local slope at each node (proportionality coefficient given in the Python script).
 
 	```{hint}
-	The local slope, defined as minus the gradient of the bed elevation ($S = −\partial \eta$), can be computed using the _numpy_ function [gradient](https://numpy.org/doc/stable/reference/generated/numpy.gradient.html).
+	The local slope, defined as the gradient of the bed elevation ($S = \partial \eta$), can be computed using the _numpy_ function [gradient](https://numpy.org/doc/stable/reference/generated/numpy.gradient.html). When computing the slope, do these values make sense to you?
 	```
 
 -   To compute the bed evolution per grid point, we need to calculate the difference between the sediment coming into the grid point and leaving the grid point. This is the amount of sediment that gets stored or eroded from that point, which changes the  bed elevation. For bed evolution, the sediment balance equation (also called Exner equation) is then used. You can see this as a derivative of the law of mass conservation. It can be written as:
@@ -290,7 +291,7 @@ The following exercises have to be handed in for the practical of Chapter 3:
 - {ref}`EXERCISE-3.3`
 
 ```{important}
-We expect the scripts and the separate word or PDF document in one zip file named **YourSurname_GEO4-4436_Chapter3**. Also include to your zip file all the separate files that you have imported in your scripts. Moreover, each script should be well labelled and contain the answers to questions as comments. Please note that only the relevant information should be displayed when running the scripts, so do not print every variable.
+We expect the scripts and the separate word or PDF document in one zip file named **YourSurname_GEO4-4436_Chapter3**. Also include to your zip file all the separate files that you have imported in your scripts. Moreover, each script should be well labelled and contain the answers to questions should be provided in the word file. Please note that only the relevant information should be displayed when running the scripts, so do not print every variable.
 ```
 
 ```{important} 
