@@ -176,6 +176,12 @@ The basic Python operations and their symbols are presented in {numref}`Table 1`
   - ```True``` or ```False```
 ```
 
+```{important}
+**Reserved words and built-in functions**
+Some terms in Python have a specific pre-defined meaning. In Spyder, these will appear in yellow or purple. If you type a name for a new variable and it changes colour, STOP! Giving this name to a variable will delete its built-in functionallity and could cause your code to behave "unexpectedly" (this is a programming euphamism for "disasterously"). Chose a different name for your code, _e.g._ `my_list` instead of the function name `list`.
+Examples of reserved words include the names of data types listed in {numref}`Table 2`, as well as the booleans `True` and `False` (but not `true` or `false`).
+```
+
 #### Initial lines of a Python script
 
 Now we start working in the {ref}`Editor <Fig. 1>`. A new `.py` file in Spyder will automatically show some initial information, e.g.:
@@ -259,7 +265,7 @@ Now, what exactly is ```numpy```?
 (packages_intro)=
 #### Python packages
 
-The advantage of Python is that it is free and open-source, where any user can write code and functions and share them online for anyone to use. This isn't limited to individual users, but also applies to big _software development teams_. If such a team has developed a large set of functions, they typically store them in a _library_ or _package_. One such important _package_ is [numpy](https://numpy.org/doc/stable/index.html#), which provides numerous mathematical functions and is widely applied in scientific calculations.
+The advantage of Python is that it is free and open-source, where any user can write code and functions and share them online for anyone to use. This isn't limited to individual users, but also applies to big _software development teams_. If such a team has developed a large set of functions, they typically store them in a _library_ or _package_. One such important _package_ is [NumPy](https://numpy.org/doc/stable/index.html#), which provides numerous mathematical functions and is widely applied in scientific calculations.
 
 -	Instead of importing separate functions (e.g. ```numpy.cos```), you can also import the entire package. Add to your {ref}`Editor <Fig. 1>` and run:
 
@@ -268,7 +274,7 @@ The advantage of Python is that it is free and open-source, where any user can w
 	```
 
 	````{note}
-	The ```as np``` tells your program that wherever a command starts with ```np.``` it needs to look it up in the _numpy_ library.
+	The ```as np``` tells your program that wherever a command starts with ```np.``` it needs to look it up in the _NumPy_ library.
 	````
 
 	```{note}
@@ -277,11 +283,11 @@ The advantage of Python is that it is free and open-source, where any user can w
 	If you import a package but don't use it, an orange triangle ![](img/media/image10.png) will appear to the left of the import command in the Spyder editor.
 	```
 
--	Run your script and you can use all of the functions available in the _numpy_ library. Run in your console: ```np.cos(np.pi)``` and then ```cos(pi)```. Do you understand the difference here?
+-	Run your script and you can use all of the functions available in the _NumPy_ library. Run in your console: ```np.cos(np.pi)``` and then ```cos(pi)```. Do you understand the difference here?
 
--   Now test some of the other frequently-used mathematical functions of _numpy_, given in {numref}`Table 3`.
+-   Now test some of the other frequently-used mathematical functions of _NumPy_, given in {numref}`Table 3`.
 
-```{list-table} Several important mathematical functions in _numpy_.
+```{list-table} Several important mathematical functions in _NumPy_.
 :header-rows: 1
 :name: Table 3
 
@@ -306,13 +312,13 @@ The advantage of Python is that it is free and open-source, where any user can w
 ```
 
 ```{important}
-All of these mathematical functions have their own documentation at the [official numpy web page](https://numpy.org/doc/stable/reference/routines.math.html), or on many of the other Python-related web pages. A very important step of debugging is **always** to ask a search engine! Also see the the debug manual on Brightspace. Note, however, that asking an Artificial Intelligence to write your code will not help your learning (and may count as plagiarism, and has an enormous CO<sub>2</sub> footprint).
+All of these mathematical functions have their own documentation at the [official NumPy web page](https://numpy.org/doc/stable/reference/routines.math.html), or on many of the other Python-related web pages. A very important step of debugging is **always** to ask a search engine! Also see the the debug manual on Brightspace. Note, however, that asking an Artificial Intelligence to write your code will not help your learning (and may count as plagiarism, and has an enormous CO<sub>2</sub> footprint).
 ```
 
 -	If you want to see all the attributes of a function or package, run for instance ```help(np)``` or ```help(np.cos)```.
 
 
-Aside from _numpy_, there are countless other free and open source packages that constitute the vibrant community of Python. As you will find out later, other important packages in this course are:
+Aside from _NumPy_, there are countless other free and open source packages that constitute the vibrant community of Python. As you will find out later, other important packages in this course are:
 
 -	[pandas](https://pandas.pydata.org/), which is handy for data analysis and manipulation.
 
@@ -336,7 +342,7 @@ When a script is executed, Python executes the commands in the order they are wr
 
 -	**Docstring (documentation string)**	Describe the script in a few words (e.g. objective, date of creation, author of the script)
 
--	**Package import**						Import all the necessary packages to perform operations (e.g. numpy)
+-	**Package import**						Import all the necessary packages to perform operations (e.g. NumPy)
 
 -	**Initialization**						Declare the main variables and load your data
 
@@ -397,7 +403,7 @@ $$ (Eq_1_2)
 
 See [Kleinhans, 2005](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2005JE002521#) for a brief overview how the Chezy relation is equivalent to the Darcy-Weisbach relation and the Manning relation, which you might be more familiar with.
 
-The commands should be written in a _.py_ file called _Exercise1_, saved in your current directory. The script should display the results.
+The commands should be written in a file called `Exercise1.py`, saved in your current directory. **The script should print the results.**
 
 Do not forget to comment the file and give meaningful names to the variables.
 
@@ -417,86 +423,92 @@ _Please add this script to the folder that you will zip and send to us._
 
 A data structure is the fundamental form that Python uses to store and manipulate data. It allows for efficient calculations and analysis over entire datasets. There are multiple types of data structures. In this course we will discuss _lists_, _arrays_ and _DataFrames_.
 
--	A **list** is simply a one-dimensional series of elements (e.g. numbers, strings, or other lists) and can be create using using square brackets `[]`.
+-	A **list** is simply a one-dimensional series of elements (e.g. numbers, strings, other lists, or a combination thereof). You can a list create using square brackets `[]` or the `list()` function, _e.g._ `my_list = [1, 2, 3, 4, 5]` and `my_list = list((1, 2, 3, 4, 5))` will produce the same result.
 
--	An **array** is similar to a list, but it can have any number of dimensions. An array contains data of all the same type (e.g. all integers or all strings).
+-	An **array** is similar to a list, but it can have any number of dimensions. An array contains data of all the same type (e.g. all integers or all strings). Python has a built in function `array()`, but you will usually want to use NumPy to manipulate your array, therefore it would be better to use the NumPy function `np.array()`.
 
--	A **DataFrame** is a matrix of different elements organized in rows and columns which CAN be of different datatypes.
+-	A **DataFrame** is a table of different elements organized in rows and columns which CAN be of different datatypes (although each column can only have one data type). We use the [pandas](https://pandas.pydata.org/) library to work with DataFrames.
 
 Different data types that can be stored in lists, arrays and DataFrames are provided in {numref}`Table 2`.
 
 In this section we will learn how to create lists, arrays and dataframes, extract the relevant information from one of them, and perform calculations with them.
 
+```{tip}
+There are more data sctructures you should be aware of, as they are in highly common use in Python:
+- A [**tuple**](https://docs.python.org/3/library/stdtypes.html#tuple) is similar to a list, but it cannot be changed once it has been created, while a list can. A tuple can be created using parens: `my_tuple = (1, 2, 3)` or the `tuple()` function: `my_tuple = tuple([1, 2, 3]).
+- A [**dictionary**](https://docs.python.org/3/library/stdtypes.html#dict), or **dict** stores data in pars of keys and values (think of the keys as labels or names), _e.g._ `my_dict = {"spam": 50, "egg": 46}`. Follow the link for more details. A common way to create a DataFrame is from data stored in a dict.
+```
+
 ### 1.3.1 Creating lists, arrays and DataFrames
 
--   Clear your variables and run in your console: ```L = [1, 2, 5, 10]```. Check the Variable Explorer to see the type of data structure that is produced.
+-   Clear your variables and run in your console: ```my_list = [1, 2, 5, 10]```. Check the Variable Explorer to see the type of data structure that is produced.
 
--   Now run in your console: ```L2 = [[1, 2, 5, 10], [3, 4, -2, 7]]```. Now compare $L$ and $L2$ in the Variable Explorer. Do you understand the difference in size?
+-   Now run in your console: ```my_list2 = [[1, 2, 5, 10], [3, 4, -2, 7]]```. Now compare `my_list` and `my_list2` in the Variable Explorer. Do you understand the difference in size?
 
 	```{hint}
 	By double clicking on a variable in the variable explorer, you can see more information.
 	```
 
-$L$ and $L2$ are data structures of the type _list_. A list is a basic [Python structure](https://docs.python.org/3/tutorial/datastructures.html#) included in the core Python modules. It therefore does not require a {ref}`package<packages_intro>` to be imported.
+`my_list` and `my_list2` are data structures of the type _list_. A list is a basic [Python structure](https://docs.python.org/3/tutorial/datastructures.html#) included in the core Python modules. It therefore does not require a {ref}`package<packages_intro>` to be imported.
 
--   Now import numpy again as np.
+-   Now import NumPy again as `np`.
 
--	Run: ```A = np.array(L2)```. What kind of variable do you obtain and how is different from $L2$?
+-	Run: ```my_array = np.array(my_list2)```. What kind of variable do you obtain and how is different from `my_list2`?
 
-$A$ is of type [array](https://numpy.org/doc/stable/reference/generated/numpy.array.html), which is a data structure type of the _numpy_ package.
+`my_array` is of type [array](https://numpy.org/doc/stable/reference/generated/numpy.array.html), which is a data structure type of the _NumPy_ package.
 
--   Now run: ```import pandas as pd``` and ```D = pd.DataFrame(L2)```. What is the difference between $L2$, $A$ and $D$?
+-   Now run: ```import pandas as pd``` and ```df = pd.DataFrame(my_list2)```. What is the difference between `my_list2`, `my_array` and `df`?
 
 	```{note}
-	Similar to importing _numpy_ as _np_, it is very common to import _pandas_ as _pd_.
+	Similar to importing _NumPy_ as _np_, it is very common to import _pandas_ as _pd_.
 	```
 
-$D$ is of type [DataFrame](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html), which is a data structure type of the _pandas_ package.
+`df` is of type [DataFrame](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html), which is a data structure type of the _pandas_ package.
 
--	Now run: ```A2 = np.array(D)``` and ```D2 = pd.DataFrame(A)```. Are there differences between $A$ and $A2$ or $D$ and $D2$?
+-	Now run: ```my_array2 = np.array(df)``` and ```df2 = pd.DataFrame(my_array)```. Are there differences between `my_array` and `my_array2` or `df` and `df2`?
 
-Because of the worlwide usage of both packages, _numpy arrays_ can be easily transformed into _pandas DataFrames_ and vice versa.
+_NumPy arrays_ can be easily transformed into _pandas DataFrames_ and vice versa.
 
 (note_on_data_structures)=
 ```{important}
 Some {ref}`functions<functions_intro>`, classes or attributes require a specific type of data structure (e.g. array or DataFrame). Therefore, you should always consider whether your variable is stored in the proper data structure!
 ```
 
-The advantage of package-built data structures is that they have their own built-in attributes. Attributes are called using a ```.```.
+The advantage of package-built data structures is that they have their own built-in attributes. Attributes are accessed by appending them with a ```.``` after the object or variable name.
 
 -   Run the following code:
 
-	```D.size```
+	```df.size```
 
-	```D.shape```
+	```df.shape```
 
-	```A.size```
+	```my_array.size```
 
-	```A.shape```
+	```my_array.shape```
 
-As you can see, there are overlapping attributes between _numpy arrays_ and _pandas DataFrames_. For any type of data structure, you can usually find the attributes online in the official documentation of the specific data structure (e.g. [pandas DataFrame](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html)).
+As you can see, there are overlapping attributes between _NumPy arrays_ and _pandas DataFrames_. For any type of data structure, you can usually find the attributes online in the official documentation of the specific data structure (e.g. [pandas DataFrame](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html)).
 
--   Have a closer look at the attributes listed in [DataFrame documentation](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Run the following codes:
+-   Have a closer look at the attributes listed in the [DataFrame documentation](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Run the following codes:
 
-	```len(D.index)```
+	```len(df.index)```
 
-	```len(D.columns)```
+	```len(df.columns)```
 
 	Do you understand what the above lines display and what the funcion ```len()``` does?
 
-Instead of defining all the specific elements, as you did for $L$ and $L2$, you can also define an array of an amount of elements following an interval. You can do this using the numpy function [np.arange](https://numpy.org/doc/stable/reference/generated/numpy.arange.html):
+Instead of defining all the specific elements, as you did for `my_list` and `my_list2`, you can also define an array of a number of elements following an interval. You can do this using the NumPy function [np.arange](https://numpy.org/doc/stable/reference/generated/numpy.arange.html):
 
 -	Run the following codes:
 
-	```A3 = np.arange(1, 6, 1)```
+	```my_array3 = np.arange(1, 6, 1)```
 
-	```A4 = np.arange(1, 6, 2)```
+	```my_array4 = np.arange(1, 6, 2)```
 
-	```A5 = np.arange(12, 0, -3)```
+	```my_array5 = np.arange(12, 0, -3)```
 
-	```A6 = np.arange(12, 0, 3)```
+	```my_array6 = np.arange(12, 0, 3)```
 
-	Compare the outcomes. Do yo understand how the np.arange function works?
+	Compare the outcomes. Do yo understand how the `np.arange` function works?
 
 The np.arange function requires as input "(begin, end, interval)". If no interval is specified, the default interval is 1. So ```np.arange(1, 6)``` will return the same as ```np.arange(1, 6, 1)```.
 
@@ -508,45 +520,45 @@ Thus ```np.arange(1, 6, 1)``` returns ```[1 2 3 4 5]``` and NOT ```[1 2 3 4 5 6]
 
 ### 1.3.2 Concatenation, vstack and hstack
 
-Sometimes it can be useful to combine several related arrays or lists into one unique array and join them together. This can be done using the numpy operation of [concatenate](https://numpy.org/doc/stable/reference/generated/numpy.concatenate.html).
+Sometimes it can be useful to combine several related arrays or lists into one unique array and join them together. This can be done using the NumPy function [np.concatenate](https://numpy.org/doc/stable/reference/generated/numpy.concatenate.html).
 
--	Clear your variables and import numpy. Run the following codes:
+-	Clear your variables and import NumPy. Run the following codes:
 
-	```a = np.arange(1, 3)```
+	```array_a = np.arange(1, 3)```
 
-	```b = np.arange(4, 6)```
+	```array_b = np.arange(4, 6)```
 
-	```c = np.concatenate((a, b))```
+	```array_c = np.concatenate((array_a, array_b))```
 
-	Inspect how arrays $a$ and $b$ are joined together into array $c$.
+	Inspect how arrays `array_a` and `array_b` are joined together into `array_c`.
 
 	```{note}
-	Several functions require double parens (parentheses, `(())`) or double brackets (`[[]]`), e.g. _np.concatenate(( ))_.
+	Notice that we used double _parens_ (parentheses, `()`) for `np.concatenate`. This is because the function requires that we give it a _sequence_ of arrays or lists to concatenate. In this example, we used a sequence of type `tuple` (denoted by the surrounding `()`), but we could also have used a list, like this: `np.concatenate([array_a, array_b])`.
 	```
 
 The default is to concatenate arrays in the same dimension (also referred to as horizontally).
 
 ```{note}
-The above arrays are 1-dimensional (i.e. their size has only one direction, for example (2,) and not (2,1)). Double-clicking a 1-dimensional vector in the variable explorer provides a default vertical display. Don't confuse this as a 2-dimenstional display of several rows and one column (e.g. (2,1) )!
+The above arrays are 1-dimensional (i.e. their size has only one direction, for example `(2,)` and not `(2,1)`). Double-clicking a 1-dimensional vector in the variable explorer provides a default vertical display. Don't mistake this for a 2-dimenstional display of several rows and one column (e.g. `(2,1)`)!
 ```
 
 -	Now run:
 
-	```d = np.vstack((a, b))```
+	```array_d = np.vstack((array_a, array_b))```
 
-	```e = np.hstack((a, b))```
+	```array_e = np.hstack((array_a, array_b))```
 
 	Compare the outcomes.
 
-Numpy [vstack](https://numpy.org/doc/stable/reference/generated/numpy.vstack.html) is used to vertically concatenate arrays, whereas [hstack](https://numpy.org/doc/stable/reference/generated/numpy.hstack.html) is used for horizontal or 1-dimensional concatenation (for the situation above, $c$ and $e$ yield the same concatenation output).
+NumPy [vstack](https://numpy.org/doc/stable/reference/generated/numpy.vstack.html) is used to vertically concatenate arrays, whereas [hstack](https://numpy.org/doc/stable/reference/generated/numpy.hstack.html) is used for horizontal or 1-dimensional concatenation (for the situation above, `array_c` and `array_e` yield the same concatenation output).
 
 ```{note}
 _concatenate_, _hstack_ and _vstack_ can be used to combine strings, and lists or arrays of floats and integers ({numref}`Table 2`). To vertically stack two lists they must have the same dimensions!
 ```
 
-### 1.3.3 Manipulating data structures using their subscripts
+### 1.3.3 Manipulating data structures using index numbers
 
-Elements of data structures are usually identified by their position (row and column numbers), also called subscript or index. {numref}`Table 4` shows how the different elements of a 3 *×* 6 matrix can be identified using their subscripts.
+Elements in data structures are usually identified by their position (row and column numbers), also called their index number. {numref}`Table 4` shows how the different elements of a 3 *×* 6 matrix can be identified using their index numbers.
 
 ```{list-table} Subscripts of 3 *×* 6 matrix
 :header-rows: 0
@@ -572,23 +584,23 @@ Elements of data structures are usually identified by their position (row and co
   - [2,5]
 ```
 
-For a _numpy array_ you can identify an element by position as follows:
+For a _NumPy array_ you can identify an element by position as follows:
 
--	Clear your variables and import numpy and pandas as np and pd, respectively. Run the following codes:
+-	Clear your variables and import NumPy and pandas as np and pd, respectively. Run the following code:
 
-	```L = [[1, 2, 5, 10], [3, 4, -2, 7]]```
+	```my_list = [[1, 2, 5, 10], [3, 4, -2, 7]]```
 
-	```A = np.array(L)```
+	```my_array = np.array(my_list)```
 
-	```NA = A[1, 3]```
+	```val_a = my_array[1, 3]```
 
-	Here $NA$ provides the element of array $A$ at position (1,3).
+	Here `val_a` provides the element at position (1,3) of `my_array`.
 
 -	Now try if this also works for a _pandas DataFrame_ by running:
 
-	```D = pd.DataFrame(L)```
+	```df = pd.DataFrame(my_list)```
 
-	```ND = D[1, 3]```
+	```val_df = df[1, 3]```
 
 	Here we refer to an {ref}`earlier note<note_on_data_structures>` on data structures.
 
@@ -596,61 +608,61 @@ To identify the element of a _pandas DataFrame_ through a subscript, we use [ilo
 
 -	Run:
 
-	```ND = D.iloc[1,3]```
+	```val_df = df.iloc[1,3]```
 
-	As _iloc_ is an attribute to _pandas DataFrame_, it won't work for a _numpy array_. Try: ```NA = A.iloc[1,3]```
+	As `iloc` is an attribute of _pandas DataFrames_, it won't work for a _NumPy array_. Try: ```val_a = my_array.iloc[1,3]```
 
--	Write your own code that returns ```-2``` for both $A$ and $D$.
+-	Write your own code that returns ```-2``` for both `my_array` and `df`.
 
-To replace an element with something else we use [numpy where](https://numpy.org/doc/stable/reference/generated/numpy.where.html) or [pandas replace](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.replace.html).
+To replace an element with something else we use [NumPy where](https://numpy.org/doc/stable/reference/generated/numpy.where.html) or [pandas replace](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.replace.html).
 
--   Run the following codes:
+-   Run the following code:
 
-	```A = np.where(A == -2, 2, A)```
+	```my_array = np.where(my_array == -2, 2, my_array)```
 
-	```D = D.replace(-2, 2)```
+	```df = df.replace(-2, 2)```
 
-	Compare $A$ and $D$ with their previous outputs. Do you understand how the _np.where_ function works?
+	Compare `my_array` and `df` with their previous outputs. Do you understand how the `np.where` function works?
 
 Instead of single elements, you can also call entire rows and columns.
 
 -   Run the following codes:
 
-	```RA = A[0, 0:4]```
+	```array_row = my_array[0, 0:4]```
 
-	```CA = A[0:2, 2]```
+	```array_column = my_array[0:2, 2]```
 
-	```RD = D.iloc[0, 0:4]```
+	```df_row = df.iloc[0, 0:4]```
 
-	```CD = D.iloc[0:2, 2]```
+	```df_column = df.iloc[0:2, 2]```
 
 	Examine the outputs.
 
 	````{note}
-	Instead of defining a row or column through its first and last index, you can also just use ```:```, e.g. for the variables definede here, ```RA = A[0, :]``` yields the same output as ```RA = A[0, 0:4]```. The same goes for ```CD = D.iloc[:, 2]``` and ```CD = D.iloc[0:2, 2]```.
+	Instead of defining a row or column through its first and last index, you can also just use ```:```, e.g. for the variables definede here, ```array_row = my_array[0, :]``` yields the same output as ```array_row = my_array[0, 0:4]```. The same goes for ```df_column = df.iloc[:, 2]``` and ```df_column = df.iloc[0:2, 2]```.
 	````
 
--	Create two new vectors containing the second rows of $A$ and $D$.
+-	Create two new vectors containing the second rows of `my_array` and `df`.
 
--	Replace all elements of the second columns of $A$ and $D$ with zeros.
+-	Replace all elements of the second columns of `my_array` and `df` with zeros.
 
-## 1.4 Operations on numpy arrays and pandas DataFrames
+## 1.4 Operations on NumPy arrays and pandas DataFrames
 
 ### 1.4.1 Operations between a scalar and a matrix
 
-If you conduct simple operations on a numpy array with a scalar, all the elements in the array are multiplied by that scalar.
+If you perform simple operations on a NumPy array with a scalar, that operation is applied to each element in the array.
 
 -	For instance, inspect the outputs of the following commands:
 
-	```2 * A```
+	```2 * my_array```
 
-	```2 / A```
+	```2 / my_array```
 
-	```2 + A```
+	```2 + my_array```
 
-	```2 - A```
+	```2 - my_array```
 
--	Now try the same operations with pandas DataFrame $D$. Do these operations also work for Dataframes?
+-	Now try the same operations with pandas DataFrame `df`. Do these operations also work for Dataframes?
 
 ### 1.4.2 Operations between matrices
 
@@ -658,29 +670,29 @@ If you conduct simple operations on a numpy array with a scalar, all the element
 
 Addition or subtraction operations can only be applied to matrices of identical size. The resulting matrix is obtained by adding (subtracting) their corresponding elements. Example:
 
--   Define the following new matrix $M$ of same size as $A$ and $D$ and store it **both** as a _numpy array_ and as _pandas DataFrame_:
+-   Define the following new matrix of same size as `my_array` and `df` and store it **both** as a _NumPy array_ and as _pandas DataFrame_:
 
 	$$
-	M = \begin{pmatrix}
+	matrix = \begin{pmatrix}
 		3 & 8 & 0 & 160\\
 		13 & 42 & 21 & 17
 	\end{pmatrix}
 	$$
 
--	Now try operations of ```+```, ```-```, ```*```, ```/``` and ```**``` between $A$, $D$ and $M$. Also try operations between arrays and DataFrames. Inspect the outputs.
+-	Now try operations of ```+```, ```-```, ```*```, ```/``` and ```**``` between `my_array`,  `df` and `matrix`. Also try operations between arrays and DataFrames. Inspect the outputs.
 
 #### Multiplication of two matrices
 
 Matrix multiplication according to linear algebra follows different rules.
 
--	Define two new _arrays_ $B$ and $C$:
+-	Define two new _arrays_ `array_b` and `array_c`:
 
 	$$
-	B = \begin{pmatrix}
+	array_b = \begin{pmatrix}
 		1 & 0 & 2\\
 		5 & 10 & 7
 	\end{pmatrix}
-	\quad \textrm{and} \quad C = \begin{pmatrix}
+	\quad \textrm{and} \quad array_c = \begin{pmatrix}
 		1 & 3\\
 		4 & 1\\
 		2 & 2
@@ -689,12 +701,12 @@ Matrix multiplication according to linear algebra follows different rules.
 
 -	To execute a matrix multiplication, you use [np.matmul](https://numpy.org/doc/stable/reference/generated/numpy.matmul.html), run:
 
-	```E = np.matmul(B,C)```
+	```array_d = np.matmul(array_b, array_c)```
 
-	This will calculate the matrix product of matrices $B$ and $C$ as follows:
+	This will calculate the matrix product of `array_b` and `array_c` as follows:
 
 	$$
-	E(i,j) = \sum_{k=1}^{n} B(i,k) \ast C(k,j) = \begin{pmatrix}
+	array_d(i,j) = \sum_{k=1}^{n} array_b(i,k) \ast array_c(k,j) = \begin{pmatrix}
 		1 \ast 1 + 0 \ast 4 + 2 \ast 2 & 1 \ast 3 + 0 \ast 1 + 2 \ast 2\\
 		5 \ast 1 + 10 \ast 4 + 7 \ast 2 & 5 \ast 3 + 10 \ast 1 + 7 \ast 2
 	\end{pmatrix} = \begin{pmatrix}
@@ -707,7 +719,7 @@ Matrix multiplication according to linear algebra follows different rules.
 
 ### 1.5.1 Examples of elemantary functions
 
-We are now going to look at several additional examples of built-in functions for both arrays and DataFrames. For a complete list, go to the official documentation of [numpy arrays](https://numpy.org/doc/stable/reference/arrays.html) and [pandas DataFrames](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). If you're looking for something specific, it's always a good idea to conduct a Google search for the data structure you are using.
+We are now going to look at several additional examples of built-in functions for both arrays and DataFrames. For a complete list, go to the official documentation of [NumPy arrays](https://numpy.org/doc/stable/reference/arrays.html) and [pandas DataFrames](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). If you're looking for something specific, it's always a good idea to conduct a Google search for the data structure you are using.
 
 -	It is possible to **round** the value of floats and matrices using [np.round](https://numpy.org/devdocs/reference/generated/numpy.round.html). Run the following and inspect the outcomes to see if you understand what happens:
 
@@ -739,7 +751,7 @@ We are now going to look at several additional examples of built-in functions fo
 
 ### 1.5.2 Data analysis
 
-The main numpy functions available to perform (statistical) data analysis on arrays are summarized in {numref}`Table 5`. Some examples of the use of these functions are given below.
+The main NumPy functions available to perform (statistical) data analysis on arrays are summarized in {numref}`Table 5`. Some examples of the use of these functions are given below.
 
 -	Define the following vector as an array:
 
@@ -769,7 +781,7 @@ The main numpy functions available to perform (statistical) data analysis on arr
 
 	Compare $s$ and $vectA$.
 
--	For DataFrames, these statistical numpy operations work differently in that they handle each column separately. The output is therefore a vector of length the amount of columns. Run for instance:
+-	For DataFrames, these statistical NumPy operations work differently in that they handle each column separately. The output is therefore a vector of length the amount of columns. Run for instance:
 
 	```np.mean(D)```
 
@@ -781,7 +793,7 @@ The main numpy functions available to perform (statistical) data analysis on arr
 
 	What is the difference?
 
-```{list-table} Some important numpy functions for statistical data analysis on matrices
+```{list-table} Some important NumPy functions for statistical data analysis on matrices
 :header-rows: 1
 :name: Table 5
 
@@ -818,7 +830,7 @@ The main numpy functions available to perform (statistical) data analysis on arr
 
 Make a new _.py_ file called _Exercise2_ in your work-directory, where the commands need to solve the following assignments. The script should display the results of all assignments.
 
-1.  Create the following numpy array $A$:
+1.  Create the following NumPy array $A$:
 
 $$
 A = \begin{pmatrix}
@@ -860,7 +872,7 @@ _Please add this script to the folder that you will zip and send to us._
 
 Add all the following codes in the .py file in your {ref}`Editor <Fig. 1>`, not your console!
 
--	Clear your variables, import numpy and define the following arrays in your file:
+-	Clear your variables, import NumPy and define the following arrays in your file:
 
 	```x = np.arange(-np.pi, np.pi,0.5)```
 
@@ -1056,7 +1068,7 @@ This exercise is based on the dataset contained in the file _MPMtransportdata.xl
 	```
 	dataMPM = pd.read_excel(path+"\MPMtransportdata.xls")
 	```
-	The output given here is a _pandas_ [DataFrame](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). The DataFrame reads in ALL the information including the text headers, which is not convenient for calculations. Create a _numpy_ [array](https://numpy.org/doc/stable/reference/generated/numpy.array.html) where the _NaN_ and text columns of this DataFrame have been eliminated. You can do this by by specifying a row from where you want the array to start.
+	The output given here is a _pandas_ [DataFrame](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). The DataFrame reads in ALL the information including the text headers, which is not convenient for calculations. Create a _NumPy_ [array](https://numpy.org/doc/stable/reference/generated/numpy.array.html) where the _NaN_ and text columns of this DataFrame have been eliminated. You can do this by by specifying a row from where you want the array to start.
 
 3.  Define vectors containing the discharge $Q$ (m<sup>3</sup>/s), channel width $W$ (m), water depth $h$ (m), slope $S$ (m/m), median grain size $D_{50}$ (m), the specific gravity of the sediment $s$ (which is density of sediment divided by density of water), and the sediment transport rate $q_s$ (m<sup>2</sup>/s, or m<sup>3</sup>/s per m width).
 
@@ -1077,7 +1089,7 @@ This exercise is based on the dataset contained in the file _MPMtransportdata.xl
 	```
 	np.sin(S.astype(float))
 	```
- 	This is not only the case for the _sin_-function, but also many other numpy functions!
+ 	This is not only the case for the _sin_-function, but also many other NumPy functions!
 	````
 
 5.  To compare datasets derived from different scales (e.g. field versus lab measurements), parameters are often made dimensionless. Shear stress $\tau$ can be nondimensionalized into the "Shields parameter" $\theta$, which is the ratio of the flow force driving sediment transport and gravitational force that demobilizes sediment. Calculate $\theta$ following:
