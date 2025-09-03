@@ -719,104 +719,121 @@ Matrix multiplication according to linear algebra follows different rules.
 
 ### 1.5.1 Examples of elemantary functions
 
-We are now going to look at several additional examples of built-in functions for both arrays and DataFrames. For a complete list, go to the official documentation of [NumPy arrays](https://numpy.org/doc/stable/reference/arrays.html) and [pandas DataFrames](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). If you're looking for something specific, it's always a good idea to conduct a Google search for the data structure you are using.
+NumPy functions can generally be used on all sorts of matrices (including NumPy arrays and pandas DataFrames). However, both NumPy arrays and pandas DataFrames have many of these functions as built-in _methods_ (the technical term for a function that is written into the definition of a data structure or other programmatic type). A method of a NumPy array is usually just another way of writing the equivalent NumPy function. However, the equivalent method for a non-NumPy matrix (_e.g.,_ a DataFrame) will often be better adapted to use with that specific data structure.
 
--	It is possible to **round** the value of floats and matrices using [np.round](https://numpy.org/devdocs/reference/generated/numpy.round.html). Run the following and inspect the outcomes to see if you understand what happens:
+For example, `np.mean()` returns the mean value of a matrix. When applied to a NumPy array, `np.mean(my_array)` returns the same result as the array's built-in method `my_array.mean()`. Applying this to a DataFrame containing the same values `np.mean(df)` will, again, return the same result. However, the DataFrame's built-in method `df.mean()` will return a different result. Try it for yourself and see if you understand what it does. Check the [documentation](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.mean.html) to learn the different ways you can apply this method, including how to get the same result as with `np.mean(df)`.
+
+Note that NumPy functions that manipulate values in a matrix can also be applied to an individual value.
+
+We are now going to look at several additional examples of functions for both arrays and DataFrames. For a complete list, go to the official documentation of [NumPy arrays](https://numpy.org/doc/stable/reference/arrays.html) and [pandas DataFrames](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). If you're looking for something specific, it's always a good idea to conduct an online search for the data structure you are using.
+
+-	It is possible to **round** the value of floats and matrices using [np.round](https://numpy.org/devdocs/reference/generated/numpy.round.html) or [pandas.DataFrame.round](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.round.html). Run the following and inspect the outcomes to see if you understand what happens:
 
 	```np.round(1.555)```
 
-	```np.round(1.555,2)```
+	```np.round(1.555, 2)```
 
-	```np.round(A/3)```
+	```np.round(my_array / 3)```
 
-	```np.round(D/3)```
+	```(my_array / 3).round()```
+
+	```np.round(df / 3)```
+
+	```(df / 3).round```
+
+	The last example could also be written as:
+
+	```
+	df = df / 3
+	df.round()
+	```
 
 -	To **transpose** a matrix, you change the rows of the matrix into columns, and vice versa using [np.transpose](https://numpy.org/doc/stable/reference/generated/numpy.transpose.html). As a consequence, a matrix of size n × m will turn into a matrix of size m × n containing the same elements organised in a different way.
 
-	```np.transpose(A)```
+	```np.transpose(my_array)```
 
-	```np.transpose(D)```
+	```np.transpose(df)```
 
--	To **create new matrices**, you are not required to write down every element, such as you did earlier by defining $L$. Run the following and inspect the outcomes:
+	```df.transpose()```
 
-	```np.zeros((3,5))```
+-	To **create new arrays**, you are not required to write down every element, such as you did earlier by defining `my_list`. Run the following and inspect the outcomes:
 
-	```np.ones((5,3))```
+	```np.zeros((3, 5))```
 
-	```np.full((3,5),2)```
+	```np.ones((5, 3))```
 
-	```np.full((3,5),np.nan)```
+	```np.full((3, 5), 2)```
 
--	With the help of functions previously introduced, create a matrix of size 20x30 containing only floats that represent $5/3$ in six digits after the decimal point. Try to do this in only one line of code!
+	```np.full((3, 5), np.nan)```
+
+-	With the help of functions previously introduced, create a matrix of size 20 x 30 containing only floats that represent $5 / 3$ to six decimal places. Try to do this in only one line of code!
 
 ### 1.5.2 Data analysis
 
-The main NumPy functions available to perform (statistical) data analysis on arrays are summarized in {numref}`Table 5`. Some examples of the use of these functions are given below.
+The main functions and methods available to perform (statistical) data analysis on arrays are summarized in {numref}`Table 5`. Some examples of the use of these functions are given below.
 
 -	Define the following vector as an array:
 
-	```vectA = np.array([6,2,5,7])```
+	```vect_A = np.array([6, 2, 5, 7])```
 
 -	Run the following commands and inspect the outputs:
 
-	```np.mean(vectA)```
+	```vect_A.mean()```
 
-	```np.median(vectA)```
+	```vect_A.median()```
 
-	```np.sum(vectA)```
+	```vect_A.sum()```
 
-	```np.max(vectA)```
+	```vect_A.max()```
 
-	```np.min(vectA)```
+	```vect_A.min()```
 
--	In some practical cases, it is important to know when a maximum (or minimum) value has been reached, that is to say, what is the position of the largest value in the original vector. To return the index/location of the max or minimum value use [np.argmax](https://numpy.org/doc/stable/reference/generated/numpy.argmax.html) or [np.argmin](https://numpy.org/doc/stable/reference/generated/numpy.argmin.html#numpy.argmin), respectively. Inspect the following runs:
+-	In some practical cases, it is important to know when a maximum (or minimum) value has been reached, that is to say, what is the position of the largest value in the original array. To return the index/location of the max or minimum value use [np.argmax](https://numpy.org/doc/stable/reference/generated/numpy.argmax.html) or [np.argmin](https://numpy.org/doc/stable/reference/generated/numpy.argmin.html#numpy.argmin), respectively. The equivalent pandas methods are [df.idxmax](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.idxmax.html) and [df.idxmin](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.idxmin.html). Inspect the following:
 
-	```np.argmax(vectA)```
+	```vect_A.argmax()```
 
-	```np.argmin(vectA)```
+	```vect_A.argmin()```
 
 -   Now run:
 
-	```s = np.sort(vectA)```
+	```s = np.sort(vect_A)```
 
-	Compare $s$ and $vectA$.
+	Compare `s` and `vect_A`.
 
--	For DataFrames, these statistical NumPy operations work differently in that they handle each column separately. The output is therefore a vector of length the amount of columns. Run for instance:
-
-	```np.mean(D)```
-
--	It is generally possible to specify the direction (rows or columns) along which the computations have to be performed as an additional input argument. Run for instance:
-
-	```np.mean(D,0)```
-
-	```np.mean(D,1)```
-
-	What is the difference?
-
-```{list-table} Some important NumPy functions for statistical data analysis on matrices
+```{list-table} Some important functions and methods for statistical data analysis on matrices
 :header-rows: 1
 :name: Table 5
 
-* - Function
+* - NumPy
+  - pandas
   - Description
-* - [np.max](https://numpy.org/devdocs/reference/generated/numpy.max.html)
+* - [array.max](https://numpy.org/devdocs/reference/generated/numpy.max.html)
+  - [df.max](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.max.html)
   - Maximum value
-* - [np.min](https://numpy.org/devdocs/reference/generated/numpy.min.html)
+* - [array.min](https://numpy.org/devdocs/reference/generated/numpy.min.html)
+  - [df.min](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.min.html)
   - Minimum value
-* - [np.median](https://numpy.org/doc/stable/reference/generated/numpy.median.html)
+* - [array.median](https://numpy.org/doc/stable/reference/generated/numpy.median.html)
+  - [df.median](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.median.html)
   - Median value
-* - [np.mean](https://numpy.org/doc/stable/reference/generated/numpy.mean.html)
+* - [array.mean](https://numpy.org/doc/stable/reference/generated/numpy.mean.html)
+  - [df.mean](pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.mean.html)
   - Average/mean value
-* - [np.std](https://numpy.org/doc/stable/reference/generated/numpy.std.html)
+* - [array.std](https://numpy.org/doc/stable/reference/generated/numpy.std.html)
+  - [df.std](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.std.html)
   - Standard deviation
-* - [np.var](https://numpy.org/doc/stable/reference/generated/numpy.var.html)
+* - [array.var](https://numpy.org/doc/stable/reference/generated/numpy.var.html)
+  - [df.var](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.var.html)
   - Variance
 * - [np.percentile](https://numpy.org/doc/stable/reference/generated/numpy.percentile.html)
+  - [df.quantile](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.quantile.html)
   - Percentile values
-* - [np.sum](https://numpy.org/doc/stable/reference/generated/numpy.sum.html)
+* - [array.sum](https://numpy.org/doc/stable/reference/generated/numpy.sum.html)
+  - [df.sum](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.sum.html)
   - Sum of the elements
 * - [np.sort](https://numpy.org/doc/stable/reference/generated/numpy.sort.html)
-  - Arrange the elements in ascending order
+  - [df.sort_values](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.sort_values.html)
+  - Arrange the elements in ascending order (pandas: sort the DataFrame following the order of a specific column)
 ```
 
 ---
@@ -828,12 +845,12 @@ The main NumPy functions available to perform (statistical) data analysis on arr
 **You are expected to hand in this code.**
 ```
 
-Make a new _.py_ file called _Exercise2_ in your work-directory, where the commands need to solve the following assignments. The script should display the results of all assignments.
+Make a new file called `Exercise2.py` in your work directory. The script should print the results of all assignments.
 
-1.  Create the following NumPy array $A$:
+1.  Create the following NumPy array `my_array`:
 
 $$
-A = \begin{pmatrix}
+my_array = \begin{pmatrix}
   16 & 3 & 2 & 13\\
   5 & 10 & 11 & 8\\
   9 & 6 & 7 & 12\\
@@ -841,23 +858,23 @@ A = \begin{pmatrix}
 \end{pmatrix}
 $$
 
-2.  Define an array $A1$ containing the first row of $A$.
+2.  Create an array `array_1` containing the first row of `my_array`.
 
-3.  Define a scalar, $sumA1$, equal to the sum of the elements of $A1$.
+3.  Create a scalar, `sum_a1`, equal to the sum of the elements of `array_1`.
 
-4.  Create a vector $sumRows$, where each element contains the sum of the elements of one of the rows of $A$. The first element of this vector should be equal to:
+4.  Create a vector `sum_rows`, where each element contains the sum of the elements of one of the rows of `array_1`. The first element of this vector should be equal to:
 
 	$$
-	sumRows[0] = \sum_{k=0}^{4} A[0,k]
+	sum_rows[0] = \sum_{k=0}^{4} array_1[0,k]
 	$$
 
-	Try to use only one command line!
+	Try to do this in one line!
 
-5.  Create a vector $sumColumns$, containing the sum of the columns of $A$.
+5.  Create a vector `sum_columns`, containing the sum of the columns of `array_1`.
 
-6.	What do you notice when comparing $sumRows$ and $sumColumns$?
+6.	What do you notice when comparing `sum_rows` and `sum_columns`?
 
-	_Answer open questions as remarks in separate lines starting with: '#'_.
+	_Include answers to open questions as strings and print them to the console._
 
 ```{Important}
 End of Exercise 2.
@@ -870,11 +887,11 @@ _Please add this script to the folder that you will zip and send to us._
 
 **How to make a simple 2D-plot: example**
 
-Add all the following codes in the .py file in your {ref}`Editor <Fig. 1>`, not your console!
+Add all the following lines of code to the file `Practical1.py` in your {ref}`Editor <Fig. 1>`, not your console!
 
--	Clear your variables, import NumPy and define the following arrays in your file:
+-	Clear your variables, import NumPy and create the following arrays in your file:
 
-	```x = np.arange(-np.pi, np.pi,0.5)```
+	```x = np.arange(- np.pi, np.pi, 0.5)```
 
 	```y = np.sin(x)```
 
@@ -888,25 +905,25 @@ Add all the following codes in the .py file in your {ref}`Editor <Fig. 1>`, not 
 
 	```plt.figure(1)```
 
-	```plt.plot(x,y)```
+	```plt.plot(x, y)```
 
 	```plt.show()```
 
 	````{note}
-	You have to include the ```plt.figure(1)``` because you have to give unique numbers your separate plots in your script.
+	You have to include the ```plt.figure(1)``` because you have to give unique numbers to your separate figures in your script.
 	````
 	Select all the lines you have in your file and press **F9**. Inspect what happens.
 
 -	Now run in your console:
 
-	```plt.plot(x,y2)```
+	```plt.plot(x, y2)```
 
 	A new plot has replaced the previous one in the figure window. To display the second graph on top of the first one you have to edit your file as follows:
 
 	```
 	plt.figure(1)
-	plt.plot(x,y)
-	plt.plot(x,y2)
+	plt.plot(x, y)
+	plt.plot(x, y2)
 	plt.show()
 	```
 
@@ -918,11 +935,11 @@ Add all the following codes in the .py file in your {ref}`Editor <Fig. 1>`, not 
 
 -	Edit the second plotting line so it now reads
 
-    ```plt.plot(x,y2, color = 'r')```
+    ```plt.plot(x, y2, color='r')```
 
 	Run the lines. Do you understand what happened?
 
--	Title, labels on the x- and y-axis and legends can now be defined. Type the following commands (before ```plt.show()```!) one by one and analyse their effects on the figure:
+-	Title, labels on the x- and y-axes and legends can now be defined. Type the following commands (before ```plt.show()```!) one by one and analyse their effects on the figure:
 
 	```plt.title('Sine and cosine functions')```
 
@@ -932,7 +949,7 @@ Add all the following codes in the .py file in your {ref}`Editor <Fig. 1>`, not 
 
 	```plt.legend(['sine', 'cosine'])```
 
--	Matplotlib is the basic package for plotting your data, but there are also other packages that can be used complementary to matplotlib, for instance [seaborn](https://seaborn.pydata.org/). Include at the top of your script where you import your packages:
+-	Matplotlib is the basic package for plotting your data, but there are also complementary packages that can be used to improve your figures further, such as [seaborn](https://seaborn.pydata.org/). Include at the top of your script where you import your packages:
 
 	```import seaborn as sns```
 
@@ -940,32 +957,32 @@ Add all the following codes in the .py file in your {ref}`Editor <Fig. 1>`, not 
 
 	Run the plotting lines again, do you see the difference?
 
--	To specify the limits of the x- and y-axis include for instance (before ```plt.show()```!):
+-	To specify the limits of the x- and y-axes include for instance (before ```plt.show()```!):
 
-	```plt.xlim(-np.pi, np.pi)```
+	```plt.xlim(- np.pi, np.pi)```
 
-	```plt.ylim(-2,2)```
+	```plt.ylim(- 2, 2)```
 
 	Run the plotting lines again. What has happened?
 
--	It is also possible to plot without specifying the *x* argument. Run:
+-	It is also possible to plot without specifying the `x` argument. Run:
 
 	```plt.plot(y)```
 
-	The elements are now plotted as a function of their position in the vector: *y*(1) at *x* = 1, *y*(2) at *x* = 2, etc.
+	The elements are now plotted as a function of their position in the vector: `y[0]` at `x = 0`, `y[1]` at `x = 1`, etc.
 
--	Multiple plots can also be displayed in one figure. This can be done using the command [subplot(a,b,c)](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplot.html) where $a$, $b$ and $c$ are integers, and $c$ is less than or equal to the product $a*b$. This command divides the figure in $a*b$ sub-figures, organized in $a$ rows and $b$ columns. To obtain 2 figures, one above the other, include and run following lines below your 1st figure:
+-	Multiple plots can also be displayed in one figure. This can be done using the command [subplot(a,b,c)](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplot.html) where `a`, `b` and `c` are integers, and `c` is less than or equal to the product $a * b$. This command divides the figure in $a * b$ sub-figures, organized in $a$ rows and $b$ columns. To obtain 2 plots, one above the other, include and run following lines below your 1st figure:
 
 	```
 	plt.figure(2)
-	plt.subplot(2,1,1)
-	plt.plot(x,y)
-	plt.subplot(2,1,2)
-	plt.plot(x,y2, 'g')
+	plt.subplot(2, 1, 1)
+	plt.plot(x, y)
+	plt.subplot(2, 1, 2)
+	plt.plot(x, y2, 'g')
 	plt.show()
 	```
 
--   Include labels and titles to your subplots of the second figure
+-   Add labels and titles to your subplots of the second figure
 
 -	To close a figure use:
 
@@ -974,7 +991,7 @@ Add all the following codes in the .py file in your {ref}`Editor <Fig. 1>`, not 
 	Try this with and without the code ```plt.show()```.
 
 	````{hint}
-	You can easily disable a line of code by adding a ```#```.
+	You can easily disable a line of code by adding a ```#```. This is known as _commenting out_ inprogrammer speak.
 	````
 
 	````{note}
@@ -983,7 +1000,7 @@ Add all the following codes in the .py file in your {ref}`Editor <Fig. 1>`, not 
 	You can close all plots in the figure window by clicking: ![](img/media/image12.png)
 	````
 
--	Numerous options are available to customize your plots, all lised at the official documentation of [matplotlib](https://matplotlib.org/stable/index.html). Some examples are given in {numref}`Table 6`. Try out the example in {numref}`Table 6` to your own script.
+-	Numerous options are available to customize your plots, all lised in the official documentation of [matplotlib](https://matplotlib.org/stable/index.html). Some examples are given in {numref}`Table 6`. Try out the example in {numref}`Table 6` in your own script.
 
 ```{list-table} Some important matplotlib.pyplot functions for customizing your plots
 :header-rows: 1
@@ -991,34 +1008,37 @@ Add all the following codes in the .py file in your {ref}`Editor <Fig. 1>`, not 
 
 * - Syntax
   - Description
-* - ```plt.plot(x,y, color = 'r')```
+* - ```plt.plot(x, y, color='r')```
   - Solid red line
-* - ```plt.plot(x,y, color = 'r', linestyle= '--')```
+* - ```plt.plot(x, y, color='r', linestyle='--')```
   - Dashed red line
-* - ```plt.plot(x,y, color = 'r', linestyle = '--', linewidth= 2)```
+* - ```plt.plot(x, y, color='r', linestyle='--', linewidth=2)```
   - Thick dashed red line
-* - ```plt.plot(x,y, color = 'g', marker = '*')```
+* - ```plt.plot(x, y, color='g', marker='*')```
   - Green asterisks with line
-* - ```plt.plot(x,y, color = 'g', marker = '*', linestyle = 'none')```
+* - ```plt.plot(x, y, color='g', marker='*', linestyle='none')```
   - Green asterisks without line
-* - ```plt.plot(x,y, color = 'magenta', marker = 's', linestyle = 'dashdot')```
-  - Magenta squares with a dashdot line
+* - ```plt.plot(x, y, color='magenta', marker='s', linestyle='dashdot')```
+  - Magenta squares with a dash-dot line
 ```
 
--	There are many colours available, using either letters, full names or colour codes. Google _matplotlib color_ or _seaborn color_ to get an idea of what colours are available. The figure below also indicates a wide range of colour options. If you are using several lines it may be nice to use a colour palette using seaborn palettes. An example of how to do this is as follow:
+-	There are many colours available, using either letters, full names or colour codes. Search for _matplotlib color_ or _seaborn color_ to get an idea of what colours are available. The figure below also indicates a wide range of colour options. If you are using several lines it may be nice to use a Seaborn color palettes. An example of how to do this is as follows:
 
 	```sns.set_palette("Spectral", 18)```
 
-	In this case _Spectral_ is the name of the palette and _18_ is the number of lines you will use in your plot. Google _seaborn palettes_ to see what is available.
+	In this case _Spectral_ is the name of the palette and _18_ is the number of lines you will use in your plot. Search for _seaborn palettes_ to see what else is available.
 
--	Similarly, many marker and linestyles are available. See the images below for the most common options.
+-	Similarly, many marker and line styles are available. See the images below for the most common options.
 
 ````{note}
 If you want to reset the Seaborn settings to original, run:
+
 ```
 sns.reset_orig
 ```
+
 If you want to switch off Seaborn, you can reset matplotlib within your script or through the console, by running:
+
 ```
 import matplotblib as mpl
 import importlib
@@ -1049,47 +1069,96 @@ Specs for colors, markers and linestyles in matplotlib
 **You are expected to hand in this code.**
 ```
 
-This exercise is based on the dataset contained in the file _MPMtransportdata.xls_. [Meyer-Peter and Mueller (1948)](https://repository.tudelft.nl/islandora/object/uuid:4fda9b61-be28-4703-ab06-43cdc2a21bd7?) (abbreviated MPM) graphically reported gravel transport data from their flume experiments and derived their famous empirical bedload transport predictor from this dataset. [Wong and Parker (2006)](https://ascelibrary.org/doi/full/10.1061/%28ASCE%290733-9429%282006%29132%3A11%281159%29) recovered the original data and re-analysed it to find that the original fit by MPM was wrong. Here you will plot both the data in nondimensional form and plot a predicted transport using a sediment transport predictor. We assume that the density of the water $\rho$ is 1000 kg/m<sup>3</sup> and Earth's gravity acceleration $g$ is 9.81 m/s<sup>2</sup>.
+```{important}
+Make sure to use `plt.show()` after every figure you are asked to make.
+```
 
-1.  Make a new _.py_ file called _Exercise3_ in which the series of commands necessary to solve this assignment will be written. Do not forget to clear your workspace and close the figures at the beginning of your script.
+This exercise is based on the dataset contained in the file _MPMtransportdata.xls_. [Meyer-Peter and Mueller (1948)](https://repository.tudelft.nl/islandora/object/uuid:4fda9b61-be28-4703-ab06-43cdc2a21bd7?) (abbreviated MPM) graphically reported gravel transport data from their flume experiments and derived their famous empirical bedload transport predictor from this dataset. [Wong and Parker (2006)](https://ascelibrary.org/doi/full/10.1061/%28ASCE%290733-9429%282006%29132%3A11%281159%29) recovered the original data and re-analysed it to find that the original fit by MPM was wrong. Here you will plot both the data in nondimensional form and plot a predicted transport using a sediment transport predictor. We assume that the density of the water $\rho=1000\ kg\ m^{-3}$ and Earth's gravity acceleration $g=9.81\ m\ s^{-2}$ (the notation form $m\ s^{-2}$ is commonly used for units in technical documents, and is equivalent to $\frac{m}{s^2}$).
 
-2.  Download the file _MPMtransportdata.xls_ from Blackboard or Teams and save it in your current work-directory. First you must specify the the path of the file i.e. the folder where you have saved the Excel file. For example:
+1.  Make a new file called `Exercise3.py. Do not forget to clear your workspace and close the figures at the beginning of your script.
+
+2.  Download the file "MPMtransportdata.xls" from Brightspace or Teams and save it in your current working directory.
+
+	````{important}
+	For your code to be able to access a file, you must specify the _filepath_ (or _path_, for short) to that file. This is the sequence of folders you would have to click through to get to the file, _e.g._, "C:\Users\username\Documents\myworkspace\MPMtransportdata.xls". When you want to use this information in Python, you can type out the path as-is:
 
 	```
-	path = r"C:\Users\username\Documents\myworkspace"
+	path = r"C:\Users\username\Documents\new_workspace\MPMtransportdata.xls"
 	```
 
-	```{note}
-	The _r_ here refers to _raw_ and makes sure that everything between the quotation marks is read as a 'raw' string, without making other interpretations. This prevents the syntax of the path to cause the script to error when it wants to read a file from the directory.
+	Notice that a path in Python is always given as a string, and that in this example we have stored it in a variable called `path`, which we will later pass as an argument to the function that will access the file. The `r` is short for "raw" and tells Python not to apply additional meaning to anything in the string (for instance, the "\n" at the beginning of "\new_workspace\" could also mean a line break).
+
+	The above filepath uses Windows syntax with back slashes (\). Mac and Linux use forward slashes (/). When your code might be used on both system types (which IS LIKELY in this course!), you can avoid issues by specifying you filepath as follows:
+
 	```
+	import os # this goes at the BEGINNING of your script
+
+	path = os.path.join("path", "to", "file.extension") # replace strings with directory and file names in the correct order
+	```
+
+	This will combine the directory names into a single string, with directory and file names separated by "\" or "/", depending on the computer you are running the code on.
+
+	This can be simplified a lot by using _relative paths_, which tell Python where to go from the _current working directory_. So, if your data file is in the same directory as your Python script, you can simply write:
+
+	```
+	path = "MPMtransportdata.xls"
+	```
+
+	It is good practive to have a separate data sub-directory inside your project directory. Create a subdirectory called "data" in your project directory and put your data file in it. Now you can use the following relative path in your Python script
+
+	```
+	path = os.path.join("data", "MPMtransportdata.xls")
+	```
+
+	**Remember to include the data sub-directory and its contents in your submission folder, or your script won't run properly when the TAs test it!**
+	````
 
 	You can now load the data using the following line:
 
 	```
-	dataMPM = pd.read_excel(path+"\MPMtransportdata.xls")
+	mpm_data = pd.read_excel(path)
 	```
-	The output given here is a _pandas_ [DataFrame](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). The DataFrame reads in ALL the information including the text headers, which is not convenient for calculations. Create a _NumPy_ [array](https://numpy.org/doc/stable/reference/generated/numpy.array.html) where the _NaN_ and text columns of this DataFrame have been eliminated. You can do this by by specifying a row from where you want the array to start.
 
-3.  Define vectors containing the discharge $Q$ (m<sup>3</sup>/s), channel width $W$ (m), water depth $h$ (m), slope $S$ (m/m), median grain size $D_{50}$ (m), the specific gravity of the sediment $s$ (which is density of sediment divided by density of water), and the sediment transport rate $q_s$ (m<sup>2</sup>/s, or m<sup>3</sup>/s per m width).
+	This reads data from the file into a _pandas_ [DataFrame](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). The function reads in ALL the information including the text headers, which is not convenient for calculations. Check the [functions' documentation](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html) for ways to exclude irrelevant data, so that you get a tidy DataFrame.
+	
+	```{hint}
+	Try the `skiprows` parameter.
+	```
+
+3.  The data you will want to use are:
+
+	- the discharge $Q (m^3\ s^{-1})$,
+
+	- channel width $W (m)$,
+
+	- water depth $h (m)$,
+
+	- slope $S (m\ m^{-1})$,
+
+	- median grain size $D_{50} (m)$,
+	
+	- the specific gravity of the sediment $s$ (which is density of sediment divided by density of water), and
+	
+	- the sediment transport rate $q_s (m^2\ s^{-1})$ (or $m^3\ s^{-1}$ per $m$ width).
+	
+	Make sure you understand the names of the columns.
 
 	```{hint}
 	Check the units of the dataset!
 	```
 
-4.  In order to compute sediment transport, it is necessary to know the total bed shear stress $\tau$ (Pa). Calculate a new vector $\tau$ (or _tau_). This can be calculated as follows:
+	You can work with a specific column in the DataFrame using the syntax `df[column name]` (where `column name` is a string), _e.g._, `mpm_data["DISCHARGE"]` for the first column in the current dataset. You can also rename columns with [df.rename](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.rename.html). Most methods of a DataFrame also work on a single column (technically called a _Series_), _e.g._, `mpm_data.mean()` to get means for the whole DataFrame, or `mpm_data["DISCHARGE"].mean()` to get only the mean of this column.
+
+4.  In order to compute sediment transport, it is necessary to know the total bed shear stress $\tau$ (Pa). Calculate a new vector `tau`, using:
 
 	$$
 	\tau = \rho gh\sin{S} = \rho {u\ast}^2
 	$$ (Eq_1_3)
 
-	where $u\ast$ is the shear velocity (m/s) defined by the above relation. (Accept this for now... there is a complicated story behind it involving boundary layer theory.)
+	where $u\ast$ is the shear velocity ($m\ s^{-1}$), defined by the above relation. (Accept this for now... there is a complicated story behind it involving boundary layer theory.)
 
 	````{note}
-	The $S$ variable is has the type "Array of object". Although $S$ consists of float elements, the _sin_-function isn't able to recognize these elements as such within an "Array of object". Therefore you will need to type the following in your code to specify that it needs to read the elements as floats:
-	```
-	np.sin(S.astype(float))
-	```
- 	This is not only the case for the _sin_-function, but also many other NumPy functions!
+	It is possible that some of your columns will be read in with the wrong data type (such as numerical values being represented as strings instead of floats). If so, some mathematical functions will not work properly. If you run into problems, try searching for a method or function called `astype` and applying it to the relevant column in the DataFrame.
 	````
 
 5.  To compare datasets derived from different scales (e.g. field versus lab measurements), parameters are often made dimensionless. Shear stress $\tau$ can be nondimensionalized into the "Shields parameter" $\theta$, which is the ratio of the flow force driving sediment transport and gravitational force that demobilizes sediment. Calculate $\theta$ following:
@@ -1115,21 +1184,21 @@ This exercise is based on the dataset contained in the file _MPMtransportdata.xl
 7.  Plot the sediment transport rate $q_s$ (y-axis; this is the effect) as a function of the shear stress $\tau$ (x-axis; this is the cause). Plot the data as _points_ in log-scales for both axes. To do that, the function [plt.plot()](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html) can be replaced by [plt.loglog()](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.loglog.html). Give an appropriate title to the plot, as well as labels to the x- and y-axes.
 
 	```{note}
-	When writing texts for figure titels or axis labels, writing sections of text between two \$-signs will automatically make the text between these signs mathematical, e.g. ```$m^2$``` becomes $m^2$. Similarly, ```$q_s$``` will become $q_s$. To subscript or superscript more than one character, use the parentheses "\{...}", for example ```$D_{50}$``` becomes $D_{50}$.
+	When writing texts for figure titels or axis labels, writing sections of text between two \$-signs will automatically make the text between these signs mathematical, e.g. ```$m^2$``` becomes $m^2$. Similarly, ```$q_s$``` will become $q_s$. To subscript or superscript more than one character, use the curly brackets `{}`, for example ```$D_{50}$``` becomes $D_{50}$. To find out more about this type of formating, search for "Latex math".
 	```
 
 	````{note}
-	To use Greek letters in your titels or axis labels, you use "\$greekletter\$", e.g. ```$\phi$``` becomes $\phi$.
+	To use Greek letters in your titels or axis labels, you can use `$\greekletter$`, e.g. ```$\phi$``` becomes $\phi$.
 	```{hint}
 	_matplotlib.pyplot_ has a built-in interpretation for ```\t```. To prevent this from affecting the texts of Greek letters such as $\tau$ or $\theta$ in your plots, assure by the dollar signs that your texts are interpreted as raw strings.
 	```
 	````
 
-8.  Plot in a new figure the data in a nondimensional form, i.e. the Einstein parameter $\phi$ (y-axis) as a function of the Shields parameter $\theta$ (x-axis). Give an appropriate title to the plot, as well as labels to the axes.
+8.  Plot in a new figure the data in a nondimensional form, _i.e._, the Einstein parameter $\phi$ (y-axis) as a function of the Shields parameter $\theta$ (x-axis). Give an appropriate title to the plot, as well as labels to the axes.
 
 9.	Compare the figures plotted at **7** and **8**. What is the use of dimensionless variables?
 
-	_Answer open questions as remarks in separate lines starting with: '#'_.
+	_Include answers to open questions as strings and print them to the console._
 
 10.	The MPM predictor of [Meyer-Peter and Mueller (1948)](https://repository.tudelft.nl/islandora/object/uuid:4fda9b61-be28-4703-ab06-43cdc2a21bd7?) was derived from flume experiments with bed load transport, meaning that it does not predict suspended load bed material transport. It is given as:
 
@@ -1155,7 +1224,7 @@ This exercise is based on the dataset contained in the file _MPMtransportdata.xl
 11. In the same figure, plot a vertical line corresponding to $x = \theta_{cr}$.
 
 	````{note}
-	For this you can use the _matplotlib.pyplot_ command [axvline](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.axvline.html).
+	For this you can use [plt.axvline](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.axvline.html).
 	```{hint}
 	All data should be equal to or larger than $\theta_{cr}$.
 	```
@@ -1173,7 +1242,7 @@ This exercise is based on the dataset contained in the file _MPMtransportdata.xl
 	plt.yscale('log')
 	```
 
-	Copy-paste the code above and add a _matplotlib.pyplot_ [colorbar](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.colorbar.html) of the colormap to your figure. Give the colorbar a proper label.
+	Copy-paste the code above and add a _matplotlib.pyplot_ [colorbar](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.colorbar.html) of the colormap to your figure. Give the colorbar a proper label. Don't forget to `show()` the figure!
 
 	```{note}
 	Importing seaborn here allows you to use the various colormaps available in this package.
@@ -1195,7 +1264,7 @@ This exercise is based on the dataset contained in the file _MPMtransportdata.xl
 
 	- What is the function of ```alpha```?
 
-	_Answer open questions as remarks in separate lines starting with: '#'_.
+	_Include answers to open questions as strings and print them to the console._
 
 14. Aside from shear stress and sediment transport, grain size can also be nondimensionalized into the "Bonnefille number" $D\ast$:
 
@@ -1213,7 +1282,7 @@ This exercise is based on the dataset contained in the file _MPMtransportdata.xl
 
 15. Look at the data plotted in non-dimensional form. One set of points seems to follow a different trend than the others. What range of $D\ast$ does this correspond to?
 
-	_Answer open questions as remarks in separate lines starting with: '#'_.
+	_Include answers to open questions as strings and print them to the console._
 
 ```{important}
 End of Exercise 3.
@@ -1239,12 +1308,12 @@ In this exercise, we will perform some analysis on a dataset containing the flow
 
 **Preliminary analysis**
 
-1.  Make a new _.py_ file called _Exercise4_ in which the assignments of this exercise are executed. Start the script by clearing your workspace and closing the windows.
+1.  Make a new file called `Exercise4.py`. Start the script by clearing your workspace and closing the windows.
 
 2.  Load the new dataset. As the data are stored as a text (_ASCII_) file, the following command should be used:
 
 	```
-	Q = pd.read_table(path+"\LobithDischargeData.asc",header=None)
+	discharge = pd.read_table("LobithDischargeData.asc", header=None)
 	```
 
 	Open the DataFrame in the Variable Explorer, do you understand how it is organised? Why do you think ```header=None``` is used?
@@ -1253,7 +1322,7 @@ In this exercise, we will perform some analysis on a dataset containing the flow
 
 3.  The data corresponding to the 29th of February are included for each year, leading to 366 rows. Display the first 20 elements of the row corresponding to the 29th of February, what do you notice?
 
-	_Answer open questions as remarks in separate lines starting with: '#'_.
+	_Include answers to open questions as strings and print them to the console._
 
 	```{note}
 	NaN stands for "Not a Number". It is often used to represent missing values in datasets.
@@ -1263,13 +1332,13 @@ In this exercise, we will perform some analysis on a dataset containing the flow
 
 	```
 	plt.figure(1)
-	plt.plot(Q)
+	plt.plot(discharge)
 	```
 	In the commands above, the function [plt.plot()](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html) is applied to a [DataFrame](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html) instead of a vector. This plot handles each column (and therefore each year of data) separately. As a result, each line appearing in the figure corresponds to the evolution of the discharge $Q$ for a given year. Give an appropriate title to the plot, as well as labels to the axes.
 
 5.  Zoom in on the figure around the 29th of February. How are the NaN-values handled by the plot?
 
-	_Answer open questions as remarks in separate lines starting with: '#'_.
+	_Include answers to open questions as strings and print them to the console._
 
 	```{hint}
 	For zooming, you can use the "zoom" buttons above your plots, or redefine the [x-limits](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.xlim.html).
@@ -1289,7 +1358,7 @@ In this exercise, we will perform some analysis on a dataset containing the flow
 
 9.	What are the dates (dd/mm/yyyy) of when these maximum and minimum values at **8** were observed?
 
-	_Answer open questions as remarks in separate lines starting with: '#'_.
+	_Include answers to open questions as strings and print them to the console._
 
 **Statistics over the entire dataset**
 
@@ -1297,7 +1366,7 @@ In this exercise, we will perform some analysis on a dataset containing the flow
 
 11. Plot this vector as a function of the time. Plot in the same figure the maximum and minimum values for each day (use different type of lines an line colors to differentiate the curves). Give an appropriate title to the plot, as well as labels to the axes and a legend to the graph. In which month are the highest mean discharges occurring?
 
-	_Answer open questions as remarks in separate lines starting with: '#'_.
+	_Include answers to open questions as strings and print them to the console._
 
 12. Create a vector containing the annual flood discharges for the 100 years of data.
 
@@ -1333,7 +1402,7 @@ In this exercise, we will perform some analysis on a dataset containing the flow
 
 16. Read in the figure what is the magnitude of the 50-year and 100-year flood.
 
-	_Answer open questions as remarks in separate lines starting with: '#'_.
+	_Include answers to open questions as strings and print them to the console._
 
 	
 	`````{note}
@@ -1371,7 +1440,7 @@ The following exercises have to be handed in for the practical of Chapter 1:
 - {ref}`EXERCISE-1.4`
 
 ```{important}
-We expect the scripts in one zip file named **YourSurname_GEO4-4436_Chapter1**. Also include to your zip file all the separate files that you have imported in your scripts. Moreover, each script should be well labelled and contain the answers to questions as comments. Please note that only the relevant information should be displayed when running the scripts, so do not print every variable.
+We expect the scripts in one zip file named **YourSurname_GEO4-4436_Chapter1**. Also include to your zip file all the separate files that you have imported in your scripts. Moreover, each script should be well labelled and print the answers to each question. Please note that **only the relevant information should be displayed** when running the scripts, so do not print every variable.
 ```
 
 ```{important} 
