@@ -817,7 +817,7 @@ The main functions and methods available to perform (statistical) data analysis 
   - [df.median](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.median.html)
   - Median value
 * - [array.mean](https://numpy.org/doc/stable/reference/generated/numpy.mean.html)
-  - [df.mean](pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.mean.html)
+  - [df.mean](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.mean.html)
   - Average/mean value
 * - [array.std](https://numpy.org/doc/stable/reference/generated/numpy.std.html)
   - [df.std](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.std.html)
