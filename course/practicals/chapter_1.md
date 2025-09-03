@@ -3,20 +3,21 @@
 ```{important}
 ***NOTES ABOUT CHAPTER 1***
 
--   The exercises in this chapter will be graded on the following criteria: (1) does the program run? (2) Can we understand it (=enough comments)? (3) Does it do the right thing as specified in assignment? See the end of this chapter for the full rubric.
+-   The exercises in this chapter will be graded on the following criteria:
+	(1) Does the program run?
+	(2) Can we understand it (= properly commented)?
+	(3) Does it do the right thing as specified in assignment? See the end of this chapter for the full rubric.
 
--   There are 4 exercises that you must hand that increase in difficulty and required time for completion.
+-   There are 4 exercises that you must hand in, that increase in difficulty and time required for completion. Try to schedule your workload accordingly.
 
--   Try to schedule your workload accordingly.
-
--   Please note for this exercise you must submit the scripts (with appropriate comments) as ***.zip*** file which will be used to determine your grade.
+-   Please note, for this exercise you must submit the scripts (with appropriate comments) as a ***.zip*** file, which will be used to determine your grade.
 
 -   The deadline for this Chapter is at 9:00 before the start of next practical.
 ```
 
 ## 1.1 Getting started
 
-While there are some good Python books, the best material for learning most things Python is **online** - thanks to the large Python community.
+While there are some good Python books, the best material for learning most things Python is **online**, thanks to the large Python community.
 
 For this course, we write our Python files using an IDE (Integrated Development Environment), which is a software application that provides for user-friendly programming. There are many free IDEs to write code in Python. Here we use ***Spyder***.
 
@@ -28,7 +29,7 @@ Make sure you have completed the {ref}`software` in order to be able to run Spyd
 
 The Spyder interface is split into multiple parts:
 
-- **Editor** -- this is where you will write your code
+- **Editor** -- this is where you will write your code.
 
 - **Console & log** -- when you run your code, the outputs and errors will be displayed here. In the console you can also give commands, e.g. to get instant output or for testing lines of your code.
 
@@ -43,9 +44,11 @@ Setup of Spyder text editor. Source: [Harish Maddukuri](https://medium.com/coder
 
 ### 1.1.2 Creating your own workspace (directory)
 
-Python scripts are generally created and saved into _Projects_. These projects are located in a workspace/directory. The current workspace or directory is given in the taskbar. We advise you start every new practical by creating a new Project. To do that:
+Python scripts are generally created and saved into _Projects_. These projects are located in a workspace/directory. The current workspace or directory is shown in the taskbar.
 
--   Projects -> New Project
+We advise you start every new practical by creating a new Project. To do that:
+
+-   Projects $\rarr$ New Project
 
 -   Give the project a name, e.g. _Practical1_
 
@@ -61,7 +64,7 @@ Python scripts are generally created and saved into _Projects_. These projects a
 Creating a new Spyder project
 ```
 
-Any files that you create will now all be found in your Project at the location you have assigned. In this project we can now have multiple scripts also known as .py files. You can also click on the following icons:
+Any files that you create will now all be found in your project at the location you specified. In this project we can now have multiple scripts in the form of .py files. You can also click on the following icons:
 
 -	![](img/media/image4.png) to create a new .py file
 
@@ -69,12 +72,12 @@ Any files that you create will now all be found in your Project at the location 
 
 -   ![](img/media/image6.png) to save the currently displayed .py file
 
--   ![](img/media/image7.png) to save all opened .py files
+-   ![](img/media/image7.png) to save all open .py files
 
-Now create a new project in a .py file, called ***Practical1***. In this file you will be working on today.
+Now create a new project and a new file called `Practical1.py`. This is the file you will be working in today.
 
 ```{note}
-For the coming exercises, you need to create different .py files. Don't make the exercises in the _Practical1_ file.
+For the coming exercises, you need to create different .py files. Don't code the exercises in the _Practical1_ file.
 ```
 
 ### 1.1.3 Python basics
@@ -87,21 +90,50 @@ In this section we will perform some introductory exercises of Python. We will d
 
 You can see that the output prints the text (=_string_) you just wrote between the quotation marks.
 
+```{tip}
+**Definition**
+A _string_ ('str') is an object that Python displays as-is and does not interpret, such as text that is intended for the human user. You can create a string by putting the text in single (`' '`) or double (`" "`) quotation marks.
+
+For example, in the code `print("Hello, World!")`, the sequence `Hello, World!` is a string. The word `print` is a function (we will learn about these later), a type of instruction to the computer. If we were to write `"print"` instead, Python would no longer interpret this as an instruction, and would not pring the subsequent string to the console.
+```
+
 -	To verify whether this is indeed a string, run: ```type("Hello, World!")```.
 
-You just asked the Spyder console to directly display information. However, you will usually want to store such information in a **variable**.
+You just asked the Spyder console to directly display information. Python will immediately forget this information after displaying it. For Python to remember information for future use, we need to store it in a **variable**.
 
--	For instance, define variable _a_ by running: ```a = 2.5```.
+-	For instance, declare variable _a_ by running: ```a = 2.5```.
 
-With this command, we defined a new variable _a_ and assigned the value 2.5 to it.
+With this command, we declare a new variable _a_ and assigned the value 2.5 to it.
 
--	Now type in the console: ```b = 3*a**2``` and then press enter.
+```{tip}
+**Definition**
+A _variable_ is a container for storing information. It has a name, such as `a`, and a value, such as `2.5`. The value of a variable may be a number, a string, or an entire collection of such objects. Pretty much anything can be stored in a variable.
 
-We defined a new variable, *b*, equal to: $3a^2$.
+Assigning a value to a new variable is known in programmer-speak as _declaring_ that variable.
+```
+
+```{important}
+Assigning a new value to an existing variable will delete the old value of that variable.
+For example, if we run:
+`[1]: x = 5`
+`[2]: x = "Hello, World!"`
+only the value "Hello, World!" will be stored in the variable `x`.
+```
+
+-	Now type in the console: ```b = 3 * a ** 2``` and press enter.
+
+We declared a new variable, *b*, equal to $3a^2$.
 
 -	To see the value of *b*, run ```print(b)``` or just ```b``` in your console.
 
-You can also navigate to the {ref}`Variable Explorer <Fig. 1>`. This provides the name, type and size of the variables that are currently stored in the Spyder application.
+```{important}
+**Printing to the console**
+As you can see above, when working in the console it is enough to type a command or variable name, and its result or value will be printed (shown) on screen.
+
+In the next section, we will start working in `.py` files (a.k.a. code files or scripts). With these, only objects or outputs that are explicitly printed using the `print` function will appear on screen. Everything else will remind behind the scenes, as it were.
+```
+
+You can also navigate to the {ref}`Variable Explorer <Fig. 1>`. This provides the name, type, size, and value of the variables that are currently stored in the Spyder application.
 
 The basic Python operations and their symbols are presented in {numref}`Table 1`. The most important data types for this course are listed in {numref}`Table 2`.
 
@@ -132,7 +164,7 @@ The basic Python operations and their symbols are presented in {numref}`Table 1`
   - Example
 * - ```str```
   - String; text
-  - ```Hello, World!```
+  - ```"Hello, World!"```
 * - ```int```
   - Integer; numeric
   - ```2```
@@ -144,9 +176,15 @@ The basic Python operations and their symbols are presented in {numref}`Table 1`
   - ```True``` or ```False```
 ```
 
+```{important}
+**Reserved words and built-in functions**
+Some terms in Python have a specific pre-defined meaning. In Spyder, these will appear in yellow or purple. If you type a name for a new variable and it changes colour, STOP! Giving this name to a variable will delete its built-in functionallity and could cause your code to behave "unexpectedly" (this is a programming euphamism for "disasterously"). Chose a different name for your code, _e.g._ `my_list` instead of the function name `list`.
+Examples of reserved words include the names of data types listed in {numref}`Table 2`, as well as the booleans `True` and `False` (but not `true` or `false`).
+```
+
 #### Initial lines of a Python script
 
-Now we start working in the {ref}`Editor <Fig. 1>`. A new .py file in Spyder will automatically show some initial information, e.g.:
+Now we start working in the {ref}`Editor <Fig. 1>`. A new `.py` file in Spyder will automatically show some initial information, e.g.:
 
 ```
 # -*- coding: utf-8 -*-
@@ -157,7 +195,7 @@ Created on Tue Apr  4 12:00:00 2023
 """
 ```
 
-For **EVERY** future Python script you will make, it is important to add information that tells any viewer what this script is about. This is both handy for you and others who want to see your script at a later moment. For instance, you could add to your _Practical1_ file:
+For **EVERY** future Python script you will make, it is important to add information that tells any viewer what this script is about. This is handy both for you and for others who want to see your script at a later moment. For instance, you could add to your _Practical1_ file:
 
 ```
 """
@@ -176,7 +214,7 @@ The ```# -*- coding: utf-8 -*-``` is a remnant of an older Python version. You c
 
 #### Running a Python script or specific lines
 
--	Add two new lines to your script where you define the same variables _a_ and _b_ as you defined earlier above.
+-	Add two new lines to your script where you declare the same variables _a_ and _b_ as you did earlier above.
 
 -	Add ```print(b)``` in a new line.
 
@@ -198,20 +236,18 @@ Note: there is a difference between RUNNING the file (using the green play butto
 
 -   Clear the console using the clear button ![](img/media/image9.png)
 
-Type now:
+-   Now type in the console: ```c = a * 30``` and press Enter
 
--   Now type in the console: ```c=a*30``` and press Enter
-
-We are defining a new variable $c$, as function of variable $a$, but you just deleted $a$. Therefore, the command cannot be executed since a is not defined anymore. An error message appears in the console.
+We are declaring a new variable $c$, as a function of variable $a$, but you just deleted $a$. The command cannot be executed, because $a$ is not stored in Python's memory anymore. An error message appears in the console.
 
 (functions_intro)=
 #### Python functions
 
-You might imagine that doing lots of complicated calculations and working on large datasets may result in extremely long and complicated scripts. To counter this, you can break programming tasks into separate **Functions**, which include the following advantages:
+You might imagine that doing lots of complicated calculations and working on large datasets may result in extremely long and complicated scripts. To counter this, you can break up programming tasks into separate **functions**, which include the following advantages:
 
 -	_Simplicity_: functions typically focus on a small task rather than an entire problem.
 
--	_Maintainability_: if functions have a high decree of independence from each other, updating such functions will have limited impact on other functions.
+-	_Maintainability_: if functions have a high degree of independence from each other, updating one such function will have limited impact on other functions.
 
 -	_Reusability_: functions can easily be reused in a script, limiting duplication of code.
 
@@ -222,14 +258,14 @@ from numpy import pi
 from numpy import cos
 ```
 
-You just imported two functions, one defining a variable _pi_ and one function that calculates the _cosine_ of a value. Run: ```cos(pi)```. Now clear the console and run again ```cos(pi)```. Clearing the console also deletes all imported functions!
+You just imported two object -- one is the constant _pi_ and the other is a function that calculates the _cosine_ of a value. Run: ```cos(pi)```. Now clear the console and run ```cos(pi)``` again. Clearing the console also deletes all imported objects!
 
-So what exactly is ```numpy``` above?
+Now, what exactly is ```numpy```?
 
 (packages_intro)=
 #### Python packages
 
-The advantage of Python is that it is free and open-source, where any user can write codes and functions and share them online for anyone to use. This doesn't limit to individual users, but also applies to big _software development teams_. If such a team has developed a large set of functions, they typically store them in a _library_ or _package_. One such important _package_ is [numpy](https://numpy.org/doc/stable/index.html#), which provides numerous mathematical functions and is widely applied in scientific calculations.
+The advantage of Python is that it is free and open-source, where any user can write code and functions and share them online for anyone to use. This isn't limited to individual users, but also applies to big _software development teams_. If such a team has developed a large set of functions, they typically store them in a _library_ or _package_. One such important _package_ is [NumPy](https://numpy.org/doc/stable/index.html#), which provides numerous mathematical functions and is widely applied in scientific calculations.
 
 -	Instead of importing separate functions (e.g. ```numpy.cos```), you can also import the entire package. Add to your {ref}`Editor <Fig. 1>` and run:
 
@@ -238,20 +274,20 @@ The advantage of Python is that it is free and open-source, where any user can w
 	```
 
 	````{note}
-	The ```as np``` makes your program to interpret any use of ```np.``` as a function it needs to look up in the _numpy_ library.
+	The ```as np``` tells your program that wherever a command starts with ```np.``` it needs to look it up in the _NumPy_ library.
 	````
 
 	```{note}
 	For any package or function that you want to import, it is important to do this at the beginning of your Python script, **before** using them!
 
-	If you import a package but don't use it, an orange triangle ![](img/media/image10.png) appears to your right.
+	If you import a package but don't use it, an orange triangle ![](img/media/image10.png) will appear to the left of the import command in the Spyder editor.
 	```
 
--	Now run your script and you can use all of the functions available in the _numpy_ library. Run in your console: ```np.cos(np.pi)``` and then ```cos(pi)```. Do you understand the difference here?
+-	Run your script and you can use all of the functions available in the _NumPy_ library. Run in your console: ```np.cos(np.pi)``` and then ```cos(pi)```. Do you understand the difference here?
 
--   Now test some of the other frequently-used mathematical functions of _numpy_, given in {numref}`Table 3`.
+-   Now test some of the other frequently-used mathematical functions of _NumPy_, given in {numref}`Table 3`.
 
-```{list-table} Several important mathematical functions in _numpy_.
+```{list-table} Several important mathematical functions in _NumPy_.
 :header-rows: 1
 :name: Table 3
 
@@ -264,11 +300,11 @@ The advantage of Python is that it is free and open-source, where any user can w
 * - ```np.abs()```
   - absolute value
 * - ```np.sqrt()```
-  - root square
+  - square root
 * - ```np.round()```
-  - round towards the nearest {ref}`integer <Table 2>`)
+  - round towards the nearest {ref}`integer <Table 2>`
 * - ```np.ceil()```, ```np.floor()```
-  - round towards plus (or minus) infinity
+  - round towards plus (`ceil`) or minus (`floor`) infinity
 * - ```np.log()```, ```np.log10()```
   - natural logarithm, logarithm base 10
 * - ```np.exp()```
@@ -276,41 +312,43 @@ The advantage of Python is that it is free and open-source, where any user can w
 ```
 
 ```{important}
-All of these mathematical functions have their own documentation at the [official numpy web page](https://numpy.org/doc/stable/reference/routines.math.html), or on many of the other Python-related web pages. A very important step of debugging is **always** to ask a search engine! Also see the the debug manual on Blackboard. Note, however, that asking an Artificial Intelligence to write your code will not help your learning (and may count as plagiarism, and has an enormous CO2 footprint).
+All of these mathematical functions have their own documentation at the [official NumPy web page](https://numpy.org/doc/stable/reference/routines.math.html), or on many of the other Python-related web pages. A very important step of debugging is **always** to ask a search engine! Also see the the debug manual on Brightspace. Note, however, that asking an Artificial Intelligence to write your code will not help your learning (and may count as plagiarism, and has an enormous CO<sub>2</sub> footprint).
 ```
 
--	If you want to see all the attributes of a function or package, run for instance ```dir(np)``` or ```dir(np.cos)```.
+-	If you want to see all the attributes of a function or package, run for instance ```help(np)``` or ```help(np.cos)```.
 
 
-Aside from _numpy_, there are countless of other free and open source packages that constitute the vibrant community of Python. As you will find out later, other important packages in this course are:
+Aside from _NumPy_, there are countless other free and open source packages that constitute the vibrant community of Python. As you will find out later, other important packages in this course are:
 
 -	[pandas](https://pandas.pydata.org/), which is handy for data analysis and manipulation.
 
 -	[matplotlib](https://matplotlib.org/stable/index.html), which is used for data visualisation.
 
 ```{note}
-A Python function is specific to a single task. Packages also include modules, which have a .py extension and define multiple functions, classes, attributes etc.
+A Python function is specific to a single task. Packages can also include modules, which define multiple functions, classes, attributes etc.
 ```
 
 ## 1.2  Working with .py files
 
-A .py file is a programme file or script written in Python. It is a succession of Python commands which can be written and edited using a text editor and then is run using a Python Interpreter (e.g. Spyder). Using .py files allows you to organise and save different series of commands. Scripts can be edited, extended or corrected whenever you want and can be executed several times. Writing the commands into a script is necessary when you perform advanced data analysis, since it allows you to check/improve your methodology, but also to be sure to perform the exact same data processing for several datasets for instance.
+A `.py` file is a program file or script written in Python. It is a succession of Python commands which can be written and edited using a text editor and then is run using the Python interpreter - this is the behind-the-scenes part of Python, which translates our code into something the computer can understand directly. A Python IDE such as Spyder contains a text editor (and other useful elements, as we've seen), and is capable of communicating directly with the interpreter. Using `.py` files allows you to organise and save different series of commands. Scripts can be edited, extended or corrected whenever you want and can be executed several times. Writing the commands into a script is necessary when you perform advanced data analysis, since it allows you to check/improve your methodology, but also to be sure you perform the exact same data processing for several datasets, for instance.
 
 ````{important}
-It is important to add comment lines to your scripts to make them easier to understand. This is particularly useful when you open a script after a long time and try to figure out what you have been doing. In a script file, anything written to the right of a hashtag ```#``` is considered as a comment and will be ignored during the execution. In the .py files, the comments appear in a different colour (grey by default).
+Good code includes comments to explain to anyone reading what different parts of it do - most importantly to Future You, who will be staring at the script a month from now, wondering "wth was I trying to do here?"
+Comments in Python start with a `#`, which tells the interpreter to skip the rest of the line and move on to the next one.
+In Spyder, comments will appear in a different colour (grey by default).
 ````
 
-When a script file is executed, Python executes the commands in the order they are written. It is therefore important to consider in which order you want to execute your commands. Generally, scripts are structured as follows:
+When a script is executed, Python executes the commands in the order they are written. It is therefore important to consider in which order you want to execute your commands. Generally, scripts are structured as follows:
 
--	**Header**						Describe the script in a few words (e.g. objective, date of creation, author of the script)
+-	**Docstring (documentation string)**	Describe the script in a few words (e.g. objective, date of creation, author of the script)
 
--	**Package import**				Import all the necessary packages to perform operations (e.g. numpy)
+-	**Package import**						Import all the necessary packages to perform operations (e.g. NumPy)
 
--	**Initialization**				Define the main variables and load your data
+-	**Initialization**						Declare the main variables and load your data
 
--	**Calculations**				Execute the calculations
+-	**Calculations**						Execute the calculations
 
--	**Output and visualisation**	Commands to display the results, plot graphics and save output
+-	**Output and visualisation**			Commands to display the results, plot graphics and save output
 
 Copy-paste and execute the simple example below:
 
@@ -329,13 +367,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Initialization
-a = np.array([0,1,2,3,4,5])
+a = np.array([0, 1, 2, 3, 4, 5])
 
 # Calculations
-b = a**2
+b = a ** 2
 
 # Output and visualisation
-plt.plot(a,b)
+plt.plot(a, b)
+```
+
+```{tip}
+Best practices for using Python are described in a series of "Python Enhancement Proposals" or [PEPs](https://peps.python.org/pep-0000/). Most relevant to the beginning and even advanced Python user are [PEP 8 - the style guide](https://pep8.org/) and [PEP 20 - the Zen of Python](http://www.thezenofpython.com/) (or run `import this` in your Spyder console).
 ```
 
 ---
@@ -347,7 +389,7 @@ plt.plot(a,b)
 **You are expected to hand in this code.**
 ```
 
-The aim is to calculate flow velocity and water depth in a river from known variables and parameters (find out through a web search what the difference is between "variable" and "parameter"). The flow resistance parameter for this river is $C = 44$ m<sup>1/2</sup>/s, the discharge $Q = 2500$ m<sup>3</sup>/s, the channel width $W = 500$ m and the channel gradient $S = 1.6 × 10^{−4}$ m/m. $Q$ is defined as:
+The aim is to calculate flow velocity and water depth in a river from known variables and parameters (use a web search to find out what the difference is between "variable" and "parameter"). The flow resistance parameter for this river is $C = 44$ m<sup>1/2</sup>/s, the discharge $Q = 2500$ m<sup>3</sup>/s, the channel width $W = 500$ m and the channel gradient $S = 1.6 × 10^{−4}$ m/m. $Q$ is defined as:
 
 $$
 Q = h u W \\
@@ -361,9 +403,9 @@ $$ (Eq_1_2)
 
 See [Kleinhans, 2005](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2005JE002521#) for a brief overview how the Chezy relation is equivalent to the Darcy-Weisbach relation and the Manning relation, which you might be more familiar with.
 
-The commands should be written in a _.py_ file called _Exercise1_, saved in your current directory. The script should display the results.
+The commands should be written in a file called `Exercise1.py`, saved in your current directory. **The script should print the results.**
 
-Do not forget to comment the file, and give meaningful names to the variables.
+Do not forget to comment the file and give meaningful names to the variables.
 
 ````{hint}
 $S = 1.6 × 10^{−4}$ can be written in Python as: ```1.6e-4```.
@@ -381,136 +423,142 @@ _Please add this script to the folder that you will zip and send to us._
 
 A data structure is the fundamental form that Python uses to store and manipulate data. It allows for efficient calculations and analysis over entire datasets. There are multiple types of data structures. In this course we will discuss _lists_, _arrays_ and _DataFrames_.
 
--	A **list** is simply a 1D series of numbers and is formed using square brackets \[...\]. You can also create lists within lists.
+-	A **list** is simply a one-dimensional series of elements (e.g. numbers, strings, other lists, or a combination thereof). You can a list create using square brackets `[]` or the `list()` function, _e.g._ `my_list = [1, 2, 3, 4, 5]` and `my_list = list((1, 2, 3, 4, 5))` will produce the same result.
 
--	An **array** can be defined as a list of lists. An array contains data of all the same type (e.g. all numbers or all characters).
+-	An **array** is similar to a list, but it can have any number of dimensions. An array contains data of all the same type (e.g. all integers or all strings). Python has a built in function `array()`, but you will usually want to use NumPy to manipulate your array, therefore it would be better to use the NumPy function `np.array()`.
 
--	A **DataFrame** is a matrix of different elements organized in rows and columns which CAN be of different datatypes.
+-	A **DataFrame** is a table of different elements organized in rows and columns which CAN be of different datatypes (although each column can only have one data type). We use the [pandas](https://pandas.pydata.org/) library to work with DataFrames.
 
-Different data types that constitute lists, arrays and DataFrames are provided in {numref}`Table 2`.
+Different data types that can be stored in lists, arrays and DataFrames are provided in {numref}`Table 2`.
 
 In this section we will learn how to create lists, arrays and dataframes, extract the relevant information from one of them, and perform calculations with them.
 
+```{tip}
+There are more data sctructures you should be aware of, as they are in highly common use in Python:
+- A [**tuple**](https://docs.python.org/3/library/stdtypes.html#tuple) is similar to a list, but it cannot be changed once it has been created, while a list can. A tuple can be created using parens: `my_tuple = (1, 2, 3)` or the `tuple()` function: `my_tuple = tuple([1, 2, 3]).
+- A [**dictionary**](https://docs.python.org/3/library/stdtypes.html#dict), or **dict** stores data in pars of keys and values (think of the keys as labels or names), _e.g._ `my_dict = {"spam": 50, "egg": 46}`. Follow the link for more details. A common way to create a DataFrame is from data stored in a dict.
+```
+
 ### 1.3.1 Creating lists, arrays and DataFrames
 
--   Clear your variables and run in your console: ```L = [1, 2, 5, 10]```. Check the Variable Explorer to see the kind of data structure that is produced.
+-   Clear your variables and run in your console: ```my_list = [1, 2, 5, 10]```. Check the Variable Explorer to see the type of data structure that is produced.
 
--   Now run in your console: ```L2 = [[1, 2, 5, 10],[3, 4, -2, 7]]```. Now compare $L$ and $L2$ in the Variable Explorer. Do you understand the difference in size?
+-   Now run in your console: ```my_list2 = [[1, 2, 5, 10], [3, 4, -2, 7]]```. Now compare `my_list` and `my_list2` in the Variable Explorer. Do you understand the difference in size?
 
 	```{hint}
 	By double clicking on a variable in the variable explorer, you can see more information.
 	```
 
-$L$ and $L2$ are data structures of the type _list_. Lists are a basic [Python structure](https://docs.python.org/3/tutorial/datastructures.html#), built in the core Python documentation. It therefore does not require a {ref}`package<packages_intro>` to be imported.
+`my_list` and `my_list2` are data structures of the type _list_. A list is a basic [Python structure](https://docs.python.org/3/tutorial/datastructures.html#) included in the core Python modules. It therefore does not require a {ref}`package<packages_intro>` to be imported.
 
--   Now import numpy again as np.
+-   Now import NumPy again as `np`.
 
--	Run: ```A = np.array(L2)```. What kind of variable do you obtain and what is the difference with $L2$?
+-	Run: ```my_array = np.array(my_list2)```. What kind of variable do you obtain and how is different from `my_list2`?
 
-$A$ is of type [array](https://numpy.org/doc/stable/reference/generated/numpy.array.html), which is a data structure type of the _numpy_ package.
+`my_array` is of type [array](https://numpy.org/doc/stable/reference/generated/numpy.array.html), which is a data structure type of the _NumPy_ package.
 
--   Now run: ```import pandas as pd``` and ```D = pd.DataFrame(L2)```. What is the difference between $L2$, $A$ and $D$?
+-   Now run: ```import pandas as pd``` and ```df = pd.DataFrame(my_list2)```. What is the difference between `my_list2`, `my_array` and `df`?
 
 	```{note}
-	Similar to importing _numpy_ as _np_, it is very common to import _pandas_ as _pd_.
+	Similar to importing _NumPy_ as _np_, it is very common to import _pandas_ as _pd_.
 	```
 
-$D$ is of type [DataFrame](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html), which is a data structure type of the _pandas_ package.
+`df` is of type [DataFrame](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html), which is a data structure type of the _pandas_ package.
 
--	Now run: ```A2 = np.array(D)``` and ```D2 = pd.DataFrame(A)```. Are there differences between $A$ and $A2$ or $D$ and $D2$?
+-	Now run: ```my_array2 = np.array(df)``` and ```df2 = pd.DataFrame(my_array)```. Are there differences between `my_array` and `my_array2` or `df` and `df2`?
 
-Because of the worlwide usage of both packages, _numpy arrays_ can be easily transformed into _pandas DataFrames_ and vice versa.
+_NumPy arrays_ can be easily transformed into _pandas DataFrames_ and vice versa.
 
 (note_on_data_structures)=
 ```{important}
-Some {ref}`functions<functions_intro>`, notations or attributes specifically require a specific type of data structure (e.g. array or DataFrame). Therefore, you should always consider whether your variable is stored in the proper data structure!
+Some {ref}`functions<functions_intro>`, classes or attributes require a specific type of data structure (e.g. array or DataFrame). Therefore, you should always consider whether your variable is stored in the proper data structure!
 ```
 
-The advantage of package-built data structures is that it has its own built-in attributes. Attributes are called using a ```.```.
+The advantage of package-built data structures is that they have their own built-in attributes. Attributes are accessed by appending them with a ```.``` after the object or variable name.
 
--   Run the following codes:
+-   Run the following code:
 
-	```D.size```
+	```df.size```
 
-	```D.shape```
+	```df.shape```
 
-	```A.size```
+	```my_array.size```
 
-	```A.shape```
+	```my_array.shape```
 
-As you can see, there are overlapping attributes between _numpy arrays_ and _pandas DataFrames_. For any type of data structure, you can usually find the attributes on the online available official documentation of the specific data structure (e.g. [pandas DataFrame](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html)).
+As you can see, there are overlapping attributes between _NumPy arrays_ and _pandas DataFrames_. For any type of data structure, you can usually find the attributes online in the official documentation of the specific data structure (e.g. [pandas DataFrame](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html)).
 
--   Have a closer look at the attributes listed in [DataFrame documentation](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Run the following codes:
+-   Have a closer look at the attributes listed in the [DataFrame documentation](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Run the following codes:
 
-	```len(D.index)```
+	```len(df.index)```
 
-	```len(D.columns)```
+	```len(df.columns)```
 
 	Do you understand what the above lines display and what the funcion ```len()``` does?
 
-Instead of defining all the specific elements, as you did for $L$ and $L2$, you can also define an array of an amount of elements following an interval. You can do this using the numpy function [np.arange](https://numpy.org/doc/stable/reference/generated/numpy.arange.html):
+Instead of defining all the specific elements, as you did for `my_list` and `my_list2`, you can also define an array of a number of elements following an interval. You can do this using the NumPy function [np.arange](https://numpy.org/doc/stable/reference/generated/numpy.arange.html):
 
 -	Run the following codes:
 
-	```A3 = np.arange(1,6,1)```
+	```my_array3 = np.arange(1, 6, 1)```
 
-	```A4 = np.arange(1,6,2)```
+	```my_array4 = np.arange(1, 6, 2)```
 
-	```A5 = np.arange(12,0,-3)```
+	```my_array5 = np.arange(12, 0, -3)```
 
-	```A6 = np.arange(12,0,3)```
+	```my_array6 = np.arange(12, 0, 3)```
 
-	Compare the outcomes. Do yo understand how the np.arange function works?
+	Compare the outcomes. Do yo understand how the `np.arange` function works?
 
-The np.arange function requires as input (begin, end, interval). If no interval is specified, the default interval is 1. So ```np.arange(1,6)``` will return the same as ```np.arange(1,6,1)```.
+The np.arange function requires as input "(begin, end, interval)". If no interval is specified, the default interval is 1. So ```np.arange(1, 6)``` will return the same as ```np.arange(1, 6, 1)```.
 
 ````{note}
-The end number is not included in the output array.
+The _end_ number is not included in the output array.
 
-Thus ```np.arange(1,6,1)``` returns ```[1 2 3 4 5]``` and NOT ```[1 2 3 4 5 6]```.
+Thus ```np.arange(1, 6, 1)``` returns ```[1 2 3 4 5]``` and NOT ```[1 2 3 4 5 6]```.
 ````
 
 ### 1.3.2 Concatenation, vstack and hstack
 
-Sometimes it can be useful to combine several related arrays or lists into one unique array and join them together. This can be done using the numpy operation of [concatenate](https://numpy.org/doc/stable/reference/generated/numpy.concatenate.html).
+Sometimes it can be useful to combine several related arrays or lists into one unique array and join them together. This can be done using the NumPy function [np.concatenate](https://numpy.org/doc/stable/reference/generated/numpy.concatenate.html).
 
--	Clear your variables and import numpy. Run the following codes:
+-	Clear your variables and import NumPy. Run the following codes:
 
-	```a = np.arange(1,3)```
+	```array_a = np.arange(1, 3)```
 
-	```b = np.arange(4,6)```
+	```array_b = np.arange(4, 6)```
 
-	```c = np.concatenate((a,b))```
+	```array_c = np.concatenate((array_a, array_b))```
 
-	Inspect how arrays $a$ and $b$ are joined together into array $c$.
+	Inspect how arrays `array_a` and `array_b` are joined together into `array_c`.
 
 	```{note}
-	Several functions require double brackets, e.g. _np.concatenate(( ))_.
+	Notice that we used double _parens_ (parentheses, `()`) for `np.concatenate`. This is because the function requires that we give it a _sequence_ of arrays or lists to concatenate. In this example, we used a sequence of type `tuple` (denoted by the surrounding `()`), but we could also have used a list, like this: `np.concatenate([array_a, array_b])`.
 	```
 
 The default is to concatenate arrays in the same dimension (also referred to as horizontally).
 
 ```{note}
-The above arrays are 1-dimensional (i.e. their size has only one direction, for example (2,) and not (2,1)). Double-clicking a 1-dimensional vector in the variable explorer provides a default vertical display. Don't confuse this as a 2-dimenstional display of several rows and one column (e.g. (2,1) )!
+The above arrays are 1-dimensional (i.e. their size has only one direction, for example `(2,)` and not `(2,1)`). Double-clicking a 1-dimensional vector in the variable explorer provides a default vertical display. Don't mistake this for a 2-dimenstional display of several rows and one column (e.g. `(2,1)`)!
 ```
 
 -	Now run:
 
-	```d = np.vstack((a,b))```
+	```array_d = np.vstack((array_a, array_b))```
 
-	```e = np.hstack((a,b))```
+	```array_e = np.hstack((array_a, array_b))```
 
 	Compare the outcomes.
 
-Numpy [vstack](https://numpy.org/doc/stable/reference/generated/numpy.vstack.html) is used to vertically concatenate arrays, whereas [hstack](https://numpy.org/doc/stable/reference/generated/numpy.hstack.html) is used for horizontal or 1-dimensional concatenation (for the situation above, $c$ and $e$ yield the same concatenation output).
+NumPy [vstack](https://numpy.org/doc/stable/reference/generated/numpy.vstack.html) is used to vertically concatenate arrays, whereas [hstack](https://numpy.org/doc/stable/reference/generated/numpy.hstack.html) is used for horizontal or 1-dimensional concatenation (for the situation above, `array_c` and `array_e` yield the same concatenation output).
 
 ```{note}
 _concatenate_, _hstack_ and _vstack_ can be used to combine strings, and lists or arrays of floats and integers ({numref}`Table 2`). To vertically stack two lists they must have the same dimensions!
 ```
 
-### 1.3.3 Manipulating data structures using their subscripts
+### 1.3.3 Manipulating data structures using index numbers
 
-Elements of data structures are usually identified by their position (row and column numbers), also called subscript or index. {numref}`Table 4` shows how the different elements of a 3 *×* 6 matrix can be identified using their subscripts.
+Elements in data structures are usually identified by their position (row and column numbers), also called their index number. {numref}`Table 4` shows how the different elements of a 3 *×* 6 matrix can be identified using their index numbers.
 
 ```{list-table} Subscripts of 3 *×* 6 matrix
 :header-rows: 0
@@ -536,23 +584,23 @@ Elements of data structures are usually identified by their position (row and co
   - [2,5]
 ```
 
-For a _numpy array_ you can identify an element by position as follows:
+For a _NumPy array_ you can identify an element by position as follows:
 
--	Clear your variables and import numpy and pandas as np and pd, respectively. Run the following codes:
+-	Clear your variables and import NumPy and pandas as np and pd, respectively. Run the following code:
 
-	```L = [[1, 2, 5, 10], [3, 4, -2, 7]]```
+	```my_list = [[1, 2, 5, 10], [3, 4, -2, 7]]```
 
-	```A = np.array(L)```
+	```my_array = np.array(my_list)```
 
-	```NA = A[1,3]```
+	```val_a = my_array[1, 3]```
 
-	Here $NA$ provides the element of array $A$ at position (1,3).
+	Here `val_a` provides the element at position (1,3) of `my_array`.
 
 -	Now try if this also works for a _pandas DataFrame_ by running:
 
-	```D = pd.DataFrame(L)```
+	```df = pd.DataFrame(my_list)```
 
-	```ND = D[1,3]```
+	```val_df = df[1, 3]```
 
 	Here we refer to an {ref}`earlier note<note_on_data_structures>` on data structures.
 
@@ -560,61 +608,61 @@ To identify the element of a _pandas DataFrame_ through a subscript, we use [ilo
 
 -	Run:
 
-	```ND = D.iloc[1,3]```
+	```val_df = df.iloc[1,3]```
 
-	As _iloc_ is an attribute to _pandas DataFrame_, it won't work for a _numpy array_. Try: ```NA = A.iloc[1,3]```
+	As `iloc` is an attribute of _pandas DataFrames_, it won't work for a _NumPy array_. Try: ```val_a = my_array.iloc[1,3]```
 
--	Write your own code that returns ```-2``` for both $A$ and $D$.
+-	Write your own code that returns ```-2``` for both `my_array` and `df`.
 
-To replace an element with something else we use [numpy where](https://numpy.org/doc/stable/reference/generated/numpy.where.html) or [pandas replace](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.replace.html).
+To replace an element with something else we use [NumPy where](https://numpy.org/doc/stable/reference/generated/numpy.where.html) or [pandas replace](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.replace.html).
 
--   Run the following codes:
+-   Run the following code:
 
-	```A = np.where(A==-2,2,A)```
+	```my_array = np.where(my_array == -2, 2, my_array)```
 
-	```D = D.replace(-2,2)```
+	```df = df.replace(-2, 2)```
 
-	Compare $A$ and $D$ with their previous outputs. Do you understand how the _np.where_ function works?
+	Compare `my_array` and `df` with their previous outputs. Do you understand how the `np.where` function works?
 
 Instead of single elements, you can also call entire rows and columns.
 
 -   Run the following codes:
 
-	```RA = A[0,0:4]```
+	```array_row = my_array[0, 0:4]```
 
-	```CA = A[0:2,2]```
+	```array_column = my_array[0:2, 2]```
 
-	```RD = D.iloc[0,0:4]```
+	```df_row = df.iloc[0, 0:4]```
 
-	```CD = D.iloc[0:2,2]```
+	```df_column = df.iloc[0:2, 2]```
 
 	Examine the outputs.
 
 	````{note}
-	Instead of defining a row or column through its first and last index, you can also just use ```:```, e.g. for the variables definede here, ```RA = A[0,:]``` yields the same output as ```RA = A[0,0:4]```. The same goes for ```CD = D.iloc[:,2]``` and ```CD = D.iloc[0:2,2]```.
+	Instead of defining a row or column through its first and last index, you can also just use ```:```, e.g. for the variables definede here, ```array_row = my_array[0, :]``` yields the same output as ```array_row = my_array[0, 0:4]```. The same goes for ```df_column = df.iloc[:, 2]``` and ```df_column = df.iloc[0:2, 2]```.
 	````
 
--	Create two new vectors containing the second rows of $A$ and $D$.
+-	Create two new vectors containing the second rows of `my_array` and `df`.
 
--	Replace all elements of the second columns of $A$ and $D$ with zeros.
+-	Replace all elements of the second columns of `my_array` and `df` with zeros.
 
-## 1.4 Operations on numpy arrays and pandas DataFrames
+## 1.4 Operations on NumPy arrays and pandas DataFrames
 
 ### 1.4.1 Operations between a scalar and a matrix
 
-If you conduct simple operations on a numpy array with a scalar, all the elements in the array are multiplied by that scalar.
+If you perform simple operations on a NumPy array with a scalar, that operation is applied to each element in the array.
 
 -	For instance, inspect the outputs of the following commands:
 
-	```2*A```
+	```2 * my_array```
 
-	```2/A```
+	```2 / my_array```
 
-	```2+A```
+	```2 + my_array```
 
-	```2-A```
+	```2 - my_array```
 
--	Now try the same operations with pandas DataFrame $D$. Do these operations also work for Dataframes?
+-	Now try the same operations with pandas DataFrame `df`. Do these operations also work for Dataframes?
 
 ### 1.4.2 Operations between matrices
 
@@ -622,29 +670,29 @@ If you conduct simple operations on a numpy array with a scalar, all the element
 
 Addition or subtraction operations can only be applied to matrices of identical size. The resulting matrix is obtained by adding (subtracting) their corresponding elements. Example:
 
--   Define the following new matrix $M$ of same size as $A$ and $D$ and store it **both** as a _numpy array_ and as _pandas DataFrame_:
+-   Define the following new matrix of same size as `my_array` and `df` and store it **both** as a _NumPy array_ and as _pandas DataFrame_:
 
 	$$
-	M = \begin{pmatrix}
+	matrix = \begin{pmatrix}
 		3 & 8 & 0 & 160\\
 		13 & 42 & 21 & 17
 	\end{pmatrix}
 	$$
 
--	Now try operations of ```+```, ```-```, ```*```, ```/``` and ```**``` between $A$, $D$ and $M$. Also try operations between arrays and DataFrames. Inspect the outputs.
+-	Now try operations of ```+```, ```-```, ```*```, ```/``` and ```**``` between `my_array`,  `df` and `matrix`. Also try operations between arrays and DataFrames. Inspect the outputs.
 
 #### Multiplication of two matrices
 
 Matrix multiplication according to linear algebra follows different rules.
 
--	Define two new _arrays_ $B$ and $C$:
+-	Define two new _arrays_ `array_b` and `array_c`:
 
 	$$
-	B = \begin{pmatrix}
+	array_b = \begin{pmatrix}
 		1 & 0 & 2\\
 		5 & 10 & 7
 	\end{pmatrix}
-	\quad \textrm{and} \quad C = \begin{pmatrix}
+	\quad \textrm{and} \quad array_c = \begin{pmatrix}
 		1 & 3\\
 		4 & 1\\
 		2 & 2
@@ -653,12 +701,12 @@ Matrix multiplication according to linear algebra follows different rules.
 
 -	To execute a matrix multiplication, you use [np.matmul](https://numpy.org/doc/stable/reference/generated/numpy.matmul.html), run:
 
-	```E = np.matmul(B,C)```
+	```array_d = np.matmul(array_b, array_c)```
 
-	This will calculate the matrix product of matrices $B$ and $C$ as follows:
+	This will calculate the matrix product of `array_b` and `array_c` as follows:
 
 	$$
-	E(i,j) = \sum_{k=1}^{n} B(i,k) \ast C(k,j) = \begin{pmatrix}
+	array_d(i,j) = \sum_{k=1}^{n} array_b(i,k) \ast array_c(k,j) = \begin{pmatrix}
 		1 \ast 1 + 0 \ast 4 + 2 \ast 2 & 1 \ast 3 + 0 \ast 1 + 2 \ast 2\\
 		5 \ast 1 + 10 \ast 4 + 7 \ast 2 & 5 \ast 3 + 10 \ast 1 + 7 \ast 2
 	\end{pmatrix} = \begin{pmatrix}
@@ -671,104 +719,121 @@ Matrix multiplication according to linear algebra follows different rules.
 
 ### 1.5.1 Examples of elemantary functions
 
-We are now going to look at several additional examples of built-in functions for both arrays and DataFrames. For a complete list, go to the official documentation of [numpy arrays](https://numpy.org/doc/stable/reference/arrays.html) and [pandas DataFrames](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). If you're looking for something specific, it's always a good idea to conduct a Google search for the data structure you are using.
+NumPy functions can generally be used on all sorts of matrices (including NumPy arrays and pandas DataFrames). However, both NumPy arrays and pandas DataFrames have many of these functions as built-in _methods_ (the technical term for a function that is written into the definition of a data structure or other programmatic type). A method of a NumPy array is usually just another way of writing the equivalent NumPy function. However, the equivalent method for a non-NumPy matrix (_e.g.,_ a DataFrame) will often be better adapted to use with that specific data structure.
 
--	It is possible to **round** the value of floats and matrices using [np.round](https://numpy.org/devdocs/reference/generated/numpy.round.html). Run the following and inspect the outcomes to see if you understand what happens:
+For example, `np.mean()` returns the mean value of a matrix. When applied to a NumPy array, `np.mean(my_array)` returns the same result as the array's built-in method `my_array.mean()`. Applying this to a DataFrame containing the same values `np.mean(df)` will, again, return the same result. However, the DataFrame's built-in method `df.mean()` will return a different result. Try it for yourself and see if you understand what it does. Check the [documentation](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.mean.html) to learn the different ways you can apply this method, including how to get the same result as with `np.mean(df)`.
+
+Note that NumPy functions that manipulate values in a matrix can also be applied to an individual value.
+
+We are now going to look at several additional examples of functions for both arrays and DataFrames. For a complete list, go to the official documentation of [NumPy arrays](https://numpy.org/doc/stable/reference/arrays.html) and [pandas DataFrames](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). If you're looking for something specific, it's always a good idea to conduct an online search for the data structure you are using.
+
+-	It is possible to **round** the value of floats and matrices using [np.round](https://numpy.org/devdocs/reference/generated/numpy.round.html) or [pandas.DataFrame.round](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.round.html). Run the following and inspect the outcomes to see if you understand what happens:
 
 	```np.round(1.555)```
 
-	```np.round(1.555,2)```
+	```np.round(1.555, 2)```
 
-	```np.round(A/3)```
+	```np.round(my_array / 3)```
 
-	```np.round(D/3)```
+	```(my_array / 3).round()```
+
+	```np.round(df / 3)```
+
+	```(df / 3).round```
+
+	The last example could also be written as:
+
+	```
+	df = df / 3
+	df.round()
+	```
 
 -	To **transpose** a matrix, you change the rows of the matrix into columns, and vice versa using [np.transpose](https://numpy.org/doc/stable/reference/generated/numpy.transpose.html). As a consequence, a matrix of size n × m will turn into a matrix of size m × n containing the same elements organised in a different way.
 
-	```np.transpose(A)```
+	```np.transpose(my_array)```
 
-	```np.transpose(D)```
+	```np.transpose(df)```
 
--	To **create new matrices**, you are not required to write down every element, such as you did earlier by defining $L$. Run the following and inspect the outcomes:
+	```df.transpose()```
 
-	```np.zeros((3,5))```
+-	To **create new arrays**, you are not required to write down every element, such as you did earlier by defining `my_list`. Run the following and inspect the outcomes:
 
-	```np.ones((5,3))```
+	```np.zeros((3, 5))```
 
-	```np.full((3,5),2)```
+	```np.ones((5, 3))```
 
-	```np.full((3,5),np.nan)```
+	```np.full((3, 5), 2)```
 
--	With the help of functions previously introduced, create a matrix of size 20x30 containing only floats that represent $5/3$ in six digits after the decimal point. Try to do this in only one line of code!
+	```np.full((3, 5), np.nan)```
+
+-	With the help of functions previously introduced, create a matrix of size 20 x 30 containing only floats that represent $5 / 3$ to six decimal places. Try to do this in only one line of code!
 
 ### 1.5.2 Data analysis
 
-The main numpy functions available to perform (statistical) data analysis on arrays are summarized in {numref}`Table 5`. Some examples of the use of these functions are given below.
+The main functions and methods available to perform (statistical) data analysis on arrays are summarized in {numref}`Table 5`. Some examples of the use of these functions are given below.
 
 -	Define the following vector as an array:
 
-	```vectA = np.array([6,2,5,7])```
+	```vect_A = np.array([6, 2, 5, 7])```
 
 -	Run the following commands and inspect the outputs:
 
-	```np.mean(vectA)```
+	```vect_A.mean()```
 
-	```np.median(vectA)```
+	```vect_A.median()```
 
-	```np.sum(vectA)```
+	```vect_A.sum()```
 
-	```np.max(vectA)```
+	```vect_A.max()```
 
-	```np.min(vectA)```
+	```vect_A.min()```
 
--	In some practical cases, it is important to know when a maximum (or minimum) value has been reached, that is to say, what is the position of the largest value in the original vector. To return the index/location of the max or minimum value use [np.argmax](https://numpy.org/doc/stable/reference/generated/numpy.argmax.html) or [np.argmin](https://numpy.org/doc/stable/reference/generated/numpy.argmin.html#numpy.argmin), respectively. Inspect the following runs:
+-	In some practical cases, it is important to know when a maximum (or minimum) value has been reached, that is to say, what is the position of the largest value in the original array. To return the index/location of the max or minimum value use [np.argmax](https://numpy.org/doc/stable/reference/generated/numpy.argmax.html) or [np.argmin](https://numpy.org/doc/stable/reference/generated/numpy.argmin.html#numpy.argmin), respectively. The equivalent pandas methods are [df.idxmax](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.idxmax.html) and [df.idxmin](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.idxmin.html). Inspect the following:
 
-	```np.argmax(vectA)```
+	```vect_A.argmax()```
 
-	```np.argmin(vectA)```
+	```vect_A.argmin()```
 
 -   Now run:
 
-	```s = np.sort(vectA)```
+	```s = np.sort(vect_A)```
 
-	Compare $s$ and $vectA$.
+	Compare `s` and `vect_A`.
 
--	For DataFrames, these statistical numpy operations work differently in that they handle each column separately. The output is therefore a vector of length the amount of columns. Run for instance:
-
-	```np.mean(D)```
-
--	It is generally possible to specify the direction (rows or columns) along which the computations have to be performed as an additional input argument. Run for instance:
-
-	```np.mean(D,0)```
-
-	```np.mean(D,1)```
-
-	What is the difference?
-
-```{list-table} Some important numpy functions for statistical data analysis on matrices
+```{list-table} Some important functions and methods for statistical data analysis on matrices
 :header-rows: 1
 :name: Table 5
 
-* - Function
+* - NumPy
+  - pandas
   - Description
-* - [np.max](https://numpy.org/devdocs/reference/generated/numpy.max.html)
+* - [array.max](https://numpy.org/devdocs/reference/generated/numpy.max.html)
+  - [df.max](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.max.html)
   - Maximum value
-* - [np.min](https://numpy.org/devdocs/reference/generated/numpy.min.html)
+* - [array.min](https://numpy.org/devdocs/reference/generated/numpy.min.html)
+  - [df.min](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.min.html)
   - Minimum value
-* - [np.median](https://numpy.org/doc/stable/reference/generated/numpy.median.html)
+* - [array.median](https://numpy.org/doc/stable/reference/generated/numpy.median.html)
+  - [df.median](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.median.html)
   - Median value
-* - [np.mean](https://numpy.org/doc/stable/reference/generated/numpy.mean.html)
+* - [array.mean](https://numpy.org/doc/stable/reference/generated/numpy.mean.html)
+  - [df.mean](pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.mean.html)
   - Average/mean value
-* - [np.std](https://numpy.org/doc/stable/reference/generated/numpy.std.html)
+* - [array.std](https://numpy.org/doc/stable/reference/generated/numpy.std.html)
+  - [df.std](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.std.html)
   - Standard deviation
-* - [np.var](https://numpy.org/doc/stable/reference/generated/numpy.var.html)
+* - [array.var](https://numpy.org/doc/stable/reference/generated/numpy.var.html)
+  - [df.var](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.var.html)
   - Variance
 * - [np.percentile](https://numpy.org/doc/stable/reference/generated/numpy.percentile.html)
+  - [df.quantile](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.quantile.html)
   - Percentile values
-* - [np.sum](https://numpy.org/doc/stable/reference/generated/numpy.sum.html)
+* - [array.sum](https://numpy.org/doc/stable/reference/generated/numpy.sum.html)
+  - [df.sum](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.sum.html)
   - Sum of the elements
 * - [np.sort](https://numpy.org/doc/stable/reference/generated/numpy.sort.html)
-  - Arrange the elements in ascending order
+  - [df.sort_values](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.sort_values.html)
+  - Arrange the elements in ascending order (pandas: sort the DataFrame following the order of a specific column)
 ```
 
 ---
@@ -780,12 +845,12 @@ The main numpy functions available to perform (statistical) data analysis on arr
 **You are expected to hand in this code.**
 ```
 
-Make a new _.py_ file called _Exercise2_ in your work-directory, where the commands need to solve the following assignments. The script should display the results of all assignments.
+Make a new file called `Exercise2.py` in your work directory. The script should print the results of all assignments.
 
-1.  Create the following numpy array $A$:
+1.  Create the following NumPy array `my_array`:
 
 $$
-A = \begin{pmatrix}
+my_array = \begin{pmatrix}
   16 & 3 & 2 & 13\\
   5 & 10 & 11 & 8\\
   9 & 6 & 7 & 12\\
@@ -793,23 +858,23 @@ A = \begin{pmatrix}
 \end{pmatrix}
 $$
 
-2.  Define an array $A1$ containing the first row of $A$.
+2.  Create an array `array_1` containing the first row of `my_array`.
 
-3.  Define a scalar, $sumA1$, equal to the sum of the elements of $A1$.
+3.  Create a scalar, `sum_a1`, equal to the sum of the elements of `array_1`.
 
-4.  Create a vector $sumRows$, where each element contains the sum of the elements of one of the rows of $A$. The first element of this vector should be equal to:
+4.  Create a vector `sum_rows`, where each element contains the sum of the elements of one of the rows of `array_1`. The first element of this vector should be equal to:
 
 	$$
-	sumRows[0] = \sum_{k=0}^{4} A[0,k]
+	sum_rows[0] = \sum_{k=0}^{4} array_1[0,k]
 	$$
 
-	Try to use only one command line!
+	Try to do this in one line!
 
-5.  Create a vector $sumColumns$, containing the sum of the columns of $A$.
+5.  Create a vector `sum_columns`, containing the sum of the columns of `array_1`.
 
-6.	What do you notice when comparing $sumRows$ and $sumColumns$?
+6.	What do you notice when comparing `sum_rows` and `sum_columns`?
 
-	_Answer open questions as remarks in separate lines starting with: '#'_.
+	_Include answers to open questions as strings and print them to the console._
 
 ```{Important}
 End of Exercise 2.
@@ -822,11 +887,11 @@ _Please add this script to the folder that you will zip and send to us._
 
 **How to make a simple 2D-plot: example**
 
-Add all the following codes in the .py file in your {ref}`Editor <Fig. 1>`, not your console!
+Add all the following lines of code to the file `Practical1.py` in your {ref}`Editor <Fig. 1>`, not your console!
 
--	Clear your variables, import numpy and define the following arrays in your file:
+-	Clear your variables, import NumPy and create the following arrays in your file:
 
-	```x = np.arange(-np.pi, np.pi,0.5)```
+	```x = np.arange(- np.pi, np.pi, 0.5)```
 
 	```y = np.sin(x)```
 
@@ -840,25 +905,25 @@ Add all the following codes in the .py file in your {ref}`Editor <Fig. 1>`, not 
 
 	```plt.figure(1)```
 
-	```plt.plot(x,y)```
+	```plt.plot(x, y)```
 
 	```plt.show()```
 
 	````{note}
-	You have to include the ```plt.figure(1)``` because you have to give unique numbers your separate plots in your script.
+	You have to include the ```plt.figure(1)``` because you have to give unique numbers to your separate figures in your script.
 	````
 	Select all the lines you have in your file and press **F9**. Inspect what happens.
 
 -	Now run in your console:
 
-	```plt.plot(x,y2)```
+	```plt.plot(x, y2)```
 
 	A new plot has replaced the previous one in the figure window. To display the second graph on top of the first one you have to edit your file as follows:
 
 	```
 	plt.figure(1)
-	plt.plot(x,y)
-	plt.plot(x,y2)
+	plt.plot(x, y)
+	plt.plot(x, y2)
 	plt.show()
 	```
 
@@ -870,11 +935,11 @@ Add all the following codes in the .py file in your {ref}`Editor <Fig. 1>`, not 
 
 -	Edit the second plotting line so it now reads
 
-    ```plt.plot(x,y2, color = 'r')```
+    ```plt.plot(x, y2, color='r')```
 
 	Run the lines. Do you understand what happened?
 
--	Title, labels on the x- and y-axis and legends can now be defined. Type the following commands (before ```plt.show()```!) one by one and analyse their effects on the figure:
+-	Title, labels on the x- and y-axes and legends can now be defined. Type the following commands (before ```plt.show()```!) one by one and analyse their effects on the figure:
 
 	```plt.title('Sine and cosine functions')```
 
@@ -884,7 +949,7 @@ Add all the following codes in the .py file in your {ref}`Editor <Fig. 1>`, not 
 
 	```plt.legend(['sine', 'cosine'])```
 
--	Matplotlib is the basic package for plotting your data, but there are also other packages that can be used complementary to matplotlib, for instance [seaborn](https://seaborn.pydata.org/). Include at the top of your script where you import your packages:
+-	Matplotlib is the basic package for plotting your data, but there are also complementary packages that can be used to improve your figures further, such as [seaborn](https://seaborn.pydata.org/). Include at the top of your script where you import your packages:
 
 	```import seaborn as sns```
 
@@ -892,32 +957,32 @@ Add all the following codes in the .py file in your {ref}`Editor <Fig. 1>`, not 
 
 	Run the plotting lines again, do you see the difference?
 
--	To specify the limits of the x- and y-axis include for instance (before ```plt.show()```!):
+-	To specify the limits of the x- and y-axes include for instance (before ```plt.show()```!):
 
-	```plt.xlim(-np.pi, np.pi)```
+	```plt.xlim(- np.pi, np.pi)```
 
-	```plt.ylim(-2,2)```
+	```plt.ylim(- 2, 2)```
 
 	Run the plotting lines again. What has happened?
 
--	It is also possible to plot without specifying the *x* argument. Run:
+-	It is also possible to plot without specifying the `x` argument. Run:
 
 	```plt.plot(y)```
 
-	The elements are now plotted as a function of their position in the vector: *y*(1) at *x* = 1, *y*(2) at *x* = 2, etc.
+	The elements are now plotted as a function of their position in the vector: `y[0]` at `x = 0`, `y[1]` at `x = 1`, etc.
 
--	Multiple plots can also be displayed in one figure. This can be done using the command [subplot(a,b,c)](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplot.html) where $a$, $b$ and $c$ are integers, and $c$ is less than or equal to the product $a*b$. This command divides the figure in $a*b$ sub-figures, organized in $a$ rows and $b$ columns. To obtain 2 figures, one above the other, include and run following lines below your 1st figure:
+-	Multiple plots can also be displayed in one figure. This can be done using the command [subplot(a,b,c)](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplot.html) where `a`, `b` and `c` are integers, and `c` is less than or equal to the product $a * b$. This command divides the figure in $a * b$ sub-figures, organized in $a$ rows and $b$ columns. To obtain 2 plots, one above the other, include and run following lines below your 1st figure:
 
 	```
 	plt.figure(2)
-	plt.subplot(2,1,1)
-	plt.plot(x,y)
-	plt.subplot(2,1,2)
-	plt.plot(x,y2, 'g')
+	plt.subplot(2, 1, 1)
+	plt.plot(x, y)
+	plt.subplot(2, 1, 2)
+	plt.plot(x, y2, 'g')
 	plt.show()
 	```
 
--   Include labels and titles to your subplots of the second figure
+-   Add labels and titles to your subplots of the second figure
 
 -	To close a figure use:
 
@@ -926,7 +991,7 @@ Add all the following codes in the .py file in your {ref}`Editor <Fig. 1>`, not 
 	Try this with and without the code ```plt.show()```.
 
 	````{hint}
-	You can easily disable a line of code by adding a ```#```.
+	You can easily disable a line of code by adding a ```#```. This is known as _commenting out_ inprogrammer speak.
 	````
 
 	````{note}
@@ -935,7 +1000,7 @@ Add all the following codes in the .py file in your {ref}`Editor <Fig. 1>`, not 
 	You can close all plots in the figure window by clicking: ![](img/media/image12.png)
 	````
 
--	Numerous options are available to customize your plots, all lised at the official documentation of [matplotlib](https://matplotlib.org/stable/index.html). Some examples are given in {numref}`Table 6`. Try out the example in {numref}`Table 6` to your own script.
+-	Numerous options are available to customize your plots, all lised in the official documentation of [matplotlib](https://matplotlib.org/stable/index.html). Some examples are given in {numref}`Table 6`. Try out the example in {numref}`Table 6` in your own script.
 
 ```{list-table} Some important matplotlib.pyplot functions for customizing your plots
 :header-rows: 1
@@ -943,34 +1008,37 @@ Add all the following codes in the .py file in your {ref}`Editor <Fig. 1>`, not 
 
 * - Syntax
   - Description
-* - ```plt.plot(x,y, color = 'r')```
+* - ```plt.plot(x, y, color='r')```
   - Solid red line
-* - ```plt.plot(x,y, color = 'r', linestyle= '--')```
+* - ```plt.plot(x, y, color='r', linestyle='--')```
   - Dashed red line
-* - ```plt.plot(x,y, color = 'r', linestyle = '--', linewidth= 2)```
+* - ```plt.plot(x, y, color='r', linestyle='--', linewidth=2)```
   - Thick dashed red line
-* - ```plt.plot(x,y, color = 'g', marker = '*')```
+* - ```plt.plot(x, y, color='g', marker='*')```
   - Green asterisks with line
-* - ```plt.plot(x,y, color = 'g', marker = '*', linestyle = 'none')```
+* - ```plt.plot(x, y, color='g', marker='*', linestyle='none')```
   - Green asterisks without line
-* - ```plt.plot(x,y, color = 'magenta', marker = 's', linestyle = 'dashdot')```
-  - Magenta squares with a dashdot line
+* - ```plt.plot(x, y, color='magenta', marker='s', linestyle='dashdot')```
+  - Magenta squares with a dash-dot line
 ```
 
--	There are many colours available, using either letters, full names or colour codes. Google _matplotlib color_ or _seaborn color_ to get an idea of what colours are available. The figure below also indicates a wide range of colour options. If you are using several lines it may be nice to use a colour palette using seaborn palettes. An example of how to do this is as follow:
+-	There are many colours available, using either letters, full names or colour codes. Search for _matplotlib color_ or _seaborn color_ to get an idea of what colours are available. The figure below also indicates a wide range of colour options. If you are using several lines it may be nice to use a Seaborn color palettes. An example of how to do this is as follows:
 
 	```sns.set_palette("Spectral", 18)```
 
-	In this case _Spectral_ is the name of the palette and _18_ is the number of lines you will use in your plot. Google _seaborn palettes_ to see what is available.
+	In this case _Spectral_ is the name of the palette and _18_ is the number of lines you will use in your plot. Search for _seaborn palettes_ to see what else is available.
 
--	Similarly, many marker and linestyles are available. See the images below for the most common options.
+-	Similarly, many marker and line styles are available. See the images below for the most common options.
 
 ````{note}
 If you want to reset the Seaborn settings to original, run:
+
 ```
 sns.reset_orig
 ```
+
 If you want to switch off Seaborn, you can reset matplotlib within your script or through the console, by running:
+
 ```
 import matplotblib as mpl
 import importlib
@@ -1001,47 +1069,96 @@ Specs for colors, markers and linestyles in matplotlib
 **You are expected to hand in this code.**
 ```
 
-This exercise is based on the dataset contained in the file _MPMtransportdata.xls_. [Meyer-Peter and Mueller (1948)](https://repository.tudelft.nl/islandora/object/uuid:4fda9b61-be28-4703-ab06-43cdc2a21bd7?) (abbreviated MPM) graphically reported gravel transport data from their flume experiments and derived their famous empirical bedload transport predictor from this dataset. [Wong and Parker (2006)](https://ascelibrary.org/doi/full/10.1061/%28ASCE%290733-9429%282006%29132%3A11%281159%29) recovered the original data and re-analysed it to find that the original fit by MPM was wrong. Here you will plot both the data in nondimensional form and plot a predicted transport using a sediment transport predictor. We assume that the density of the water $\rho$ is 1000 kg/m<sup>3</sup> and Earth's gravity acceleration $g$ is 9.81 m/s<sup>2</sup>.
+```{important}
+Make sure to use `plt.show()` after every figure you are asked to make.
+```
 
-1.  Make a new _.py_ file called _Exercise3_ in which the series of commands necessary to solve this assignment will be written. Do not forget to clear your workspace and close the figures at the beginning of your script.
+This exercise is based on the dataset contained in the file _MPMtransportdata.xls_. [Meyer-Peter and Mueller (1948)](https://repository.tudelft.nl/islandora/object/uuid:4fda9b61-be28-4703-ab06-43cdc2a21bd7?) (abbreviated MPM) graphically reported gravel transport data from their flume experiments and derived their famous empirical bedload transport predictor from this dataset. [Wong and Parker (2006)](https://ascelibrary.org/doi/full/10.1061/%28ASCE%290733-9429%282006%29132%3A11%281159%29) recovered the original data and re-analysed it to find that the original fit by MPM was wrong. Here you will plot both the data in nondimensional form and plot a predicted transport using a sediment transport predictor. We assume that the density of the water $\rho=1000\ kg\ m^{-3}$ and Earth's gravity acceleration $g=9.81\ m\ s^{-2}$ (the notation form $m\ s^{-2}$ is commonly used for units in technical documents, and is equivalent to $\frac{m}{s^2}$).
 
-2.  Download the file _MPMtransportdata.xls_ from Blackboard or Teams and save it in your current work-directory. First you must specify the the path of the file i.e. the folder where you have saved the Excel file. For example:
+1.  Make a new file called `Exercise3.py. Do not forget to clear your workspace and close the figures at the beginning of your script.
+
+2.  Download the file "MPMtransportdata.xls" from Brightspace or Teams and save it in your current working directory.
+
+	````{important}
+	For your code to be able to access a file, you must specify the _filepath_ (or _path_, for short) to that file. This is the sequence of folders you would have to click through to get to the file, _e.g._, "C:\Users\username\Documents\myworkspace\MPMtransportdata.xls". When you want to use this information in Python, you can type out the path as-is:
 
 	```
-	path = r"C:\Users\username\Documents\myworkspace"
+	path = r"C:\Users\username\Documents\new_workspace\MPMtransportdata.xls"
 	```
 
-	```{note}
-	The _r_ here refers to _raw_ and makes sure that everything between the quotation marks is read as a 'raw' string, without making other interpretations. This prevents the syntax of the path to cause the script to error when it wants to read a file from the directory.
+	Notice that a path in Python is always given as a string, and that in this example we have stored it in a variable called `path`, which we will later pass as an argument to the function that will access the file. The `r` is short for "raw" and tells Python not to apply additional meaning to anything in the string (for instance, the "\n" at the beginning of "\new_workspace\" could also mean a line break).
+
+	The above filepath uses Windows syntax with back slashes (\). Mac and Linux use forward slashes (/). When your code might be used on both system types (which IS LIKELY in this course!), you can avoid issues by specifying you filepath as follows:
+
 	```
+	import os # this goes at the BEGINNING of your script
+
+	path = os.path.join("path", "to", "file.extension") # replace strings with directory and file names in the correct order
+	```
+
+	This will combine the directory names into a single string, with directory and file names separated by "\" or "/", depending on the computer you are running the code on.
+
+	This can be simplified a lot by using _relative paths_, which tell Python where to go from the _current working directory_. So, if your data file is in the same directory as your Python script, you can simply write:
+
+	```
+	path = "MPMtransportdata.xls"
+	```
+
+	It is good practive to have a separate data sub-directory inside your project directory. Create a subdirectory called "data" in your project directory and put your data file in it. Now you can use the following relative path in your Python script
+
+	```
+	path = os.path.join("data", "MPMtransportdata.xls")
+	```
+
+	**Remember to include the data sub-directory and its contents in your submission folder, or your script won't run properly when the TAs test it!**
+	````
 
 	You can now load the data using the following line:
 
 	```
-	dataMPM = pd.read_excel(path+"\MPMtransportdata.xls")
+	mpm_data = pd.read_excel(path)
 	```
-	The output given here is a _pandas_ [DataFrame](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). The DataFrame reads in ALL the information including the text headers, which is not convenient for calculations. Create a _numpy_ [array](https://numpy.org/doc/stable/reference/generated/numpy.array.html) where the _NaN_ and text columns of this DataFrame have been eliminated. You can do this by by specifying a row from where you want the array to start.
 
-3.  Define vectors containing the discharge $Q$ (m<sup>3</sup>/s), channel width $W$ (m), water depth $h$ (m), slope $S$ (m/m), median grain size $D_{50}$ (m), the specific gravity of the sediment $s$ (which is density of sediment divided by density of water), and the sediment transport rate $q_s$ (m<sup>2</sup>/s, or m<sup>3</sup>/s per m width).
+	This reads data from the file into a _pandas_ [DataFrame](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). The function reads in ALL the information including the text headers, which is not convenient for calculations. Check the [functions' documentation](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html) for ways to exclude irrelevant data, so that you get a tidy DataFrame.
+	
+	```{hint}
+	Try the `skiprows` parameter.
+	```
+
+3.  The data you will want to use are:
+
+	- the discharge $Q (m^3\ s^{-1})$,
+
+	- channel width $W (m)$,
+
+	- water depth $h (m)$,
+
+	- slope $S (m\ m^{-1})$,
+
+	- median grain size $D_{50} (m)$,
+	
+	- the specific gravity of the sediment $s$ (which is density of sediment divided by density of water), and
+	
+	- the sediment transport rate $q_s (m^2\ s^{-1})$ (or $m^3\ s^{-1}$ per $m$ width).
+	
+	Make sure you understand the names of the columns.
 
 	```{hint}
 	Check the units of the dataset!
 	```
 
-4.  In order to compute sediment transport, it is necessary to know the total bed shear stress $\tau$ (Pa). Calculate a new vector $\tau$ (or _tau_). This can be calculated as follows:
+	You can work with a specific column in the DataFrame using the syntax `df[column name]` (where `column name` is a string), _e.g._, `mpm_data["DISCHARGE"]` for the first column in the current dataset. You can also rename columns with [df.rename](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.rename.html). Most methods of a DataFrame also work on a single column (technically called a _Series_), _e.g._, `mpm_data.mean()` to get means for the whole DataFrame, or `mpm_data["DISCHARGE"].mean()` to get only the mean of this column.
+
+4.  In order to compute sediment transport, it is necessary to know the total bed shear stress $\tau$ (Pa). Calculate a new vector `tau`, using:
 
 	$$
 	\tau = \rho gh\sin{S} = \rho {u\ast}^2
 	$$ (Eq_1_3)
 
-	where $u\ast$ is the shear velocity (m/s) defined by the above relation. (Accept this for now... there is a complicated story behind it involving boundary layer theory.)
+	where $u\ast$ is the shear velocity ($m\ s^{-1}$), defined by the above relation. (Accept this for now... there is a complicated story behind it involving boundary layer theory.)
 
 	````{note}
-	The $S$ variable is has the type "Array of object". Although $S$ consists of float elements, the _sin_-function isn't able to recognize these elements as such within an "Array of object". Therefore you will need to type the following in your code to specify that it needs to read the elements as floats:
-	```
-	np.sin(S.astype(float))
-	```
- 	This is not only the case for the _sin_-function, but also many other numpy functions!
+	It is possible that some of your columns will be read in with the wrong data type (such as numerical values being represented as strings instead of floats). If so, some mathematical functions will not work properly. If you run into problems, try searching for a method or function called `astype` and applying it to the relevant column in the DataFrame.
 	````
 
 5.  To compare datasets derived from different scales (e.g. field versus lab measurements), parameters are often made dimensionless. Shear stress $\tau$ can be nondimensionalized into the "Shields parameter" $\theta$, which is the ratio of the flow force driving sediment transport and gravitational force that demobilizes sediment. Calculate $\theta$ following:
@@ -1067,21 +1184,21 @@ This exercise is based on the dataset contained in the file _MPMtransportdata.xl
 7.  Plot the sediment transport rate $q_s$ (y-axis; this is the effect) as a function of the shear stress $\tau$ (x-axis; this is the cause). Plot the data as _points_ in log-scales for both axes. To do that, the function [plt.plot()](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html) can be replaced by [plt.loglog()](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.loglog.html). Give an appropriate title to the plot, as well as labels to the x- and y-axes.
 
 	```{note}
-	When writing texts for figure titels or axis labels, writing sections of text between two \$-signs will automatically make the text between these signs mathematical, e.g. ```$m^2$``` becomes $m^2$. Similarly, ```$q_s$``` will become $q_s$. To subscript or superscript more than one character, use the parentheses "\{...}", for example ```$D_{50}$``` becomes $D_{50}$.
+	When writing texts for figure titels or axis labels, writing sections of text between two \$-signs will automatically make the text between these signs mathematical, e.g. ```$m^2$``` becomes $m^2$. Similarly, ```$q_s$``` will become $q_s$. To subscript or superscript more than one character, use the curly brackets `{}`, for example ```$D_{50}$``` becomes $D_{50}$. To find out more about this type of formating, search for "Latex math".
 	```
 
 	````{note}
-	To use Greek letters in your titels or axis labels, you use "\$greekletter\$", e.g. ```$\phi$``` becomes $\phi$.
+	To use Greek letters in your titels or axis labels, you can use `$\greekletter$`, e.g. ```$\phi$``` becomes $\phi$.
 	```{hint}
 	_matplotlib.pyplot_ has a built-in interpretation for ```\t```. To prevent this from affecting the texts of Greek letters such as $\tau$ or $\theta$ in your plots, assure by the dollar signs that your texts are interpreted as raw strings.
 	```
 	````
 
-8.  Plot in a new figure the data in a nondimensional form, i.e. the Einstein parameter $\phi$ (y-axis) as a function of the Shields parameter $\theta$ (x-axis). Give an appropriate title to the plot, as well as labels to the axes.
+8.  Plot in a new figure the data in a nondimensional form, _i.e._, the Einstein parameter $\phi$ (y-axis) as a function of the Shields parameter $\theta$ (x-axis). Give an appropriate title to the plot, as well as labels to the axes.
 
 9.	Compare the figures plotted at **7** and **8**. What is the use of dimensionless variables?
 
-	_Answer open questions as remarks in separate lines starting with: '#'_.
+	_Include answers to open questions as strings and print them to the console._
 
 10.	The MPM predictor of [Meyer-Peter and Mueller (1948)](https://repository.tudelft.nl/islandora/object/uuid:4fda9b61-be28-4703-ab06-43cdc2a21bd7?) was derived from flume experiments with bed load transport, meaning that it does not predict suspended load bed material transport. It is given as:
 
@@ -1107,7 +1224,7 @@ This exercise is based on the dataset contained in the file _MPMtransportdata.xl
 11. In the same figure, plot a vertical line corresponding to $x = \theta_{cr}$.
 
 	````{note}
-	For this you can use the _matplotlib.pyplot_ command [axvline](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.axvline.html).
+	For this you can use [plt.axvline](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.axvline.html).
 	```{hint}
 	All data should be equal to or larger than $\theta_{cr}$.
 	```
@@ -1125,7 +1242,7 @@ This exercise is based on the dataset contained in the file _MPMtransportdata.xl
 	plt.yscale('log')
 	```
 
-	Copy-paste the code above and add a _matplotlib.pyplot_ [colorbar](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.colorbar.html) of the colormap to your figure. Give the colorbar a proper label.
+	Copy-paste the code above and add a _matplotlib.pyplot_ [colorbar](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.colorbar.html) of the colormap to your figure. Give the colorbar a proper label. Don't forget to `show()` the figure!
 
 	```{note}
 	Importing seaborn here allows you to use the various colormaps available in this package.
@@ -1147,7 +1264,7 @@ This exercise is based on the dataset contained in the file _MPMtransportdata.xl
 
 	- What is the function of ```alpha```?
 
-	_Answer open questions as remarks in separate lines starting with: '#'_.
+	_Include answers to open questions as strings and print them to the console._
 
 14. Aside from shear stress and sediment transport, grain size can also be nondimensionalized into the "Bonnefille number" $D\ast$:
 
@@ -1165,7 +1282,7 @@ This exercise is based on the dataset contained in the file _MPMtransportdata.xl
 
 15. Look at the data plotted in non-dimensional form. One set of points seems to follow a different trend than the others. What range of $D\ast$ does this correspond to?
 
-	_Answer open questions as remarks in separate lines starting with: '#'_.
+	_Include answers to open questions as strings and print them to the console._
 
 ```{important}
 End of Exercise 3.
@@ -1191,12 +1308,12 @@ In this exercise, we will perform some analysis on a dataset containing the flow
 
 **Preliminary analysis**
 
-1.  Make a new _.py_ file called _Exercise4_ in which the assignments of this exercise are executed. Start the script by clearing your workspace and closing the windows.
+1.  Make a new file called `Exercise4.py`. Start the script by clearing your workspace and closing the windows.
 
 2.  Load the new dataset. As the data are stored as a text (_ASCII_) file, the following command should be used:
 
 	```
-	Q = pd.read_table(path+"\LobithDischargeData.asc",header=None)
+	discharge = pd.read_table("LobithDischargeData.asc", header=None)
 	```
 
 	Open the DataFrame in the Variable Explorer, do you understand how it is organised? Why do you think ```header=None``` is used?
@@ -1205,7 +1322,7 @@ In this exercise, we will perform some analysis on a dataset containing the flow
 
 3.  The data corresponding to the 29th of February are included for each year, leading to 366 rows. Display the first 20 elements of the row corresponding to the 29th of February, what do you notice?
 
-	_Answer open questions as remarks in separate lines starting with: '#'_.
+	_Include answers to open questions as strings and print them to the console._
 
 	```{note}
 	NaN stands for "Not a Number". It is often used to represent missing values in datasets.
@@ -1215,13 +1332,13 @@ In this exercise, we will perform some analysis on a dataset containing the flow
 
 	```
 	plt.figure(1)
-	plt.plot(Q)
+	plt.plot(discharge)
 	```
 	In the commands above, the function [plt.plot()](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html) is applied to a [DataFrame](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html) instead of a vector. This plot handles each column (and therefore each year of data) separately. As a result, each line appearing in the figure corresponds to the evolution of the discharge $Q$ for a given year. Give an appropriate title to the plot, as well as labels to the axes.
 
 5.  Zoom in on the figure around the 29th of February. How are the NaN-values handled by the plot?
 
-	_Answer open questions as remarks in separate lines starting with: '#'_.
+	_Include answers to open questions as strings and print them to the console._
 
 	```{hint}
 	For zooming, you can use the "zoom" buttons above your plots, or redefine the [x-limits](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.xlim.html).
@@ -1241,7 +1358,7 @@ In this exercise, we will perform some analysis on a dataset containing the flow
 
 9.	What are the dates (dd/mm/yyyy) of when these maximum and minimum values at **8** were observed?
 
-	_Answer open questions as remarks in separate lines starting with: '#'_.
+	_Include answers to open questions as strings and print them to the console._
 
 **Statistics over the entire dataset**
 
@@ -1249,7 +1366,7 @@ In this exercise, we will perform some analysis on a dataset containing the flow
 
 11. Plot this vector as a function of the time. Plot in the same figure the maximum and minimum values for each day (use different type of lines an line colors to differentiate the curves). Give an appropriate title to the plot, as well as labels to the axes and a legend to the graph. In which month are the highest mean discharges occurring?
 
-	_Answer open questions as remarks in separate lines starting with: '#'_.
+	_Include answers to open questions as strings and print them to the console._
 
 12. Create a vector containing the annual flood discharges for the 100 years of data.
 
@@ -1285,7 +1402,7 @@ In this exercise, we will perform some analysis on a dataset containing the flow
 
 16. Read in the figure what is the magnitude of the 50-year and 100-year flood.
 
-	_Answer open questions as remarks in separate lines starting with: '#'_.
+	_Include answers to open questions as strings and print them to the console._
 
 	
 	`````{note}
@@ -1323,7 +1440,7 @@ The following exercises have to be handed in for the practical of Chapter 1:
 - {ref}`EXERCISE-1.4`
 
 ```{important}
-We expect the scripts in one zip file named **YourSurname_GEO4-4436_Chapter1**. Also include to your zip file all the separate files that you have imported in your scripts. Moreover, each script should be well labelled and contain the answers to questions as comments. Please note that only the relevant information should be displayed when running the scripts, so do not print every variable.
+We expect the scripts in one zip file named **YourSurname_GEO4-4436_Chapter1**. Also include to your zip file all the separate files that you have imported in your scripts. Moreover, each script should be well labelled and print the answers to each question. Please note that **only the relevant information should be displayed** when running the scripts, so do not print every variable.
 ```
 
 ```{important} 
