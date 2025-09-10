@@ -862,7 +862,7 @@ $$
 
 3.  Create a scalar, `sum_a1`, equal to the sum of the elements of `array_1`.
 
-4.  Create a vector `sum_rows`, where each element contains the sum of the elements of one of the rows of `array_1`. The first element of this vector should be equal to:
+4.  Create a vector `sum_rows`, where each element contains the sum of the elements of one of the rows of `my_array`. The first element of this vector should be equal to:
 
 	$$
 	sum_rows[0] = \sum_{k=0}^{4} array_1[0,k]
@@ -870,7 +870,7 @@ $$
 
 	Try to do this in one line!
 
-5.  Create a vector `sum_columns`, containing the sum of the columns of `array_1`.
+5.  Create a vector `sum_columns`, containing the sum of the columns of `my_array`.
 
 6.	What do you notice when comparing `sum_rows` and `sum_columns`?
 
