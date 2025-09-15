@@ -850,7 +850,7 @@ Make a new file called `Exercise2.py` in your work directory. The script should 
 1.  Create the following NumPy array `my_array`:
 
 $$
-my_array = \begin{pmatrix}
+my\_array = \begin{pmatrix}
   16 & 3 & 2 & 13\\
   5 & 10 & 11 & 8\\
   9 & 6 & 7 & 12\\
@@ -865,7 +865,7 @@ $$
 4.  Create a vector `sum_rows`, where each element contains the sum of the elements of one of the rows of `my_array`. The first element of this vector should be equal to:
 
 	$$
-	sum_rows[0] = \sum_{k=0}^{4} array_1[0,k]
+	sum\_rows[0] = \sum_{k=0}^{4} array_1[0,k]
 	$$
 
 	Try to do this in one line!
@@ -1096,7 +1096,7 @@ This exercise is based on the dataset contained in the file _MPMtransportdata.xl
 	path = os.path.join("path", "to", "file.extension") # replace strings with directory and file names in the correct order
 	```
 
-	This will combine the directory names into a single string, with directory and file names separated by "\" or "/", depending on the computer you are running the code on.
+	This will combine the directory names into a single string, with directory and file names separated by "\\" or "/", depending on the computer you are running the code on.
 
 	This can be simplified a lot by using _relative paths_, which tell Python where to go from the _current working directory_. So, if your data file is in the same directory as your Python script, you can simply write:
 
@@ -1318,7 +1318,7 @@ In this exercise, we will perform some analysis on a dataset containing the flow
 
 	Open the DataFrame in the Variable Explorer, do you understand how it is organised? Why do you think ```header=None``` is used?
 
-	_Answer open questions as remarks in separate lines starting with: '#'_.
+	_Include answers to open questions as strings and print them to the console._
 
 3.  The data corresponding to the 29th of February are included for each year, leading to 366 rows. Display the first 20 elements of the row corresponding to the 29th of February, what do you notice?
 
