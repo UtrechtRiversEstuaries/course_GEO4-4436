@@ -1318,7 +1318,7 @@ In this exercise, we will perform some analysis on a dataset containing the flow
 
 	Open the DataFrame in the Variable Explorer, do you understand how it is organised? Why do you think ```header=None``` is used?
 
-	_Answer open questions as remarks in separate lines starting with: '#'_.
+	_Include answers to open questions as strings and print them to the console._
 
 3.  The data corresponding to the 29th of February are included for each year, leading to 366 rows. Display the first 20 elements of the row corresponding to the 29th of February, what do you notice?
 
