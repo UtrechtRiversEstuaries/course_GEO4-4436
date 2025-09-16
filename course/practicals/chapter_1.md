@@ -48,7 +48,7 @@ Python scripts are generally created and saved into _Projects_. These projects a
 
 We advise you start every new practical by creating a new Project. To do that:
 
--   Projects $\rarr$ New Project
+-   Projects $\rightarrow$ New Project
 
 -   Give the project a name, e.g. _Practical1_
 
@@ -1075,7 +1075,7 @@ Make sure to use `plt.show()` after every figure you are asked to make.
 
 This exercise is based on the dataset contained in the file _MPMtransportdata.xls_. [Meyer-Peter and Mueller (1948)](https://repository.tudelft.nl/islandora/object/uuid:4fda9b61-be28-4703-ab06-43cdc2a21bd7?) (abbreviated MPM) graphically reported gravel transport data from their flume experiments and derived their famous empirical bedload transport predictor from this dataset. [Wong and Parker (2006)](https://ascelibrary.org/doi/full/10.1061/%28ASCE%290733-9429%282006%29132%3A11%281159%29) recovered the original data and re-analysed it to find that the original fit by MPM was wrong. Here you will plot both the data in nondimensional form and plot a predicted transport using a sediment transport predictor. We assume that the density of the water $\rho=1000\ kg\ m^{-3}$ and Earth's gravity acceleration $g=9.81\ m\ s^{-2}$ (the notation form $m\ s^{-2}$ is commonly used for units in technical documents, and is equivalent to $\frac{m}{s^2}$).
 
-1.  Make a new file called `Exercise3.py. Do not forget to clear your workspace and close the figures at the beginning of your script.
+1.  Make a new file called `Exercise3.py`. Do not forget to clear your workspace and close the figures at the beginning of your script.
 
 2.  Download the file "MPMtransportdata.xls" from Brightspace or Teams and save it in your current working directory.
 
