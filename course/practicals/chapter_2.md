@@ -739,7 +739,7 @@ You cannot do this assignment if you haven't done {ref}`EXERCISE-1.3` of practic
 	For the MPM predictor, do not forget to account for the fact that the sediment is only transported _if_ the critical value ($\theta_{cr} = 0.047$ empirically determined by Meyer-Peter and Mueller) is being exceeded.
 	```
 
-3.  Define a function converting non-dimensional transport into dimensional transport $qs$ (in $m^2\ s^{-1}) using Eq. {eq}`Eq_1_5` and call it `conv_phi_qs`.
+3.  Define a function converting non-dimensional transport into dimensional transport $qs$ (in $m^2\ s^{-1}$) using Eq. {eq}`Eq_1_5` and call it `conv_phi_qs`.
 
 4.  Make a new file called `Exercise5.py` in your working directory. This script should call all the functions you created above and ultimately plot the predictions of both the MPM and EH predictors against the measured sediment transport rates from the MPM dataset in one figure with log scales. Add a line corresponding to $x = y$ on the figure. Give the figure proper labels, titles and a legend.
 
