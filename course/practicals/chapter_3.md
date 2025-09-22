@@ -76,11 +76,9 @@ This formulation of the Exner relation assumes that the volume of deposited or e
 **You are expected to hand in this code and answers to the questions in your separate document.**
 ```
 
-Download <a href="https://github.com/UtrechtRiversEstuaries/course_GEO4-4436/tree/main/course/practicals/downloads/chapter_3.zip" download>chapter_3.zip</a>
+Download <a href="course/practicals/downloads/chapter_3.zip" download="download>chapter_3.zip</a>
 
-[chapter_3.zip]({{ https://github.com/UtrechtRiversEstuaries/course_GEO4-4436/ }}{% course/practicals/downloads/chapter_3.zip %})
-
--   The script file *very_simplified_model.py* contains the structure of the model, and some commands to visualise the results.
+-   Download the script file *very_simplified_model.py*. It contains the structure of the model, and some commands to visualise the results.
 
 -   Add in the initialisation part of the script the definition of the bed elevation vector $\eta$ at $t = 0$. The initial bed elevation decreases linearly with a slope $S_0$. The bed elevation at $x = L$ (downstream boundary) should be zero. Data: $L = 10$ m and $S_0 = 0.1$ m/m.
 

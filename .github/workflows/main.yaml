@@ -1,4 +1,4 @@
-name: Build and deploy website
+name: Deploy website
 
 on: [push]
 
@@ -6,23 +6,23 @@ jobs:
     # Build website and artifact
     build:
 
-        runs-on: ubuntu-24.04
+        runs-on: ubuntu-22.04
 
-        name: "Build website"
+        name: "Deploy website"
 
         steps:
 
         - name: checkout course_GEO4-4436
-          uses: actions/checkout@v4
+          uses: actions/checkout@v3
 
-        - uses: mamba-org/setup-micromamba@v2
+        - uses: conda-incubator/setup-miniconda@v2
           with:
-              environment-name: action
-              create-args: >-
-                  python
-                  jupyter-book
-                  cmake
-              init-shell: bash
+              activate-environment: action
+              environment-file: environment/workflow/action.yaml
+              python-version: 3.11
+              auto-activate-base: false
+              auto-update-conda: false
+              channels: conda-forge
 
         - name: Configure
           shell: bash -l {0}
@@ -59,8 +59,6 @@ jobs:
     deploy:
         needs: build
 
-        name: "Deploy website"
-
         # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
         permissions:
             pages: write      # to deploy to Pages
@@ -72,8 +70,8 @@ jobs:
             url: ${{ steps.deployment.outputs.page_url }}
 
         # Specify runner + deployment step
-        runs-on: ubuntu-24.04
+        runs-on: ubuntu-latest
         steps:
             - name: Deploy to GitHub Pages
               id: deployment
-              uses: actions/deploy-pages@v4 # or the latest "vX.X.X" version tag for this action
+              uses: actions/deploy-pages@v2 # or the latest "vX.X.X" version tag for this action
