@@ -77,7 +77,7 @@ This formulation of the Exner relation assumes that the volume of deposited or e
 ```
 
 Download 
-<a href="/course/practicals/downloads/chapter_3.zip" download>chapter_3.zip</a>
+<a href="downloads/chapter_3.zip" download>chapter_3.zip</a>
 
 -   The script file *very_simplified_model.py* contains the structure of the model, and some commands to visualise the results.
 
