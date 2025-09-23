@@ -23,6 +23,7 @@
 ## 3.1 A very simplified morphodynamic model
 
 In this section we consider a one-dimensional river with an initial constant slope $S_0 = -0.1$ m/m. To gain insight, we want to compute the evolution of the river bed in space and time using very basic physical laws. Similar approaches are used in cellular automats of rivers and in so-called reduced-complexity models in earth surface, processes and landforms (try a search in Google Scholar to see debates and controversies). In this model, we do _not_ consider the influence of the water motion and critical Shields number etc. on sediment transport. The total sediment transport rate $q_t$ [in $m^3\ s^{-1}$ per m width, or $m^2\ s^{-1}$] is therefore assumed to depend simply linearly on the local bed slope $S$. More precisely, we assume that:
+In this section we consider a one-dimensional river with an initial constant slope $S_0 = -0.1$ m/m. To gain insight, we want to compute the evolution of the river bed in space and time using very basic physical laws. Similar approaches are used in cellular automats of rivers and in so-called reduced-complexity models in earth surface, processes and landforms (try a search in Google Scholar to see debates and controversies). In this model, we do _not_ consider the influence of the water motion and critical Shields number etc. on sediment transport. The total sediment transport rate $q_t$ [in $m^3\ s^{-1}$ per m width, or $m^2\ s^{-1}$] is therefore assumed to depend simply linearly on the local bed slope $S$. More precisely, we assume that:
 
 $$
 q_t = \alpha_{s_t} S
@@ -69,6 +70,10 @@ A negative gradient of sediment transport implies that there is more sediment go
 This formulation of the Exner relation assumes that the volume of deposited or eroded sediment includes pore space between the particles. In a later exercise, where we calculate sediment mass flux without pores using the Engelund-Hansen or Meyer-Peter and Mueller functions, the Exner relation will be written including the pore space correction.
 ```
 
+```{important}
+Download the necessary files for this Chapter <a href="github.com/UtrechtRiversEstuaries/course_GEO4-4436/tree/main/course/practicals/downloads/chapter_3.zip" download>here</a>.
+```
+
 (EXERCISE-3.1)=
 ## **EXERCISE 1 - A very simplified morphodynamic model**
 
@@ -76,7 +81,7 @@ This formulation of the Exner relation assumes that the volume of deposited or e
 **You are expected to hand in this code and answers to the questions in your separate document.**
 ```
 
--   Download the script file *very_simplified_model.py*. It contains the structure of the model, and some commands to visualise the results.
+-   The script file *very_simplified_model.py* contains the structure of the model, and some commands to visualise the results.
 
 -   Add in the initialisation part of the script the definition of the bed elevation vector $\eta$ at $t = 0$. The initial bed elevation decreases linearly with a slope $S_0$. The bed elevation at $x = L$ (downstream boundary) should be zero. Data: $L = 10$ m and $S_0 = 0.1$ m/m.
 
@@ -195,7 +200,7 @@ This is one of the simplest numerical solutions that provides reasonably stable 
 **You are expected to hand in this code and answers to the questions in your separate document.**
 ```
 
--   Download the Python scripts *backwater_equation.py* and *functions.py*.
+-   In this exercise you will need the scripts *backwater_equation.py* and *functions.py*.
 
 -   Identify the different steps in the computation of the water depth $H$. Why is the loop starting at $N_x + 1$ and not $0$ as usual?
 
@@ -234,7 +239,7 @@ This model is simple and fast, and assumes a constant and morphologically releva
 **You are expected to hand in this code and answers to the questions in your separate document.**
 ```
 
--   Download the script *model.py*. You will also need *functions.py*, which you downloaded previously.
+-   For this exercise you will need the scripts *model.py* and *functions.py*.
 
 -   A detailed description of the model is given in *Chapter 20* of the [Gary Parker e-book](http://hydrolab.illinois.edu/people/parkerg//morphodynamics_e-book.htm?q=people/parkerg/morphodynamics_e-book.htm). Open this document (downloadable as a word document) and use it to identify the different parts of the script _model.py_. Look through the different functions called in this script and try understand what is going on.
 
