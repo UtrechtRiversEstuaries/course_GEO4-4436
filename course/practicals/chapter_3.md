@@ -71,7 +71,7 @@ This formulation of the Exner relation assumes that the volume of deposited or e
 ```
 
 ```{important}
-Download the necessary files for this Chapter <a href="github.com/UtrechtRiversEstuaries/course_GEO4-4436/tree/main/course/practicals/downloads/chapter_3.zip" download>here</a>.
+Download the necessary files for this Chapter <a href="https://github.com/UtrechtRiversEstuaries/course_GEO4-4436/tree/main/course/practicals/downloads/chapter_3.zip" download>here</a>.
 ```
 
 (EXERCISE-3.1)=
