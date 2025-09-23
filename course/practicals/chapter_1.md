@@ -1062,6 +1062,10 @@ Specs for colors, markers and linestyles in matplotlib
 
 ---
 
+```{important}
+Download the data files for this Chapter <a href="https://github.com/UtrechtRiversEstuaries/course_GEO4-4436/raw/refs/heads/main/course/practicals/downloads/chapter_1.zip" download>here</a>.
+```
+
 (EXERCISE-1.3)=
 ## **EXERCISE 3 - Visualisation of river sediment transport data**
 
@@ -1077,7 +1081,7 @@ This exercise is based on the dataset contained in the file _MPMtransportdata.xl
 
 1.  Make a new file called `Exercise3.py`. Do not forget to clear your workspace and close the figures at the beginning of your script.
 
-2.  Download the file "MPMtransportdata.xls" from Brightspace or Teams and save it in your current working directory.
+2.  Load the data file "MPMtransportdata.xls" in your script.
 
 	````{important}
 	For your code to be able to access a file, you must specify the _filepath_ (or _path_, for short) to that file. This is the sequence of folders you would have to click through to get to the file, _e.g._, "C:\Users\username\Documents\myworkspace\MPMtransportdata.xls". When you want to use this information in Python, you can type out the path as-is:
@@ -1304,16 +1308,16 @@ There are several ways to load Excel files in Python. In this assignment we use 
 **You are expected to hand in this code.**
 ```
 
-In this exercise, we will perform some analysis on a dataset containing the flow discharge of the Rhine measured at Lobith (where the Rhine enters the Netherlands) for the previous century 1901-2000 AD. The dataset is provided on Blackboard as a the text-file _LobithDischargeData.asc_. Each element of this dataset is the discharge in m<sup>3</sup>/s for one day, and each column corresponds to one year (first column = 1901, last column = 2000).
+In this exercise, we will perform some analysis on a dataset containing the flow discharge of the Rhine measured at Lobith (where the Rhine enters the Netherlands) for the previous century 1901-2000 AD. The dataset is provided in the text file _LobithDischargeData.asc_, which you downloaded previously. Each element of this dataset is the discharge in $m^3\ s^{-1}$ for one day, and each column corresponds to one year (first column = 1901, last column = 2000).
 
 **Preliminary analysis**
 
 1.  Make a new file called `Exercise4.py`. Start the script by clearing your workspace and closing the windows.
 
-2.  Load the new dataset. As the data are stored as a text (_ASCII_) file, the following command should be used:
+2.  Load the new dataset. As the data are stored as a text (_ASCII_) file, the following command should be used (you must first create a variable `path` with the path to the data file):
 
 	```
-	discharge = pd.read_table("LobithDischargeData.asc", header=None)
+	discharge = pd.read_table(path, header=None)
 	```
 
 	Open the DataFrame in the Variable Explorer, do you understand how it is organised? Why do you think ```header=None``` is used?
