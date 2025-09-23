@@ -22,7 +22,7 @@
 (CHAPTER-3.1)=
 ## 3.1 A very simplified morphodynamic model
 
-In this section we consider a one-dimensional river with an initial constant slope $S_0 = -0.1$ m/m. To gain insight, we want to compute the evolution of the river bed in space and time using very basic physical laws. Similar approaches are used in cellular automats of rivers and in so-called reduced-complexity models in earth surface, processes and landforms (try a search in Google Scholar to see debates and controversies). In this model, we do _not_ consider the influence of the water motion and critical Shields number etc. on sediment transport. The total sediment transport rate $q_t$ [in $m^3/s$ per m width, or $m^2/s$] is therefore assumed to depend simply linearly on the local bed slope $S$. More precisely, we assume that:
+In this section we consider a one-dimensional river with an initial constant slope $S_0 = -0.1$ m/m. To gain insight, we want to compute the evolution of the river bed in space and time using very basic physical laws. Similar approaches are used in cellular automats of rivers and in so-called reduced-complexity models in earth surface, processes and landforms (try a search in Google Scholar to see debates and controversies). In this model, we do _not_ consider the influence of the water motion and critical Shields number etc. on sediment transport. The total sediment transport rate $q_t$ [in $m^3\ s^{-1}$ per m width, or $m^2\ s^{-1}$] is therefore assumed to depend simply linearly on the local bed slope $S$. More precisely, we assume that:
 
 $$
 q_t = \alpha_{s_t} S
@@ -195,7 +195,7 @@ This is one of the simplest numerical solutions that provides reasonably stable 
 **You are expected to hand in this code and answers to the questions in your separate document.**
 ```
 
--   Download the Python script called *backwater_equation.py* as well as the function *F_back.py*.
+-   Download the Python scripts *backwater_equation.py* and *functions.py*.
 
 -   Identify the different steps in the computation of the water depth $H$. Why is the loop starting at $N_x + 1$ and not $0$ as usual?
 
@@ -234,7 +234,7 @@ This model is simple and fast, and assumes a constant and morphologically releva
 **You are expected to hand in this code and answers to the questions in your separate document.**
 ```
 
--   The folder _full_model_ contains the different .py files needed for this assignment.
+-   Download the script *model.py*. You will also need *functions.py*, which you downloaded previously.
 
 -   A detailed description of the model is given in *Chapter 20* of the [Gary Parker e-book](http://hydrolab.illinois.edu/people/parkerg//morphodynamics_e-book.htm?q=people/parkerg/morphodynamics_e-book.htm). Open this document (downloadable as a word document) and use it to identify the different parts of the script _model.py_. Look through the different functions called in this script and try understand what is going on.
 
